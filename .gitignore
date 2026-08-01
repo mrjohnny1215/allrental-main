@@ -3,7 +3,8 @@
 node_modules/
 
 # Build artifacts
-dist/
+# NOTE: dist/ is committed on purpose so Vercel can serve it statically
+# without running a build step.
 build/
 *.js.map
 
