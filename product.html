@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세 - ALL렌탈</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .thumbnail { cursor: pointer; border: 2px solid transparent; transition: all 0.2s; }
+        .thumbnail.active { border-color: #1d4ed8; }
+        .option-btn { transition: all 0.2s; }
+        .option-btn.selected { border-color: #1d4ed8; color: #1d4ed8; font-weight: 600; background-color: #eff6ff; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 헤더 -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold text-blue-700 tracking-tighter">ALL<span class="text-gray-800">렌탈</span></a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html#bidet-section" class="text-gray-600 hover:text-blue-700 font-medium">비데</a>
+                    <a href="index.html#water-section" class="text-gray-600 hover:text-blue-700 font-medium">정수기</a>
+                    <a href="index.html#air-section" class="text-gray-600 hover:text-blue-700 font-medium">공기청정기</a>
+                    <a href="index.html#mattress-section" class="text-gray-600 hover:text-blue-700 font-medium">매트리스</a>
+                    <a href="index.html#consultation" class="bg-blue-700 text-white px-5 py-2 rounded-md font-medium hover:bg-blue-800">상담신청</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 빵 crumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="text-sm text-gray-500">
+            <a href="index.html" class="hover:text-blue-700">HOME</a>
+            <span class="mx-2">&gt;</span>
+            <span id="breadcrumb-category">카테고리</span>
+            <span class="mx-2">&gt;</span>
+            <span id="breadcrumb-product" class="text-gray-800 font-medium">상품명</span>
+        </nav>
+    </div>
+
+    <!-- 상품 상세 본문 -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                
+                <!-- 좌측: 이미지 영역 -->
+                <div class="p-8 bg-gray-50">
+                    <div class="flex gap-4">
+                        <!-- 썸네일 -->
+                        <div class="flex flex-col gap-2 w-20">
+                            <div class="thumbnail active bg-white rounded-lg p-2 border border-gray-200 aspect-square flex items-center justify-center" onclick="changeImage(0)">
+                                <img id="thumb-0" src="" class="max-w-full max-h-full object-contain">
+                            </div>
+                            <div class="thumbnail bg-white rounded-lg p-2 border border-gray-200 aspect-square flex items-center justify-center" onclick="changeImage(1)">
+                                <img id="thumb-1" src="" class="max-w-full max-h-full object-contain">
+                            </div>
+                            <div class="thumbnail bg-white rounded-lg p-2 border border-gray-200 aspect-square flex items-center justify-center" onclick="changeImage(2)">
+                                <img id="thumb-2" src="" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <!-- 메인 이미지 -->
+                        <div class="flex-1 bg-white rounded-xl border border-gray-200 p-6 flex items-center justify-center">
+                            <img id="main-image" src="" alt="상품 이미지" class="max-w-full max-h-96 object-contain">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 우측: 상품 정보 영역 -->
+                <div class="p-8 lg:p-10">
+                    <div class="flex justify-between items-start mb-6">
+                        <h1 id="product-title" class="text-2xl font-bold text-gray-900 leading-tight">상품명</h1>
+                        <button class="text-xs bg-gray-200 text-gray-700 px-3 py-1.5 rounded hover:bg-gray-300 whitespace-nowrap ml-4">제휴카드 안내</button>
+                    </div>
+
+                    <!-- 정보 테이블 -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center border-b border-gray-100 pb-4">
+                            <span class="w-24 text-gray-500 text-sm">렌탈사</span>
+                            <span id="product-brand" class="flex-1 font-medium">브랜드</span>
+                        </div>
+                        
+                        <div class="flex items-center border-b border-gray-100 pb-4">
+                            <span class="w-24 text-gray-500 text-sm">렌탈기간</span>
+                            <div class="flex-1 flex gap-2">
+                                <button class="option-btn border border-gray-300 rounded-md px-4 py-1.5 text-sm" onclick="selectOption(this, 'period')">3년</button>
+                                <button class="option-btn border border-gray-300 rounded-md px-4 py-1.5 text-sm" onclick="selectOption(this, 'period')">5년</button>
+                                <button class="option-btn selected border border-gray-300 rounded-md px-4 py-1.5 text-sm" onclick="selectOption(this, 'period')">6년</button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center border-b border-gray-100 pb-4">
+                            <span class="w-24 text-gray-500 text-sm">사이즈</span>
+                            <select id="size-select" class="flex-1 border border-gray-300 rounded-md px-3 py-1.5 text-sm bg-white">
+                                <option>싱글</option>
+                                <option>슈퍼싱글</option>
+                                <option>퀸</option>
+                                <option>킹</option>
+                                <option>라지킹</option>
+                            </select>
+                        </div>
+
+                        <div class="flex items-center border-b border-gray-100 pb-4">
+                            <span class="w-24 text-gray-500 text-sm">관리주기</span>
+                            <select id="cycle-select" class="flex-1 border border-gray-300 rounded-md px-3 py-1.5 text-sm bg-white">
+                                <option>자가관리</option>
+                                <option>방문관리/2개월</option>
+                                <option>방문관리/4개월</option>
+                                <option>방문관리/6개월</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 가격 정보 -->
+                    <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-600 text-sm">월 렌탈료</span>
+                            <span id="monthly-price" class="text-3xl font-bold text-gray-900">0원</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-500 text-sm font-medium">할인적용</span>
+                            <span id="discount-price" class="text-2xl font-bold text-red-500">0원</span>
+                        </div>
+                    </div>
+
+                    <!-- 버튼 영역 -->
+                    <div class="flex gap-3">
+                        <button onclick="goBack()" class="w-14 h-14 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-300 transition">
+                            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                            </svg>
+                        </button>
+                        <button onclick="applyRental()" class="flex-1 bg-blue-700 text-white font-bold py-4 rounded-lg hover:bg-blue-800 transition text-lg">
+                            렌탈신청
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 하단 스펙 테이블 -->
+            <div class="border-t border-gray-200 p-8 bg-white">
+                <h2 class="text-lg font-bold mb-4">상품 정보</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                    <div class="flex border border-gray-200 rounded-lg overflow-hidden">
+                        <span class="bg-gray-50 px-4 py-3 text-gray-600 w-24">브랜드</span>
+                        <span id="spec-brand" class="px-4 py-3 flex-1">-</span>
+                    </div>
+                    <div class="flex border border-gray-200 rounded-lg overflow-hidden">
+                        <span class="bg-gray-50 px-4 py-3 text-gray-600 w-24">모델명</span>
+                        <span id="spec-model" class="px-4 py-3 flex-1">-</span>
+                    </div>
+                    <div class="flex border border-gray-200 rounded-lg overflow-hidden">
+                        <span class="bg-gray-50 px-4 py-3 text-gray-600 w-24">제품종류</span>
+                        <span id="spec-category" class="px-4 py-3 flex-1">-</span>
+                    </div>
+                    <div class="flex border border-gray-200 rounded-lg overflow-hidden">
+                        <span class="bg-gray-50 px-4 py-3 text-gray-600 w-24">AS기간</span>
+                        <span class="px-4 py-3 flex-1">렌탈기간내</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xl font-bold text-white mb-2">ALL렌탈</p>
+            <p class="text-sm mb-4">합리적인 가격으로 프리미엄 라이프를 제안합니다.</p>
+            <div class="border-t border-gray-800 pt-4 text-xs text-gray-500">
+                <p>&copy; 2026 ALL렌탈. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentProduct = null;
+        let images = [];
+
+        // 페이지 로드 시 상품 정보 렌더링
+        window.addEventListener('DOMContentLoaded', () => {
+            const stored = localStorage.getItem('selectedProduct');
+            if (!stored) {
+                alert('상품 정보를 찾을 수 없습니다.');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            currentProduct = JSON.parse(stored);
+            renderProduct(currentProduct);
+        });
+
+        function renderProduct(product) {
+            // 카테고리 판별
+            const category = getCategory(product.description);
+            
+            // 빵 crumbs
+            document.getElementById('breadcrumb-category').textContent = category;
+            document.getElementById('breadcrumb-product').textContent = product.description;
+
+            // 이미지 설정 (메인 + 썸네일 3개)
+            images = [product.image, product.image, product.image];
+            document.getElementById('main-image').src = product.image;
+            for (let i = 0; i < 3; i++) {
+                document.getElementById(`thumb-${i}`).src = images[i];
+            }
+
+            // 상품명, 브랜드
+            document.getElementById('product-title').textContent = product.description;
+            document.getElementById('product-brand').textContent = product.brand;
+
+            // 가격
+            document.getElementById('monthly-price').textContent = product.monthly_rental;
+            document.getElementById('discount-price').textContent = product.discount_price;
+
+            // 스 테이블
+            document.getElementById('spec-brand').textContent = product.brand;
+            document.getElementById('spec-model').textContent = product.model;
+            document.getElementById('spec-category').textContent = category;
+
+            // 사이즈 옵션 (매트리스인 경우)
+            const sizeSelect = document.getElementById('size-select');
+            if (category === '매트리스') {
+                sizeSelect.innerHTML = `
+                    <option>싱글</option>
+                    <option>슈퍼싱글</option>
+                    <option>퀸</option>
+                    <option>킹</option>
+                    <option>라지킹</option>
+                `;
+            } else if (category === '비데') {
+                sizeSelect.innerHTML = `<option>일반형</option><option>슬림형</option>`;
+            } else if (category === '정수기') {
+                sizeSelect.innerHTML = `<option>스탠드형</option><option>벽걸이형</option><option>언더싱크형</option>`;
+            } else if (category === '공기청정기') {
+                sizeSelect.innerHTML = `<option>소형 (10평 이하)</option><option>중형 (20평 이하)</option><option>대형 (30평 이상)</option>`;
+            }
+
+            document.title = product.description + ' - ALL렌탈';
+        }
+
+        function getCategory(description) {
+            if (description.includes('비데')) return '비데';
+            if (description.includes('정수기')) return '정수기';
+            if (description.includes('공기청정기') || description.includes('청정기')) return '공기청정기';
+            if (description.includes('매트리스') || description.includes('프레임') || description.includes('파운데이션')) return '매트리스';
+            return '기타';
+        }
+
+        // 이미지 변경
+        function changeImage(index) {
+            document.getElementById('main-image').src = images[index];
+            document.querySelectorAll('.thumbnail').forEach((el, i) => {
+                el.classList.toggle('active', i === index);
+            });
+        }
+
+        // 옵션 택 (렌탈기간)
+        function selectOption(btn, group) {
+            btn.parentElement.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+        }
+
+        // 뒤로 가기
+        function goBack() {
+            window.history.back();
+        }
+
+        // 렌탈신청 → 상담신청 폼으로 이동
+        function applyRental() {
+            if (!currentProduct) return;
+            localStorage.setItem('consultProduct', JSON.stringify(currentProduct));
+            window.location.href = 'index.html#consultation';
+        }
+    </script>
+</body>
+</html>
