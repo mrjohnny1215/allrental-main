@@ -25,30 +25,33 @@ const parsePrice = (s) => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) 
 function ProductDetailModal({ product, onClose }) {
   const catKey = product.category;
   const detail = product.detail || {};
-  const defaults = SITE_CONFIG.categoryDefaults[catKey] || { cycles: [], colors: [], promotion: '' };
   const isMattress = catKey === 'mattress';
 
+  // 실제 렌탈세계 데이터만 사용 (하드코딩 폴백 제거)
   const periods = detail.rental_periods && detail.rental_periods.length
     ? detail.rental_periods
-    : ['3년', '5년', '6년', '7년'];
+    : [];
   const cycles = detail.maintenance_cycles && detail.maintenance_cycles.length
     ? detail.maintenance_cycles
-    : defaults.cycles;
+    : [];
   const colors = detail.colors && detail.colors.length
     ? detail.colors
-    : defaults.colors;
+    : [];
+  const sizes = detail.sizes && detail.sizes.length
+    ? detail.sizes
+    : [];
   const cards = detail.partner_cards && detail.partner_cards.length
     ? detail.partner_cards
     : [];
+  const promotion = detail.promotion && detail.promotion.length ? detail.promotion : '';
 
-  const [selectedPeriod, setSelectedPeriod] = useState(periods[0]);
-  const [selectedCycle, setSelectedCycle] = useState(cycles[0]);
+  const [selectedPeriod, setSelectedPeriod] = useState(periods[0] || '');
+  const [selectedCycle, setSelectedCycle] = useState(cycles[0] || '');
   const [selectedColor, setSelectedColor] = useState(colors[0] || '');
   const [showCardModal, setShowCardModal] = useState(false);
 
   const basePrice = parsePrice(product.price);
-  const rate = SITE_CONFIG.periodRates[selectedPeriod] ?? 1.0;
-  const calculatedPrice = Math.floor(basePrice * rate).toLocaleString();
+  const calculatedPrice = basePrice.toLocaleString();
 
   const handleConsult = () => {
     const brand = extractBrand(product.desc);
@@ -106,18 +109,18 @@ function ProductDetailModal({ product, onClose }) {
           <div className="space-y-5 mb-6">
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-2">렌탈 기간</label>
-              <div className="grid grid-cols-4 gap-2">
-                {periods.map((period) => (
-                  <button key={period} onClick={() => setSelectedPeriod(period)}
-                    className={`py-2.5 px-2 rounded-lg border-2 text-sm font-semibold transition-all ${selectedPeriod === period ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
-                    <div>{period}</div>
-                    <div className="text-[10px] font-normal mt-0.5 text-gray-500">
-                      {period === '3년' ? '기본가' : period === '5년' ? '8% 할인' : period === '6년' ? '12% 할인' : period === '7년' ? '15% 할인' : '추가할인'}
-                    </div>
-                  </button>
-                ))}
-              </div>
-              <div className="mt-2 text-xs text-gray-500">* {selectedPeriod} 약정 예상가: <span className="font-bold text-gray-700">{calculatedPrice}원</span> (실제 청구는 상담 확정)</div>
+              {periods.length > 0 ? (
+                <div className="grid grid-cols-4 gap-2">
+                  {periods.map((period) => (
+                    <button key={period} onClick={() => setSelectedPeriod(period)}
+                      className={`py-2.5 px-2 rounded-lg border-2 text-sm font-semibold transition-all ${selectedPeriod === period ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
+                      <div>{period}</div>
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-sm text-gray-400 bg-gray-50 rounded-lg p-3 border border-gray-200">해당 상품의 렌탈 기간 정보가 없습니다.</div>
+              )}
             </div>
 
             {cycles.length > 0 && (
@@ -130,26 +133,49 @@ function ProductDetailModal({ product, onClose }) {
               </div>
             )}
 
-            {colors.length > 0 && (
-              <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">{isMattress ? '매트리스 사이즈' : '제품 색상'}</label>
-                <div className="flex flex-wrap gap-2">
-                  {colors.map((item) => (
-                    <button key={item} onClick={() => setSelectedColor(item)}
-                      className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
-                      {item}
-                    </button>
-                  ))}
+            {isMattress ? (
+              sizes.length > 0 && (
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">매트리스 사이즈 / 관리등급</label>
+                  <div className="flex flex-wrap gap-2">
+                    {sizes.map((item) => (
+                      <button key={item} onClick={() => setSelectedColor(item)}
+                        className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
+                        {item}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )
+            ) : (
+              colors.length > 0 && (
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">제품 색상</label>
+                  <div className="flex flex-wrap gap-2">
+                    {colors.map((item) => (
+                      <button key={item} onClick={() => setSelectedColor(item)}
+                        className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
+                        {item}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )
             )}
 
-            {defaults.promotion && (
+            {promotion ? (
               <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-4 border border-red-100">
                 <h4 className="text-sm font-bold text-red-900 mb-2 flex items-center">
                   <span className="mr-2">🎉</span> 진행 중인 프로모션
                 </h4>
-                <div className="text-sm text-red-700 font-medium">• {defaults.promotion}</div>
+                <div className="text-sm text-red-700 font-medium">• {promotion}</div>
+              </div>
+            ) : (
+              <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                <h4 className="text-sm font-bold text-gray-600 mb-2 flex items-center">
+                  <span className="mr-2">🎉</span> 진행 중인 프로모션
+                </h4>
+                <div className="text-sm text-gray-400">해당 상품의 프로모션 정보가 없습니다.</div>
               </div>
             )}
 

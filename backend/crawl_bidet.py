@@ -93,7 +93,8 @@ def crawl_product_detail(session, url):
             'rental_periods': [],
             'maintenance_cycles': [],
             'colors': [],
-            'partner_cards': []
+            'partner_cards': [],
+            'promotion': []
         }
         
         # 1. 상품명 추출
@@ -128,16 +129,50 @@ def crawl_product_detail(session, url):
                 if value and text != '선택':
                     product_data['maintenance_cycles'].append(text)
 
-        # 5. 색상/사이즈 추출
-        color_select = soup.select_one('#rental_supply_1')
-        if color_select:
-            for option in color_select.find_all('option'):
-                value = option.get('value', '').strip()
-                text = option.get_text(strip=True)
-                if value and text != '선택':
-                    color_name = value.split(',')[0] if ',' in value else text
-                    if color_name and color_name not in product_data['colors']:
-                        product_data['colors'].append(color_name)
+        # 5. 색상/사이즈 추출 (여러 가능한 셀렉트 id/class를 모두 시도)
+        color_found = False
+        # 5-1. 정의된 후보 셀렉트 id 전부 시도
+        candidate_ids = [
+            '#rental_supply_1', '#rental_supply_2', '#rental_supply_3',
+            '#rental_option_3', '#rental_option_4',
+            '#product_color', '#product_option_color',
+        ]
+        for cid in candidate_ids:
+            sel = soup.select_one(cid)
+            if sel:
+                for option in sel.find_all('option'):
+                    value = option.get('value', '').strip()
+                    text = option.get_text(strip=True)
+                    if value and text and text != '선택':
+                        color_name = value.split(',')[0] if ',' in value else text
+                        if color_name and color_name not in product_data['colors']:
+                            product_data['colors'].append(color_name)
+                            color_found = True
+
+        # 5-2. 라벨에 '색상'/'컬러'가 붙은 셀렉트 찾기 (id 불일치 대비)
+        if not color_found:
+            for label in soup.select('label'):
+                lbl_text = label.get_text(strip=True)
+                if '색상' in lbl_text or '컬러' in lbl_text or 'color' in lbl_text.lower():
+                    sel = label.find_next('select')
+                    if sel:
+                        for option in sel.find_all('option'):
+                            value = option.get('value', '').strip()
+                            text = option.get_text(strip=True)
+                            if value and text and text != '선택':
+                                color_name = value.split(',')[0] if ',' in value else text
+                                if color_name and color_name not in product_data['colors']:
+                                    product_data['colors'].append(color_name)
+
+        # 5-3. 프로모션 추출 (<span class="form-label">프로모션</span> 다음 radio-group)
+        promo_label = soup.find('span', class_='form-label', string=lambda t: t and '프로모션' in t)
+        if promo_label:
+            group = promo_label.find_next(class_='radio-group') or promo_label.find_next('div')
+            if group:
+                for lbl in group.find_all('label'):
+                    txt = lbl.get_text(strip=True)
+                    if txt and txt not in product_data['promotion']:
+                        product_data['promotion'].append(txt)
 
         # 6. 제휴카드 안내 추출 (AJAX)
         card_button = soup.select_one('.btn-card-infomation')
