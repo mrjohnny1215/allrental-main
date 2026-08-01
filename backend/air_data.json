@@ -12,6 +12,13 @@
       "방문관리/6개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750658361_2848.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750658361_0226.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -58,7 +65,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42324&cid=1379&gid=1407",
@@ -77,6 +85,46 @@
     "colors": [
       "오트밀베이지",
       "다크그린"
+    ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/92cf629814b69d7c67fc4699b682179f_1769756939_0725.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070785_9668.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070786_5381.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070786_9509.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070789_1484.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070792_7301.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070793_4526.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070793_967.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070794_1138.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070798_1814.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070798_3275.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070798_4688.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070798_6262.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070798_8471.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070798_9992.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070799_7845.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070800_1373.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070800_3444.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070800_4725.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070802_9977.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070803_4829.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070806_6361.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070806_8682.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070807_5345.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070807_748.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070808_9132.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070809_0661.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070811_6667.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070811_8671.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070812_0292.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070812_5894.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070812_9449.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070813_6873.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070815_3747.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070816_0134.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
     ],
     "partner_cards": [
       "전월실적 30만원 이상 시 13,000원 할인",
@@ -128,7 +176,8 @@
       "프로모션 대상 : 행사기간 직전 6개월간 모든 신한신용카드(신한BC포함) 결제이력이 없고, 대상 카드로 SK인텔릭스 구독료 자동납부를 최초로 등록하고, 행사기간 내 '마케팅 전체항목 동의' 완료 및 혜택 제공 시점까지 유지한 고객",
       "연회비 : 국내 25,000원 / 국내외겸용 28,000원",
       "발급신청 : 1661-8599 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=11327&cid=1379&gid=1407",
@@ -144,6 +193,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2012/231c715a00eae621d751c23fb46bca73_1607756046_3079.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -190,7 +245,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=11328&cid=1379&gid=1407",
@@ -206,6 +262,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2309/95c39feb2eac58f127098b687f124f71_1695372910_7909.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -252,7 +314,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=11381&cid=1379&gid=1407",
@@ -268,6 +331,16 @@
       "방문관리/6개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2202/8d3d067d1292cdf1d6772ce1ea12037a_1644556164_0189.jpeg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2202/8d3d067d1292cdf1d6772ce1ea12037a_1644556164_6781.jpeg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2202/8d3d067d1292cdf1d6772ce1ea12037a_1644556164_9359.jpeg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2202/8d3d067d1292cdf1d6772ce1ea12037a_1644556165_3221.jpeg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2202/8d3d067d1292cdf1d6772ce1ea12037a_1644556165_5311.jpeg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본10,000원 + 프로모션 5,000원(60개월))",
@@ -289,7 +362,8 @@
       "전월실적 1만원 이상 시 5,000원 할인",
       "연회비 : 없음",
       "발급신청 : 1800-8888 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=11427&cid=1379&gid=1407",
@@ -305,6 +379,14 @@
       "방문관리/2개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040635_1377.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754287458_0907.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754287460_5185.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -364,7 +446,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=43239&cid=1379&gid=1407",
@@ -380,6 +463,14 @@
       "방문관리/2개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040220_8859.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754287808_3434.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754287810_3615.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -439,7 +530,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=11438&cid=1379&gid=1407",
@@ -454,6 +546,13 @@
       "방문관리/4개월(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750658101_2745.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750658100_9962.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -500,7 +599,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=11449&cid=1379&gid=1407",
@@ -516,6 +616,14 @@
       "방문관리/2개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2608/85b483a0654b2dca90d756c280fa8e56_1785545058_0998.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754288197_795.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754288199_4659.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -575,6 +683,9 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
+    ],
+    "promotion": [
+      "반값할인"
     ]
   },
   {
@@ -589,6 +700,14 @@
       "방문관리/2개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040275_3347.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754289911_8507.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754289912_9711.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -648,7 +767,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=11460&cid=1379&gid=1407",
@@ -665,6 +785,14 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1777873661_0286.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754289080_2105.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754289081_3708.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -724,7 +852,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=28199&cid=1379&gid=1407",
@@ -742,6 +871,13 @@
       "자가관리(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750657194_4438.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750657194_2746.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -788,7 +924,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=16950&cid=1379&gid=1407",
@@ -804,6 +941,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2103/2829a83144b6a2dd60e66c8127843e04_1617078529_7284.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -850,7 +993,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=16953&cid=1379&gid=1407",
@@ -866,6 +1010,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2103/2829a83144b6a2dd60e66c8127843e04_1617078906_4911.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -912,7 +1062,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=17884&cid=1379&gid=1407",
@@ -937,6 +1088,14 @@
       "샌드베이지",
       "페블그레이"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778034187_4037.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754287037_1414.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754287036_153.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -996,7 +1155,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=18032&cid=1379&gid=1407",
@@ -1013,6 +1173,18 @@
       "방문관리/3개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2106/2977617ab9caa2e9de9302eb7cf37652_1623033509_3706.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2106/2977617ab9caa2e9de9302eb7cf37652_1623033510_0139.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2106/2977617ab9caa2e9de9302eb7cf37652_1623033510_6675.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2106/2977617ab9caa2e9de9302eb7cf37652_1623033510_9871.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2106/2977617ab9caa2e9de9302eb7cf37652_1623033512_5035.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2106/2977617ab9caa2e9de9302eb7cf37652_1623033512_7312.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2106/2977617ab9caa2e9de9302eb7cf37652_1623033512_8826.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "30만원 이상 시 15,000원 할인",
       "(기본 10,000원 + 프로모션 5,000원)",
@@ -1037,7 +1209,8 @@
       "프로모션 대상 : 최근 6개월간 삼성카드 결제이력이 없는 회원",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1599-6807"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=19908&cid=1379&gid=1407",
@@ -1053,6 +1226,12 @@
       "방문관리/6개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2211/917b1939a31b7ccdcc1114f9eecd0ad4_1667541552_6366.jpeg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본10,000원 + 프로모션 5,000원(60개월))",
@@ -1074,7 +1253,8 @@
       "전월실적 1만원 이상 시 5,000원 할인",
       "연회비 : 없음",
       "발급신청 : 1800-8888 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=27519&cid=1379&gid=1407",
@@ -1089,6 +1269,23 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428584_1918.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428587_4528.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428590_5428.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428596_893.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428603_75.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428603_9139.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428604_1982.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428604_5117.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428604_7125.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428604_8523.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428605_0156.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2209/549d8f56c8a6c00dd524f4ce3a4d596a_1662428612_6204.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -1135,7 +1332,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=21051&cid=1379&gid=1407",
@@ -1148,12 +1346,19 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2504/736e6647db90ebf77a9febf41793da94_1745395876_0368.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=39801&cid=1379&gid=1407",
@@ -1169,6 +1374,27 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706121_5605.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706121_7719.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706121_8647.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706121_99.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706122_1909.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706122_3.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706122_4147.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706122_6578.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706122_9292.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706128_319.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706128_4807.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706128_6405.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706128_7584.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706128_8906.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706129_0517.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706129_2171.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -1179,7 +1405,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=22075&cid=1379&gid=1407",
@@ -1194,6 +1421,13 @@
       "방문관리/4개월(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750658280_2333.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750658279_5525.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -1240,7 +1474,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=22078&cid=1379&gid=1407",
@@ -1257,6 +1492,13 @@
       "방문관리/4개월(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750657719_6061.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750657719_4559.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -1303,7 +1545,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=22110&cid=1379&gid=1407",
@@ -1319,6 +1562,12 @@
       "방문관리/6개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2202/8d3d067d1292cdf1d6772ce1ea12037a_1644555544_0258.jpeg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본10,000원 + 프로모션 5,000원(60개월))",
@@ -1340,7 +1589,8 @@
       "전월실적 1만원 이상 시 5,000원 할인",
       "연회비 : 없음",
       "발급신청 : 1800-8888 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=26927&cid=1379&gid=1407",
@@ -1358,6 +1608,12 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2208/46a04d6131310b380bcd2ed3152514f8_1660187142_7241.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -1408,7 +1664,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=24547&cid=1379&gid=1407",
@@ -1428,6 +1685,14 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2302/fe4c8a513395db2d59af27b6d3c7dd7d_1675213123_2125.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2302/fe4c8a513395db2d59af27b6d3c7dd7d_1675213124_8067.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2302/fe4c8a513395db2d59af27b6d3c7dd7d_1675213126_9725.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "30만원 이상 시 15,000원 할인",
       "(기본 10,000원 + 프로모션 5,000원)",
@@ -1452,7 +1717,8 @@
       "프로모션 대상 : 최근 6개월간 삼성카드 결제이력이 없는 회원",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1599-6807"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=39802&cid=1379&gid=1407",
@@ -1468,6 +1734,27 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706319_7356.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706319_9592.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706320_096.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706320_2395.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706320_6199.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706320_7296.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706320_8377.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706321_0952.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706321_4142.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706326_2662.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706326_4446.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706326_5813.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706326_6758.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706326_7994.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706326_8938.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706327_0711.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -1478,7 +1765,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=35252&cid=1379&gid=1407",
@@ -1502,6 +1790,14 @@
       "허브그린",
       "우드베이지"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2402/07402b2e7e10af0c381c816a61d04401_1707109023_6044.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2402/07402b2e7e10af0c381c816a61d04401_1707109024_1747.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2402/07402b2e7e10af0c381c816a61d04401_1707109024_5227.JPG",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "30만원 이상 시 15,000원 할인",
       "(기본 10,000원 + 프로모션 5,000원)",
@@ -1526,7 +1822,8 @@
       "프로모션 대상 : 최근 6개월간 삼성카드 결제이력이 없는 회원",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1599-6807"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=38910&cid=1379&gid=1407",
@@ -1539,6 +1836,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/5ef5f2d076ae841c035e0cfa09699a5a_1773131083_5531.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -1570,7 +1873,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=28171&cid=1379&gid=1407",
@@ -1585,6 +1889,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2402/f2ab732fe73ab06fd1c0ae015f792e35_1707109602_4933.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -1631,7 +1941,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=28655&cid=1379&gid=1407",
@@ -1646,6 +1957,14 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2212/f425e252bd8d5f9372be9d4653a9d043_1670219732_2862.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2212/f425e252bd8d5f9372be9d4653a9d043_1670219732_8271.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2212/f425e252bd8d5f9372be9d4653a9d043_1670219733_1122.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -1692,7 +2011,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=30298&cid=1379&gid=1407",
@@ -1712,6 +2032,12 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2412/2d5870aa6886f06647a64129624a2435_1733820877_6028.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "30만원 이상 시 15,000원 할인",
       "(기본 10,000원 + 프로모션 5,000원)",
@@ -1736,7 +2062,8 @@
       "프로모션 대상 : 최근 6개월간 삼성카드 결제이력이 없는 회원",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1599-6807"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=30323&cid=1379&gid=1407",
@@ -1755,6 +2082,14 @@
       "방문관리/2개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778031216_3798.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2303/57379fd39f39014f018eeda643985363_1680223626_4944.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2303/57379fd39f39014f018eeda643985363_1680223628_5095.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -1814,7 +2149,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=32824&cid=1379&gid=1407",
@@ -1830,6 +2166,13 @@
       "방문관리/6개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750658209_259.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/28c0a1b7c8a698866da025a60e1bd124_1776313327_9469.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -1876,7 +2219,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=32131&cid=1379&gid=1407",
@@ -1897,6 +2241,14 @@
       "방문관리/2개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/19fbe0241e9d0f64564c5ae86d30ecb1_1772672303_2695.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2305/93ca16725cf5c666b590ab9cd79f5be7_1685405795_9867.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2305/93ca16725cf5c666b590ab9cd79f5be7_1685405846_8801.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -1956,7 +2308,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=39786&cid=1379&gid=1407",
@@ -1969,11 +2322,19 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/91b8fa47575a787176bf1d9ae357b219_1738731424_1961.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/1d0ecb1e0a685300581f9429fedcc3d1_1775091929_4567.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 해외 18,000원",
       "발급신청 : 1800-1111"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=34149&cid=1379&gid=1407",
@@ -2000,6 +2361,14 @@
       "임페리얼브라운",
       "페블그레이"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040463_9554.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/db376ee8513c48dd22d63f048a79f014_1705886462_6895.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/db376ee8513c48dd22d63f048a79f014_1705886462_9919.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -2059,7 +2428,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=33971&cid=1379&gid=1407",
@@ -2080,6 +2450,14 @@
       "방문관리/2개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040614_4875.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754287336_6914.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754287336_972.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -2139,7 +2517,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=34139&cid=1379&gid=1407",
@@ -2166,6 +2545,14 @@
       "임페리얼브라운",
       "페블그레이"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778033343_7011.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/db376ee8513c48dd22d63f048a79f014_1705885065_0314.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/db376ee8513c48dd22d63f048a79f014_1705885065_3896.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -2225,7 +2612,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=34720&cid=1379&gid=1407",
@@ -2238,12 +2626,19 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2312/ce8e381d3c277151a9ef80f05686c746_1702009513_2925.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=34721&cid=1379&gid=1407",
@@ -2256,12 +2651,19 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2312/ce8e381d3c277151a9ef80f05686c746_1702009836_1884.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=34722&cid=1379&gid=1407",
@@ -2274,12 +2676,19 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2312/ce8e381d3c277151a9ef80f05686c746_1702011070_7218.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=35111&cid=1379&gid=1407",
@@ -2294,6 +2703,14 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705986708_9258.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705986709_107.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705991824_4301.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -2304,7 +2721,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=35112&cid=1379&gid=1407",
@@ -2319,6 +2737,13 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705987025_0975.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705991657_7672.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -2329,7 +2754,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=35122&cid=1379&gid=1407",
@@ -2343,6 +2769,14 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705990206_4384.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705990206_8124.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705990202_1489.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -2353,7 +2787,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=35124&cid=1379&gid=1407",
@@ -2367,6 +2802,14 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705990474_2155.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705990474_5955.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2401/25cf3f6eb1f0c9a98f14838dc0ec7c0a_1705990468_8237.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -2377,7 +2820,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=36481&cid=1379&gid=1407",
@@ -2394,6 +2838,13 @@
       "자가관리(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750656534_9986.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750656534_826.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -2440,7 +2891,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42320&cid=1379&gid=1407",
@@ -2459,6 +2911,33 @@
     ],
     "colors": [
       "화이트"
+    ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/92cf629814b69d7c67fc4699b682179f_1769756882_6976.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067585_4244.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067585_5407.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067586_1622.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067586_2373.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067586_776.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067586_8538.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067587_3056.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067587_4821.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067587_5614.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067588_1394.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767143440_3258.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067588_5847.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067588_849.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067588_9508.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067589_0502.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067589_3779.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067589_9555.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067590_2866.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067590_5825.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067590_7231.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767067591_9597.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
     ],
     "partner_cards": [
       "전월실적 30만원 이상 시 13,000원 할인",
@@ -2510,6 +2989,9 @@
       "프로모션 대상 : 행사기간 직전 6개월간 모든 신한신용카드(신한BC포함) 결제이력이 없고, 대상 카드로 SK인텔릭스 구독료 자동납부를 최초로 등록하고, 행사기간 내 '마케팅 전체항목 동의' 완료 및 혜택 제공 시점까지 유지한 고객",
       "연회비 : 국내 25,000원 / 국내외겸용 28,000원",
       "발급신청 : 1661-8599 또는 온라인신청"
+    ],
+    "promotion": [
+      "반값할인"
     ]
   },
   {
@@ -2527,6 +3009,13 @@
       "자가관리(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750656344_7794.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750656344_5552.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -2573,7 +3062,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=36867&cid=1379&gid=1407",
@@ -2589,6 +3079,14 @@
       "방문관리/2개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778034290_5374.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754287581_152.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754287582_4655.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -2648,7 +3146,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=37089&cid=1379&gid=1407",
@@ -2668,6 +3167,12 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2412/f22865c23ee4eedb5abeb66054fd9943_1733875639_6715.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "30만원 이상 시 15,000원 할인",
       "(기본 10,000원 + 프로모션 5,000원)",
@@ -2692,7 +3197,8 @@
       "프로모션 대상 : 최근 6개월간 삼성카드 결제이력이 없는 회원",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1599-6807"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=38129&cid=1379&gid=1407",
@@ -2708,6 +3214,13 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2409/f6d05e6b0cacfbdbe068e2c8b7ffe2dd_1727076674_6941.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2409/f6d05e6b0cacfbdbe068e2c8b7ffe2dd_1727076681_2858.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 10,000원+프로모션 5,000원(60개월))",
@@ -2723,7 +3236,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-2527"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=38275&cid=1379&gid=1407",
@@ -2744,6 +3258,14 @@
       "방문관리/3개월(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2410/b367f62cba01ac0a420f8de4880f3a4a_1728964486_5207.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2410/b367f62cba01ac0a420f8de4880f3a4a_1728964492_4198.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2410/b367f62cba01ac0a420f8de4880f3a4a_1728964492_6562.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "30만원 이상 시 15,000원 할인",
       "(기본 10,000원 + 프로모션 5,000원)",
@@ -2768,7 +3290,8 @@
       "프로모션 대상 : 최근 6개월간 삼성카드 결제이력이 없는 회원",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1599-6807"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=39232&cid=1379&gid=1407",
@@ -2785,6 +3308,14 @@
       "방문관리/3개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2412/2d5870aa6886f06647a64129624a2435_1733820664_5651.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2412/2d5870aa6886f06647a64129624a2435_1733820664_8478.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2412/2d5870aa6886f06647a64129624a2435_1733820664_9669.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "30만원 이상 시 15,000원 할인",
       "(기본 10,000원 + 프로모션 5,000원)",
@@ -2809,7 +3340,8 @@
       "프로모션 대상 : 최근 6개월간 삼성카드 결제이력이 없는 회원",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1599-6807"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42313&cid=1379&gid=1407",
@@ -2826,6 +3358,13 @@
       "방문관리/2개월(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750654114_3573.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750654120_3484.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -2872,7 +3411,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=39800&cid=1379&gid=1407",
@@ -2888,6 +3428,24 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705940_0635.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705940_3333.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705940_6709.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705941_021.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705941_6675.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705942_366.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705946_7175.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705946_8682.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705947_0101.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705947_1262.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705947_2713.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705947_3807.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705947_5709.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -2898,7 +3456,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=39799&cid=1379&gid=1407",
@@ -2914,6 +3473,24 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705674_3254.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705674_5582.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705674_8526.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705675_1669.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705675_4989.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705675_8612.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705687_0339.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705687_2113.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705687_3655.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705687_5045.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705687_6729.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705687_7736.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705687_9571.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -2924,7 +3501,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=40000&cid=1379&gid=1407",
@@ -2944,6 +3522,22 @@
       "방문관리/6개월(프리미엄)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754475_5534.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754476_027.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754476_2795.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754476_5218.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754476_8066.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754476_9628.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754477_2423.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754477_4125.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754477_5944.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754477_7002.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739754636_6398.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -2994,7 +3588,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=40004&cid=1379&gid=1407",
@@ -3014,6 +3609,24 @@
       "방문관리/6개월(프리미엄)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755081_3205.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755081_5561.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755081_8153.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755082_1123.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755082_8474.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755083_0537.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755083_2335.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755083_4055.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755084_1023.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755084_4086.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755091_77.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755091_9371.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/12713de542889e7179d1fc84fea94528_1739755092_1167.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -3064,7 +3677,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=40191&cid=1379&gid=1407",
@@ -3080,6 +3694,24 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705862_0604.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705862_3087.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705862_6644.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705863_3321.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705863_7381.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705864_1316.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705871_2458.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705871_3827.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705871_5305.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705871_6593.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705871_7817.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705871_8908.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740705872_1051.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -3090,7 +3722,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=40192&cid=1379&gid=1407",
@@ -3106,6 +3739,24 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706040_5493.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706040_8297.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706041_1408.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706041_5713.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706041_9409.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706042_352.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706047_3014.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706047_4705.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706047_6001.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706047_7345.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706047_8902.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706048_0048.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706048_2111.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -3116,7 +3767,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=40193&cid=1379&gid=1407",
@@ -3132,6 +3784,27 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706246_4654.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706246_6707.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706246_7792.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706246_9216.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706247_1388.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706247_239.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706247_3567.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706247_6694.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706247_9791.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706253_3681.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706253_5195.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706253_6514.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706253_7712.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706253_9129.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706254_0076.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706254_1879.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -3142,7 +3815,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=40194&cid=1379&gid=1407",
@@ -3158,6 +3832,27 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706406_6548.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706406_8496.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706406_9429.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706407_1025.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706407_3447.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706407_4566.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706407_5803.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706407_8231.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706408_1052.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706413_8667.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706414_0807.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706414_213.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706414_3315.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706414_4753.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706414_5854.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/b84dae7b71a97904cbd87a25cad3e4af_1740706414_939.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 15,000원 할인",
       "(기본 7,000원 + 프로모션 8,000원)",
@@ -3168,7 +3863,8 @@
       "할인액은 1~60개월간 적용되며, 행사기간 직전 6개월 동안 삼성개인신용카드 결제 이력이 없는 신규고객에 한 해 적용",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1688-1133 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=40609&cid=1379&gid=1407",
@@ -3189,6 +3885,20 @@
       "방문관리/3개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742775679_811.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742775680_401.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742775680_5925.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742775703_4899.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742775683_5914.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742775684_2209.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742775684_3621.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742775684_4665.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742775684_582.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "30만원 이상 시 15,000원 할인",
       "(기본 10,000원 + 프로모션 5,000원)",
@@ -3213,7 +3923,8 @@
       "프로모션 대상 : 최근 6개월간 삼성카드 결제이력이 없는 회원",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1599-6807"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=40611&cid=1379&gid=1407",
@@ -3234,6 +3945,15 @@
       "방문관리/3개월(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742776251_2009.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742776251_6951.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742776251_9023.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742776252_0215.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "30만원 이상 시 15,000원 할인",
       "(기본 10,000원 + 프로모션 5,000원)",
@@ -3258,7 +3978,8 @@
       "프로모션 대상 : 최근 6개월간 삼성카드 결제이력이 없는 회원",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1599-6807"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=40613&cid=1379&gid=1407",
@@ -3279,6 +4000,15 @@
       "방문관리/3개월(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742776493_6688.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742776494_1813.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742776494_3915.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742776494_5199.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "30만원 이상 시 15,000원 할인",
       "(기본 10,000원 + 프로모션 5,000원)",
@@ -3303,7 +4033,8 @@
       "프로모션 대상 : 최근 6개월간 삼성카드 결제이력이 없는 회원",
       "연회비 : 국내 15,000원 / 국내외겸용 15,000원",
       "발급신청 : 1599-6807"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=40616&cid=1379&gid=1407",
@@ -3330,6 +4061,15 @@
       "임페리얼브라운",
       "페블그레이"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040413_9333.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742777444_3098.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742777444_6148.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/bbf87a7e8ebf205f0f9907e1e691d2fa_1742777444_7958.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -3389,7 +4129,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=41199&cid=1379&gid=1407",
@@ -3404,6 +4145,15 @@
       "방문관리/6개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/59944b2643cd7c48d17228fc1da19dc9_1746174826_6728.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/59944b2643cd7c48d17228fc1da19dc9_1746174826_9999.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/59944b2643cd7c48d17228fc1da19dc9_1746174827_3291.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/59944b2643cd7c48d17228fc1da19dc9_1746174827_5863.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본10,000원 + 프로모션 5,000원(60개월))",
@@ -3425,7 +4175,8 @@
       "전월실적 1만원 이상 시 5,000원 할인",
       "연회비 : 없음",
       "발급신청 : 1800-8888 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=41390&cid=1379&gid=1407",
@@ -3452,6 +4203,15 @@
       "임페리얼브라운",
       "페블그레이"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040489_0973.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/d1a7ac5efb344e8fa2a75154b14acfb3_1747638956_7268.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/d1a7ac5efb344e8fa2a75154b14acfb3_1747638961_4331.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/d1a7ac5efb344e8fa2a75154b14acfb3_1747638963_4363.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -3511,7 +4271,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=41643&cid=1379&gid=1407",
@@ -3520,6 +4281,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2503/31f7b676bbcb0c84f51b1dffacacc131_1741829058_2524.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -3551,7 +4318,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=41863&cid=1379&gid=1407",
@@ -3560,6 +4328,47 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090253_0479.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090253_2039.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090253_337.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090280_1478.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090255_8569.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090256_0926.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090256_2531.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090256_3952.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090256_5128.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090258_0324.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090292_4574.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090292_5605.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090293_4457.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090293_5309.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090293_7916.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090293_9241.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090294_6316.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090294_741.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090294_8708.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090295_0911.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090306_8996.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090307_0333.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090307_1268.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090307_4459.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090307_5709.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090307_7169.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090307_8234.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090332_5964.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090310_4515.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090310_576.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090343_193.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090343_465.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090343_6329.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090343_7572.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090343_8713.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2501/84c993ebef086d1adf7dbbda39647840_1737090344_0521.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -3610,7 +4419,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=41867&cid=1379&gid=1407",
@@ -3619,6 +4429,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/a4bdb8ba10f80aafa132f805b0b9bd66_1747295327_1459.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -3650,7 +4466,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=41958&cid=1379&gid=1407",
@@ -3663,6 +4480,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2405/fea38e2cd69f65343d518280af11ed1c_1715818297_95.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -3694,7 +4517,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42314&cid=1379&gid=1407",
@@ -3711,6 +4535,13 @@
       "방문관리/2개월(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750654861_9823.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750654861_7925.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -3757,7 +4588,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42315&cid=1379&gid=1407",
@@ -3771,6 +4603,19 @@
     ],
     "colors": [
       "화이트"
+    ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/92cf629814b69d7c67fc4699b682179f_1769756801_6815.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071615_222.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071617_377.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071617_8871.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071618_7454.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071619_4817.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071620_6659.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071620_9417.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
     ],
     "partner_cards": [
       "전월실적 30만원 이상 시 13,000원 할인",
@@ -3822,7 +4667,8 @@
       "프로모션 대상 : 행사기간 직전 6개월간 모든 신한신용카드(신한BC포함) 결제이력이 없고, 대상 카드로 SK인텔릭스 구독료 자동납부를 최초로 등록하고, 행사기간 내 '마케팅 전체항목 동의' 완료 및 혜택 제공 시점까지 유지한 고객",
       "연회비 : 국내 25,000원 / 국내외겸용 28,000원",
       "발급신청 : 1661-8599 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42317&cid=1379&gid=1407",
@@ -3838,6 +4684,21 @@
     "colors": [
       "다크그레이"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/92cf629814b69d7c67fc4699b682179f_1769756822_9548.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750655943_1546.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750655943_3129.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750655943_554.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750655944_0962.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750655944_2595.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750655944_4089.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750655944_5251.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750655944_7507.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750655944_8621.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 13,000원 할인",
       "전월실적 100만원 이상 시 18,000원 할인",
@@ -3888,7 +4749,8 @@
       "프로모션 대상 : 행사기간 직전 6개월간 모든 신한신용카드(신한BC포함) 결제이력이 없고, 대상 카드로 SK인텔릭스 구독료 자동납부를 최초로 등록하고, 행사기간 내 '마케팅 전체항목 동의' 완료 및 혜택 제공 시점까지 유지한 고객",
       "연회비 : 국내 25,000원 / 국내외겸용 28,000원",
       "발급신청 : 1661-8599 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42318&cid=1379&gid=1407",
@@ -3905,6 +4767,13 @@
       "방문관리/4개월(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2510/ce7dc7b97f707732f5f66837f7a62748_1760071317_6017.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2510/ce7dc7b97f707732f5f66837f7a62748_1760071317_2632.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -3951,7 +4820,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42319&cid=1379&gid=1407",
@@ -3971,6 +4841,44 @@
     "colors": [
       "크림베이지"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/92cf629814b69d7c67fc4699b682179f_1769756847_9825.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070447_519.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070447_6415.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070448_3593.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070448_4416.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070448_5634.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070448_725.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070449_4014.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070449_5966.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070449_7058.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070450_0177.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767143351_1127.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070450_7057.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070450_9533.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070451_046.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070451_1255.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070451_4334.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070451_9825.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070452_3088.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070452_6328.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070452_7976.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070453_328.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070454_5104.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070454_8478.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070455_9729.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070456_3869.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070456_586.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070457_9386.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070458_2968.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070458_773.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070459_079.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070459_993.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767070460_297.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 13,000원 할인",
       "전월실적 100만원 이상 시 18,000원 할인",
@@ -4021,6 +4929,9 @@
       "프로모션 대상 : 행사기간 직전 6개월간 모든 신한신용카드(신한BC포함) 결제이력이 없고, 대상 카드로 SK인텔릭스 구독료 자동납부를 최초로 등록하고, 행사기간 내 '마케팅 전체항목 동의' 완료 및 혜택 제공 시점까지 유지한 고객",
       "연회비 : 국내 25,000원 / 국내외겸용 28,000원",
       "발급신청 : 1661-8599 또는 온라인신청"
+    ],
+    "promotion": [
+      "반값할인"
     ]
   },
   {
@@ -4041,6 +4952,13 @@
       "자가관리(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750656885_5746.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/3d16dd126cca20aaae4d90c3565d5966_1750656885_3653.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -4087,7 +5005,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42322&cid=1379&gid=1407",
@@ -4107,6 +5026,44 @@
     "colors": [
       "화이트"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/92cf629814b69d7c67fc4699b682179f_1769756910_1945.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069103_3251.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069103_4538.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069104_0417.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069104_1372.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069104_3115.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069104_3908.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069104_7796.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069104_9927.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069105_0798.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069105_3574.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767143504_119.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069107_271.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069107_8089.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069107_8687.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069107_9478.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069108_2609.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069109_0837.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069109_7486.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069110_0437.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069110_1866.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069110_6551.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069113_347.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069113_6834.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069114_2375.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069114_524.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069114_6717.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069115_2095.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069115_5274.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069115_9884.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069116_2654.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069116_8081.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069117_0736.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 13,000원 할인",
       "전월실적 100만원 이상 시 18,000원 할인",
@@ -4157,6 +5114,9 @@
       "프로모션 대상 : 행사기간 직전 6개월간 모든 신한신용카드(신한BC포함) 결제이력이 없고, 대상 카드로 SK인텔릭스 구독료 자동납부를 최초로 등록하고, 행사기간 내 '마케팅 전체항목 동의' 완료 및 혜택 제공 시점까지 유지한 고객",
       "연회비 : 국내 25,000원 / 국내외겸용 28,000원",
       "발급신청 : 1661-8599 또는 온라인신청"
+    ],
+    "promotion": [
+      "반값할인"
     ]
   },
   {
@@ -4176,6 +5136,50 @@
     "colors": [
       "실버"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/92cf629814b69d7c67fc4699b682179f_1769756975_3453.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071291_2682.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071291_7795.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071292_5478.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071292_881.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071296_1255.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071296_3393.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071297_9443.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071298_0736.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071298_7484.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071299_1474.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071299_5017.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071306_5722.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071306_8768.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071307_341.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071307_505.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071312_9781.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071313_0788.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071314_0324.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071314_1777.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071314_3829.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071314_6693.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071314_7868.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071316_6555.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071316_9871.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071317_1789.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071317_3117.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071318_9457.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071319_4972.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071322_4831.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071322_8259.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071323_0163.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071323_2584.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071323_4042.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071324_9471.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071325_6441.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071326_0018.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071326_4565.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767071326_6794.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 13,000원 할인",
       "전월실적 100만원 이상 시 18,000원 할인",
@@ -4226,7 +5230,8 @@
       "프로모션 대상 : 행사기간 직전 6개월간 모든 신한신용카드(신한BC포함) 결제이력이 없고, 대상 카드로 SK인텔릭스 구독료 자동납부를 최초로 등록하고, 행사기간 내 '마케팅 전체항목 동의' 완료 및 혜택 제공 시점까지 유지한 고객",
       "연회비 : 국내 25,000원 / 국내외겸용 28,000원",
       "발급신청 : 1661-8599 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42326&cid=1379&gid=1407",
@@ -4246,6 +5251,44 @@
       "오트밀베이지",
       "다크그린"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/92cf629814b69d7c67fc4699b682179f_1769757015_3186.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069526_6209.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069527_5455.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069527_9264.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069528_0969.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069530_979.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069531_2465.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069532_1655.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069532_3606.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069536_2815.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069536_3835.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069536_5328.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069536_7051.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069536_9258.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069537_3095.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069538_4833.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069538_84.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069539_5222.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069539_6739.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069541_9619.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069542_5224.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069546_4059.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069546_5812.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069546_7744.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069546_9305.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069547_3749.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069547_5206.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069548_5367.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069549_4164.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069549_7656.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069550_2977.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069550_4639.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/1e05f97628657ae4a04fd1bb5935c4e5_1767069550_6493.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 13,000원 할인",
       "전월실적 100만원 이상 시 18,000원 할인",
@@ -4296,7 +5339,8 @@
       "프로모션 대상 : 행사기간 직전 6개월간 모든 신한신용카드(신한BC포함) 결제이력이 없고, 대상 카드로 SK인텔릭스 구독료 자동납부를 최초로 등록하고, 행사기간 내 '마케팅 전체항목 동의' 완료 및 혜택 제공 시점까지 유지한 고객",
       "연회비 : 국내 25,000원 / 국내외겸용 28,000원",
       "발급신청 : 1661-8599 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42327&cid=1379&gid=1407",
@@ -4313,6 +5357,30 @@
     "colors": [
       "네이비"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/92cf629814b69d7c67fc4699b682179f_1769757058_0526.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659963_4484.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659963_6004.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659963_7164.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659963_9679.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659964_0961.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659964_2094.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659964_6765.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659964_8231.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659965_6132.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659965_8574.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659971_4703.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659971_6387.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659971_7627.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659971_9074.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659972_0266.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659972_1466.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659972_3059.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2506/5325bfa306a05ae50af076a1dc03a771_1750659972_4427.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 13,000원 할인",
       "전월실적 100만원 이상 시 18,000원 할인",
@@ -4363,7 +5431,8 @@
       "프로모션 대상 : 행사기간 직전 6개월간 모든 신한신용카드(신한BC포함) 결제이력이 없고, 대상 카드로 SK인텔릭스 구독료 자동납부를 최초로 등록하고, 행사기간 내 '마케팅 전체항목 동의' 완료 및 혜택 제공 시점까지 유지한 고객",
       "연회비 : 국내 25,000원 / 국내외겸용 28,000원",
       "발급신청 : 1661-8599 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=42821&cid=1379&gid=1407",
@@ -4372,12 +5441,19 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/a4bdb8ba10f80aafa132f805b0b9bd66_1747297958_7041.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42823&cid=1379&gid=1407",
@@ -4395,6 +5471,12 @@
       "방문관리/12개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/a4bdb8ba10f80aafa132f805b0b9bd66_1747297537_1076.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -4445,7 +5527,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=42828&cid=1379&gid=1407",
@@ -4459,6 +5542,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2507/bac361ff54c3f95fc051fb0b70ec50d7_1752737914_1767.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -4490,7 +5579,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=43241&cid=1379&gid=1407",
@@ -4504,6 +5594,14 @@
       "방문관리/2개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040594_0963.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754289380_902.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/14d22242500d06b2c033c8ffa69bc2a2_1754289382_5221.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -4563,7 +5661,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=43462&cid=1379&gid=1407",
@@ -4583,6 +5682,12 @@
       "방문관리/6개월(프리미엄)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755679564_5396.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -4633,7 +5738,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=43463&cid=1379&gid=1407",
@@ -4653,6 +5759,12 @@
       "방문관리/6개월(프리미엄)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755679812_7581.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -4703,7 +5815,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=43467&cid=1379&gid=1407",
@@ -4721,6 +5834,24 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680192_3693.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680192_5168.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680192_6368.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680192_7337.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680192_8426.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680192_9908.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680193_1507.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680193_3488.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680193_4974.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680193_5923.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680197_7148.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680197_8444.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/3046f7fb5e3c154335f22c523f76c5f4_1755680197_9766.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -4771,7 +5902,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=43472&cid=1379&gid=1407",
@@ -4780,12 +5912,19 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2505/a4bdb8ba10f80aafa132f805b0b9bd66_1747297221_0823.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=43525&cid=1379&gid=1407",
@@ -4808,6 +5947,14 @@
       "세이지그린",
       "퓨어화이트"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040577_324.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/c869cec6264e4a756aa5dabf60506b7d_1755825643_3521.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/c869cec6264e4a756aa5dabf60506b7d_1755825643_0257.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -4867,7 +6014,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=43526&cid=1379&gid=1407",
@@ -4890,6 +6038,14 @@
       "세이지그린",
       "퓨어화이트"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040557_3112.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/c869cec6264e4a756aa5dabf60506b7d_1755826011_4683.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2508/c869cec6264e4a756aa5dabf60506b7d_1755826010_8783.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -4949,7 +6105,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=44456&cid=1379&gid=1407",
@@ -4958,6 +6115,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2507/bac361ff54c3f95fc051fb0b70ec50d7_1752736198_906.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -4989,7 +6152,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=44458&cid=1379&gid=1407",
@@ -4998,6 +6162,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2507/bac361ff54c3f95fc051fb0b70ec50d7_1752736286_831.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -5029,7 +6199,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=44530&cid=1379&gid=1407",
@@ -5042,12 +6213,19 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2510/909d2fe76b8bc10bb7f2250cc7396f6d_1760662963_1413.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47491&cid=1379&gid=1407",
@@ -5065,6 +6243,28 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805850_8131.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805850_935.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805852_1545.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805852_3651.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805853_1599.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805853_5007.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805853_8971.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805854_0572.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805855_0193.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805855_278.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805861_6385.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805861_786.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805862_0191.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805862_2179.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805862_379.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805862_5126.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2502/1568d6178b608fbd803e20286f85bddb_1738805862_673.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -5115,7 +6315,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=48393&cid=1379&gid=1407",
@@ -5124,12 +6325,19 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/762dd295e7367de5d93d14d3030f81d8_1775806658_0192.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=50655&cid=1379&gid=1407",
@@ -5142,6 +6350,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2607/31b4eb4286873f06a329e1d2b86c19dc_1784102639_5248.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -5173,7 +6387,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=50217&cid=1379&gid=1407",
@@ -5195,6 +6410,12 @@
       "애쉬로즈",
       "그로브카키"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2607/8f9c03578ea6867eee9c9dce835417ae_1782966635_745.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본10,000원 + 프로모션 5,000원(60개월))",
@@ -5216,7 +6437,8 @@
       "전월실적 1만원 이상 시 5,000원 할인",
       "연회비 : 없음",
       "발급신청 : 1800-8888 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47182&cid=1379&gid=1407",
@@ -5231,6 +6453,12 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/ace27b7ad054e15d3c6cdc5f6d51a97f_1772583736_2818.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -5277,7 +6505,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47181&cid=1379&gid=1407",
@@ -5293,6 +6522,12 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/ace27b7ad054e15d3c6cdc5f6d51a97f_1772583372_3524.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -5339,7 +6574,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47837&cid=1379&gid=1407",
@@ -5355,6 +6591,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/0ccb08ca46013032dd46269b6102820e_1775197403_9009.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본10,000원 + 프로모션 5,000원(60개월))",
@@ -5376,7 +6618,8 @@
       "전월실적 1만원 이상 시 5,000원 할인",
       "연회비 : 없음",
       "발급신청 : 1800-8888 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=45445&cid=1379&gid=1407",
@@ -5390,6 +6633,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/dddc82652a65dc78cdcd4de64a85d315_1764656102_4499.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -5436,7 +6685,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=45453&cid=1379&gid=1407",
@@ -5452,6 +6702,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/dddc82652a65dc78cdcd4de64a85d315_1764657640_9646.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -5498,7 +6754,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=45455&cid=1379&gid=1407",
@@ -5514,6 +6771,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/dddc82652a65dc78cdcd4de64a85d315_1764658377_3556.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -5560,7 +6823,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=45461&cid=1379&gid=1407",
@@ -5583,6 +6847,14 @@
       "스웨이드블루",
       "페블그레이"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040541_279.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/42daae3000d29ab575e0f1bfe0607c9c_1764834902_8741.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2512/42daae3000d29ab575e0f1bfe0607c9c_1764834905_0657.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -5642,7 +6914,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47180&cid=1379&gid=1407",
@@ -5658,6 +6931,12 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/ace27b7ad054e15d3c6cdc5f6d51a97f_1772583254_7367.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -5704,7 +6983,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47179&cid=1379&gid=1407",
@@ -5720,6 +7000,12 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/ace27b7ad054e15d3c6cdc5f6d51a97f_1772582818_6546.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -5766,7 +7052,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=46590&cid=1379&gid=1407",
@@ -5775,12 +7062,19 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/2033957c41ff8ad5d4a086732036eda6_1768800961_2562.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=46603&cid=1379&gid=1407",
@@ -5793,6 +7087,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/2033957c41ff8ad5d4a086732036eda6_1768805793_641.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -5824,7 +7124,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=46605&cid=1379&gid=1407",
@@ -5837,6 +7138,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/2033957c41ff8ad5d4a086732036eda6_1768806133_9086.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -5868,7 +7175,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=46675&cid=1379&gid=1407",
@@ -5877,6 +7185,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/a986619b0a133d78514e935f53041637_1769064282_0648.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -5908,7 +7222,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=46677&cid=1379&gid=1407",
@@ -5917,6 +7232,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/a986619b0a133d78514e935f53041637_1769064651_1347.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -5948,7 +7269,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=46873&cid=1379&gid=1407",
@@ -5957,6 +7279,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2511/3bad015525574784597414270a8cb898_1764037463_7193.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -5988,7 +7316,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47178&cid=1379&gid=1407",
@@ -6003,6 +7332,12 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/490f11b1c9703b37c81a5d9c81bebf49_1772528123_3308.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -6049,7 +7384,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47047&cid=1379&gid=1407",
@@ -6067,6 +7403,12 @@
       "방문관리/12개월(라이트플러스)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2601/e9d0513f5f321bd0bbc55fb4f422f097_1769490517_9687.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -6117,7 +7459,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47049&cid=1379&gid=1407",
@@ -6130,6 +7473,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2602/65a1a097b964aeea198b67f4989f90a6_1770772319_7919.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -6161,7 +7510,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47050&cid=1379&gid=1407",
@@ -6174,6 +7524,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2602/65a1a097b964aeea198b67f4989f90a6_1770772389_1417.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -6205,7 +7561,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47054&cid=1379&gid=1407",
@@ -6216,6 +7573,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2602/65a1a097b964aeea198b67f4989f90a6_1770772775_3663.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -6247,7 +7610,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=49257&cid=1379&gid=1407",
@@ -6268,6 +7632,12 @@
       "블랙",
       "틸"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/0469e6e7c5c44235f2164e3666c5a957_1779848300_1574.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 10,000원+프로모션 5,000원(60개월)) 할인",
@@ -6280,7 +7650,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-2527"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=49255&cid=1379&gid=1407",
@@ -6301,6 +7672,12 @@
       "화이트",
       "실버"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/0469e6e7c5c44235f2164e3666c5a957_1779847841_4777.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 10,000원+프로모션 5,000원(60개월)) 할인",
@@ -6313,7 +7690,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-2527"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47199&cid=1379&gid=1407",
@@ -6332,6 +7710,12 @@
     ],
     "colors": [
       "토프 브라운"
+    ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/200e918e28347c881e19eba5704adc64_1772688091_5837.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
     ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
@@ -6379,7 +7763,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47207&cid=1379&gid=1407",
@@ -6392,11 +7777,18 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/19fbe0241e9d0f64564c5ae86d30ecb1_1772690882_2063.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 해외 18,000원",
       "발급신청 : 1800-1111"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47209&cid=1379&gid=1407",
@@ -6412,6 +7804,12 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/200e918e28347c881e19eba5704adc64_1772694370_265.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본10,000원 + 프로모션 5,000원(60개월))",
@@ -6433,7 +7831,8 @@
       "전월실적 1만원 이상 시 5,000원 할인",
       "연회비 : 없음",
       "발급신청 : 1800-8888 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=50355&cid=1379&gid=1407",
@@ -6442,6 +7841,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2607/eae9451cf994ed344c77a9e2fb871f9f_1783383922_863.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 13,000원+프로모션 2,000원(48개월))",
@@ -6450,7 +7855,8 @@
       "발급월로부터 48개월간 적용",
       "연회비 : 국내외겸용(MASTER, ONE WAY(JCB)) 15,000원 / 국내외겸용(VISA) 20,000원",
       "발급신청 : 1800-1111"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47520&cid=1379&gid=1407",
@@ -6465,6 +7871,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2603/8deaf33ec1ebd7da6164a2d17e241434_1773991133_4364.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -6511,7 +7923,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47834&cid=1379&gid=1407",
@@ -6527,6 +7940,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/0ccb08ca46013032dd46269b6102820e_1775193599_2706.webp",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본10,000원 + 프로모션 5,000원(60개월))",
@@ -6548,7 +7967,8 @@
       "전월실적 1만원 이상 시 5,000원 할인",
       "연회비 : 없음",
       "발급신청 : 1800-8888 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47836&cid=1379&gid=1407",
@@ -6564,6 +7984,12 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/0ccb08ca46013032dd46269b6102820e_1775197231_2195.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본10,000원 + 프로모션 5,000원(60개월))",
@@ -6585,7 +8011,8 @@
       "전월실적 1만원 이상 시 5,000원 할인",
       "연회비 : 없음",
       "발급신청 : 1800-8888 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47868&cid=1379&gid=1407",
@@ -6605,6 +8032,13 @@
       "방문관리/6개월(프리미엄)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/97c502d1be1f7bd63042fd5dace67b85_1775462952_0067.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/97c502d1be1f7bd63042fd5dace67b85_1775462953_6816.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -6655,7 +8089,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47869&cid=1379&gid=1407",
@@ -6675,6 +8110,13 @@
       "방문관리/6개월(프리미엄)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/97c502d1be1f7bd63042fd5dace67b85_1775463889_7238.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/97c502d1be1f7bd63042fd5dace67b85_1775463891_5359.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -6725,7 +8167,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47870&cid=1379&gid=1407",
@@ -6745,6 +8188,13 @@
       "방문관리/6개월(프리미엄)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/97c502d1be1f7bd63042fd5dace67b85_1775464386_6779.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/97c502d1be1f7bd63042fd5dace67b85_1775464388_1464.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -6795,7 +8245,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47871&cid=1379&gid=1407",
@@ -6815,6 +8266,13 @@
       "방문관리/6개월(프리미엄)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/97c502d1be1f7bd63042fd5dace67b85_1775464750_0021.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/97c502d1be1f7bd63042fd5dace67b85_1775464751_4873.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 100만원 이상 시 35,000원 할인",
       "(기본 29,000원+프로모션 6,000원) 할인",
@@ -6865,7 +8323,8 @@
       "전월실적 120만원 이상 시 16,000원 할인",
       "국내외겸용 20,000원",
       "발급신청 : 1670-0442"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=47916&cid=1379&gid=1407",
@@ -6883,6 +8342,12 @@
       "자가관리(타사보상)"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/c4a47b16d202bdd22c1de7bbbbfc770c_1775611017_8051.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본12,000원+프로모션 3,000원)",
@@ -6929,7 +8394,8 @@
       "전월실적 30만원 이상 11,000원 할인",
       "전월실적 80만원 이상 16,000원 할인",
       "연회비 : 국내 12,000원 / 국내외겸용 15,000원"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=47979&cid=1379&gid=1407",
@@ -6938,6 +8404,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/762dd295e7367de5d93d14d3030f81d8_1775806841_4652.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -6969,7 +8441,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=47981&cid=1379&gid=1407",
@@ -6978,6 +8451,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/762dd295e7367de5d93d14d3030f81d8_1775806981_0186.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -7009,7 +8488,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=47983&cid=1379&gid=1407",
@@ -7018,12 +8498,19 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/762dd295e7367de5d93d14d3030f81d8_1775807112_8276.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=48056&cid=1379&gid=1407",
@@ -7046,6 +8533,13 @@
       "세이지그린",
       "페블그레이"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040507_9769.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/1d5c474e0751f224600f5114c55e200b_1776212017_8089.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -7105,7 +8599,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=48057&cid=1379&gid=1407",
@@ -7128,6 +8623,13 @@
       "세이지그린",
       "페블그레이"
     ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/66099cd78d542ed9c58bc0ef17f35f1f_1778040524_6542.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/1d5c474e0751f224600f5114c55e200b_1776212292_7793.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -7187,7 +8689,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=48395&cid=1379&gid=1407",
@@ -7196,12 +8699,19 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/762dd295e7367de5d93d14d3030f81d8_1775806362_3644.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 12,000원 할인",
       "전월실적 70만원 이상 17,000원 할인",
       "연회비 : 국내외겸용 15,000원",
       "발급신청 : 1588-1688"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=48397&cid=1379&gid=1407",
@@ -7210,6 +8720,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/762dd295e7367de5d93d14d3030f81d8_1775806193_8177.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 13,000원+프로모션 2,000원(48개월))",
@@ -7218,7 +8734,8 @@
       "발급월로부터 48개월간 적용",
       "연회비 : 국내외겸용(MASTER, ONE WAY(JCB)) 15,000원 / 국내외겸용(VISA) 20,000원",
       "발급신청 : 1800-1111"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=48435&cid=1379&gid=1407",
@@ -7231,6 +8748,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777359935_3848.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -7262,7 +8785,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=48436&cid=1379&gid=1407",
@@ -7275,6 +8799,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360069_6349.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -7306,7 +8836,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=48437&cid=1379&gid=1407",
@@ -7317,6 +8848,21 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360175_276.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360179_2681.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360183_4962.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360186_6709.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360188_9411.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360251_1094.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360199_6101.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360203_4515.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360206_0447.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2604/66099cd78d542ed9c58bc0ef17f35f1f_1777360209_5057.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -7348,7 +8894,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=48607&cid=1379&gid=1407",
@@ -7364,6 +8911,17 @@
       "셀프케어"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/d525b22b4114230581e6fc41e1c73bda_1777869927_134.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/d525b22b4114230581e6fc41e1c73bda_1777869927_6801.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/d525b22b4114230581e6fc41e1c73bda_1777869930_7984.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/d525b22b4114230581e6fc41e1c73bda_1777869930_9436.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/d525b22b4114230581e6fc41e1c73bda_1777869936_8187.gif",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/d525b22b4114230581e6fc41e1c73bda_1777869938_9051.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 10,000원+프로모션 5,000원(60개월))",
@@ -7379,7 +8937,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-2527"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=49101&cid=1379&gid=1407",
@@ -7390,6 +8949,13 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/fa1c50e548c2aefe2e5a0bf3123d2039_1779432185_74.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2605/fa1c50e548c2aefe2e5a0bf3123d2039_1779432186_3394.webp",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -7421,7 +8987,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=49377&cid=1379&gid=1407",
@@ -7438,6 +9005,13 @@
       "방문관리/4개월"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2607/61b2d0a00b25b59620a6918e1bdd34b7_1783303236_4558.png",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2606/314acf5e1def375bb52a10312990de6a_1780547346_4889.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 25,000원 할인",
       "(기본 8,000원 + 프로모션 17,000원(60개월))",
@@ -7497,7 +9071,8 @@
       "프로모션 대상 : 최근 6개월간 모든 신한카드(신용카드) 청구 및 사용이력이 없는 고객",
       "연회비 : 국내 27,000원 / 국내외겸용 30,000원",
       "발급신청 : 1833-6013"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=50183&cid=1379&gid=1407",
@@ -7518,6 +9093,12 @@
       "본베이지",
       "애쉬로즈",
       "그로브카키"
+    ],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2606/67aac1102a69d02d08ca4e5d62a6da4b_1782694000_0444.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
     ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
@@ -7540,7 +9121,8 @@
       "전월실적 1만원 이상 시 5,000원 할인",
       "연회비 : 없음",
       "발급신청 : 1800-8888 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=50268&cid=1379&gid=1407",
@@ -7556,6 +9138,12 @@
       "자가관리"
     ],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2607/1f8f847463a3028567118a0a977c2ad5_1783061816_8014.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 40만원 이상 시 21,000원 할인",
       "(기본 8,000원+프로모션 13,000원)",
@@ -7602,7 +9190,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내외겸용 12,000원",
       "발급신청 : 1800-1316"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=50456&cid=1379&gid=1407",
@@ -7611,6 +9200,13 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2411/2e84385d8055630d816b299bf34e10d4_1731472575_4822.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2411/2e84385d8055630d816b299bf34e10d4_1731472578_7684.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -7642,7 +9238,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=50457&cid=1379&gid=1407",
@@ -7651,6 +9248,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2403/f86c4791271491cf60ecc0c5894a8206_1710314470_1378.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -7682,7 +9285,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=50458&cid=1379&gid=1407",
@@ -7691,6 +9295,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2411/2e84385d8055630d816b299bf34e10d4_1731461340_0502.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -7722,7 +9332,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/products.php?no=50459&cid=1379&gid=1407",
@@ -7731,6 +9342,12 @@
     "rental_periods": [],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2411/2e84385d8055630d816b299bf34e10d4_1731461171_1887.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 17,000원 할인",
       "(기본 8,000원+프로모션 9,000원)",
@@ -7762,7 +9379,8 @@
       "전월실적 30만원 이상 월 최대 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-1111 또는 온라인신청"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=50528&cid=1379&gid=1407",
@@ -7775,6 +9393,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2607/c489ad0d317cf1aa9e1982e84c24afd1_1783730032_0635.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 10,000원+프로모션 5,000원(60개월))",
@@ -7790,7 +9414,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-2527"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=50530&cid=1379&gid=1407",
@@ -7803,6 +9428,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2607/c489ad0d317cf1aa9e1982e84c24afd1_1783730265_2883.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 10,000원+프로모션 5,000원(60개월))",
@@ -7818,7 +9449,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-2527"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=50533&cid=1379&gid=1407",
@@ -7831,6 +9463,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2607/c489ad0d317cf1aa9e1982e84c24afd1_1783730476_6155.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 10,000원+프로모션 5,000원(60개월))",
@@ -7846,7 +9484,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-2527"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=50582&cid=1379&gid=1407",
@@ -7859,6 +9498,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2607/bcc08d1e58d06e011c2538c044b24bba_1783907448_1335.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 10,000원+프로모션 5,000원(60개월))",
@@ -7874,7 +9519,8 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-2527"
-    ]
+    ],
+    "promotion": []
   },
   {
     "url": "https://www.rentalsegye.com/product.php?no=50583&cid=1379&gid=1407",
@@ -7887,6 +9533,12 @@
     ],
     "maintenance_cycles": [],
     "colors": [],
+    "sizes": [],
+    "care_types": [],
+    "detail_images": [
+      "//tlpartner.speedycdn.net/data/editor/rentalworld/2607/bcc08d1e58d06e011c2538c044b24bba_1783907538_8348.jpg",
+      "//tlpartner.speedycdn.net/data/editor/rentalworld3/2506/27ec1f80e98d4ac96d17a62fc8bd97f1_1749776933_3247.png"
+    ],
     "partner_cards": [
       "전월실적 30만원 이상 시 15,000원 할인",
       "(기본 10,000원+프로모션 5,000원(60개월))",
@@ -7902,6 +9554,7 @@
       "전월실적 30만원 이상 13,000원 할인",
       "연회비 : 국내 18,000원 / 국내외겸용 18,000원",
       "발급신청 : 1800-2527"
-    ]
+    ],
+    "promotion": []
   }
 ]

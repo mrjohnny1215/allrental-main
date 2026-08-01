@@ -40,6 +40,12 @@ function ProductDetailModal({ product, onClose }) {
   const sizes = detail.sizes && detail.sizes.length
     ? detail.sizes
     : [];
+  const careTypes = detail.care_types && detail.care_types.length
+    ? detail.care_types
+    : [];
+  const detailImages = detail.detail_images && detail.detail_images.length
+    ? detail.detail_images
+    : [];
   const cards = detail.partner_cards && detail.partner_cards.length
     ? detail.partner_cards
     : [];
@@ -163,6 +169,19 @@ function ProductDetailModal({ product, onClose }) {
               )
             )}
 
+            {isMattress && careTypes.length > 0 && (
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">관리 유형</label>
+                <div className="flex flex-wrap gap-2">
+                  {careTypes.map((item) => (
+                    <span key={item} className="px-4 py-2 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 text-sm font-medium">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {promotion ? (
               <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-4 border border-red-100">
                 <h4 className="text-sm font-bold text-red-900 mb-2 flex items-center">
@@ -197,6 +216,24 @@ function ProductDetailModal({ product, onClose }) {
               </div>
             )}
           </div>
+
+          {detailImages.length > 0 && (
+            <div className="mb-6">
+              <label className="block text-sm font-bold text-gray-700 mb-2">제품 상세</label>
+              <div className="space-y-3">
+                {detailImages.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img.startsWith('//') ? 'https:' + img : img}
+                    alt={`${product.desc} 상세이미지 ${i + 1}`}
+                    className="w-full rounded-xl border border-gray-200"
+                    loading="lazy"
+                    onError={(e) => { e.target.style.display = 'none'; }}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
 
           <button onClick={handleConsult}
             className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 rounded-xl shadow-lg hover:from-blue-700 hover:to-blue-800 transition-all text-lg flex items-center justify-center gap-2 active:scale-[0.98]">
@@ -250,12 +287,10 @@ export default function App() {
         const list = await listRes.json();
         const detailRaw = await detailRes.json();
 
-        // 상세 데이터를 평탄화 + URL 정규화 키맵으로 병합
+        // 상세 데이터: merged_products.json 은 {url: detail} flat 구조 (URL 정규화 키맵)
         const detailMap = {};
-        for (const cat of Object.keys(detailRaw)) {
-          for (const url of Object.keys(detailRaw[cat])) {
-            detailMap[normalizeUrl(url)] = detailRaw[cat][url];
-          }
+        for (const url of Object.keys(detailRaw)) {
+          detailMap[normalizeUrl(url)] = detailRaw[url];
         }
 
         const merged = list.map((item) => ({

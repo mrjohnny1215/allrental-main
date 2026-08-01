@@ -58,7 +58,9 @@ def extract_urls_from_csv(filename):
     return list(dict.fromkeys(urls))
 
 def crawl_product_detail(session, url):
-    """상품 상세 페이지에서 모든 정보 추출"""
+    """정수기: 공통 로직 위임 (category='water')"""
+    from crawl_common import crawl_product_detail as _common
+    return _common(session, url, category='water')
     try:
         # 요청마다 랜덤 User-Agent 및 완전한 브라우저 헤더 적용
         session.headers.update({

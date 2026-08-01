@@ -23,8 +23,9 @@ for item in PROD:
     url = item['url']
     try:
         d = mods[cat].crawl_product_detail(sess, url)
+        d['category'] = cat  # 통계/프론트용 카테고리 병합
     except Exception as e:
-        d = {'url': url, 'error': str(e)}
+        d = {'url': url, 'error': str(e), 'category': cat}
     merged[url] = d
     done += 1
     if done % 20 == 0:
@@ -36,12 +37,16 @@ json.dump(merged, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1
 print(f'DONE: {total}개 -> {out}', flush=True)
 
 # 통계
-for c in ['bidet','water','air','mattress']:
-    items=[v for v in merged.values() if v.get('category')==c]
-    n=len(items)
-    p=sum(1 for x in items if x.get('rental_periods'))
-    cy=sum(1 for x in items if x.get('maintenance_cycles'))
-    co=sum(1 for x in items if x.get('colors'))
-    pr=sum(1 for x in items if x.get('promotion'))
-    ca=sum(1 for x in items if x.get('partner_cards'))
-    print(f'  [{c}] {n}개 periods={p} cycles={cy} colors={co} promo={pr} cards={ca}', flush=True)
+for c in ['bidet', 'water', 'air', 'mattress']:
+    items = [v for v in merged.values() if v.get('category') == c]
+    n = len(items)
+    p = sum(1 for x in items if x.get('rental_periods'))
+    cy = sum(1 for x in items if x.get('maintenance_cycles'))
+    sz = sum(1 for x in items if x.get('sizes'))
+    ct = sum(1 for x in items if x.get('care_types'))
+    co = sum(1 for x in items if x.get('colors'))
+    di = sum(1 for x in items if x.get('detail_images'))
+    pr = sum(1 for x in items if x.get('promotion'))
+    ca = sum(1 for x in items if x.get('partner_cards'))
+    err = sum(1 for x in items if x.get('error'))
+    print(f'  [{c}] {n}개 periods={p} cycles={cy} sizes={sz} care={ct} colors={co} detailImg={di} promo={pr} cards={ca} err={err}', flush=True)
