@@ -570,7 +570,7 @@ export default function App() {
                       <span className="text-lg">📦</span>
                     )}
                   </div>
-                  <span className="text-[11px] font-semibold whitespace-nowrap">{c.name} <span className="opacity-70">{products.filter(p=>p.category===c.key).length}</span></span>
+                  <span className="text-[11px] font-semibold whitespace-nowrap">{c.name}</span>
                 </button>
               ))}
             </div>
