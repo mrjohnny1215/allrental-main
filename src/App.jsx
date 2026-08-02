@@ -122,7 +122,7 @@ const parsePrice = (s) => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) 
 // ==========================================
 // 상품 상세 모달
 // ==========================================
-function ProductDetailModal({ product, onClose, onSelectRecommend }) {
+function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }) {
   const catKey = product.category;
   const detail = product.detail || {};
   const isMattress = catKey === 'mattress';
@@ -165,6 +165,23 @@ function ProductDetailModal({ product, onClose, onSelectRecommend }) {
   const recommendations = detail.recommendations && detail.recommendations.length
     ? detail.recommendations
     : [];
+  // 교차 추천: 렌탈세계는 같은 카테고리만 추천하므로, 다른 카테고리 인기 상품(월료 낮은 순)을 섞어서 다양성 확보
+  const recNos = new Set(recommendations.map((r) => getNo(r.url)));
+  let crossRecs = [];
+  if (allProducts && allProducts.length) {
+    crossRecs = allProducts
+      .filter((p) => p.category !== catKey && p.desc && getNo(p.url) && !recNos.has(getNo(p.url)))
+      .sort((a, b) => parsePrice(a.price) - parsePrice(b.price))
+      .slice(0, 8)
+      .map((p) => ({
+        name: p.desc,
+        price: p.price,
+        image: p.image,
+        url: p.url,
+        logo: p.logo,
+      }));
+  }
+  const allRecommendations = [...recommendations, ...crossRecs].slice(0, 12);
   const brand = detail.brand || '';
   const productType = detail.product_type || '';
   const asPeriod = detail.as_period || '';
@@ -401,8 +418,8 @@ function ProductDetailModal({ product, onClose, onSelectRecommend }) {
           이메일 상담신청
         </button>
 
-        {recommendations.length > 0 && (
-          <RecommendCarousel items={recommendations} onSelect={onSelectRecommend} />
+        {allRecommendations.length > 0 && (
+          <RecommendCarousel items={allRecommendations} onSelect={onSelectRecommend} />
         )}
       </div>
 
@@ -677,6 +694,7 @@ export default function App() {
           <ProductDetailModal
             product={selectedProduct}
             onClose={() => setSelectedProduct(null)}
+            allProducts={products}
             onSelectRecommend={(rec) => {
               const recNo = getNo(rec.url);
               const target = products.find((p) => getNo(p.url) === recNo);
