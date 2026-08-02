@@ -139,21 +139,23 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
         data['title'] = h1.get_text(strip=True)
 
     # 1-2. 가격 (월 렌탈료 / 할인적용가)
-    # 렌탈세계 메인 가격은 JS 동적계산이라 정적 HTML에 없음.
-    # 렌탈세계 화면에 기본 표시되는 가격 = 추천캐러셀 첫 .card-price-normal (메인 상품과 동일)
-    cp = soup.select_one('.card-price-normal')
-    if cp:
-        ptxt = cp.get_text(strip=True).replace(',', '').replace('원', '').strip()
-        if ptxt.isdigit():
-            data['price'] = int(ptxt)
-    # 할인적용가도 동일 소스에서
-    dc_all = soup.select('.discount.highlight') or soup.select('.card-price.discount')
-    if dc_all:
-        for dc in dc_all:
-            dtxt = dc.get_text(strip=True).replace(',', '').replace('원', '').strip()
-            if dtxt.isdigit() and int(dtxt) > 0:
-                data['discount'] = int(dtxt)
-                break
+    # 렌탈세계 메인 상품 기본가 = input#it_price (추천캐러셀 가격 아님!)
+    it_price_el = soup.select_one('input#it_price')
+    if it_price_el and it_price_el.get('value'):
+        v = it_price_el.get('value').replace(',', '').strip()
+        if v.isdigit():
+            data['price'] = int(v)
+    # 할인적용가 (card_sale_amount 차감 또는 별도 표시)
+    cs = soup.select_one('input[name=card_sale_amount]')
+    if cs and cs.get('value'):
+        cv = cs.get('value').replace(',', '').strip()
+        if cv.isdigit() and int(cv) > 0:
+            # 카드할인 적용가 = 기본가 - card_sale_amount (렌탈세계 방식)
+            if data['price']:
+                discounted = data['price'] - int(cv)
+                data['discount'] = discounted if discounted > 0 else 0
+            else:
+                data['discount'] = int(cv)
 
     # 2. 모델명
     for row in soup.select('.product-spec-list dl'):
