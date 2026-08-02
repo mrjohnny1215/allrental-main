@@ -87,9 +87,11 @@ function ProductDetailModal({ product, onClose }) {
 
         <div className="p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center">
-              {product.logo && <img src={product.logo} alt="logo" className="h-8 mb-4 object-contain mx-auto" onError={(e) => (e.target.style.display = 'none')} />}
-              <img src={product.image} alt={product.desc} className="max-h-64 object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x300?text=ALL렌탈')} />
+            <div className="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center gap-3">
+              {product.logo && <img src={product.logo} alt="logo" className="h-8 w-auto object-contain mx-auto" onError={(e) => (e.target.style.display = 'none')} />}
+              <div className="w-full flex items-center justify-center">
+                <img src={product.image} alt={product.desc} className="max-h-64 w-auto object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x300?text=ALL렌탈')} />
+              </div>
             </div>
             <div>
               <div className="text-xs text-gray-500 mb-1">모델명</div>
