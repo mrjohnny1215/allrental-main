@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { SITE_CONFIG } from './config';
 
 // ==========================================
@@ -120,10 +120,14 @@ function ProductDetailModal({ product, onClose, onSelectRecommend }) {
   const detail = product.detail || {};
   const isMattress = catKey === 'mattress';
 
-  // 상세 페이지 진입 시 스크롤 맨 위로
+  // 오버레이 스크롤 컨테이너 ref
+  const scrollRef = useRef(null);
+
+  // 상세 페이지 진입 / 추천상품 전환 시 스크롤 맨 위로
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (scrollRef.current) scrollRef.current.scrollTop = 0;
+    else window.scrollTo(0, 0);
+  }, [product]);
 
   // 실제 렌탈세계 데이터만 사용 (하드코딩 폴백 제거)
   const periods = detail.rental_periods && detail.rental_periods.length
@@ -179,7 +183,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend }) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div ref={scrollRef} className="fixed inset-0 z-50 overflow-y-auto bg-gray-50">
       {/* 상단 바 (뒤로가기) */}
       <div className="sticky top-0 z-40 bg-white border-b border-gray-200 px-4 py-3 flex items-center gap-3">
         <button onClick={onClose}
