@@ -105,6 +105,13 @@ function normalizeUrl(u) {
     .replace('https://rentalsegye.com', 'https://rentalsegye.com');
 }
 
+// 렌탈세계 상품 고유번호(no) 추출 — 추천 URL(no=11344)과 목록 URL(no=11470&cid=..&gid=..) 매칭용
+function getNo(u) {
+  if (!u) return '';
+  const m = u.match(/no=(\d+)/);
+  return m ? m[1] : '';
+}
+
 function extractBrand(desc = '') {
   const m = desc.match(/\[(.*?)\]/);
   return m ? m[1] : '기타';
@@ -671,7 +678,8 @@ export default function App() {
             product={selectedProduct}
             onClose={() => setSelectedProduct(null)}
             onSelectRecommend={(rec) => {
-              const target = products.find((p) => normalizeUrl(p.url) === normalizeUrl(rec.url));
+              const recNo = getNo(rec.url);
+              const target = products.find((p) => getNo(p.url) === recNo);
               if (target) {
                 setSelectedProduct(target);
                 window.scrollTo(0, 0);
