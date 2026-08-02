@@ -138,17 +138,22 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
     if h1:
         data['title'] = h1.get_text(strip=True)
 
-    # 1-2. 가격 (월 렌탈료 / 할인적용가) — 렌탈세계와 동일하게 단일 기본 월료 표시
-    cp = soup.select_one('.card-price-normal') or soup.select_one('.price-normal')
+    # 1-2. 가격 (월 렌탈료 / 할인적용가)
+    # 렌탈세계 메인 가격은 JS 동적계산이라 정적 HTML에 없음.
+    # 렌탈세계 화면에 기본 표시되는 가격 = 추천캐러셀 첫 .card-price-normal (메인 상품과 동일)
+    cp = soup.select_one('.card-price-normal')
     if cp:
         ptxt = cp.get_text(strip=True).replace(',', '').replace('원', '').strip()
         if ptxt.isdigit():
             data['price'] = int(ptxt)
-    dc = soup.select_one('.discount.highlight') or soup.select_one('.card-price.discount')
-    if dc:
-        dtxt = dc.get_text(strip=True).replace(',', '').replace('원', '').strip()
-        if dtxt.isdigit():
-            data['discount'] = int(dtxt)
+    # 할인적용가도 동일 소스에서
+    dc_all = soup.select('.discount.highlight') or soup.select('.card-price.discount')
+    if dc_all:
+        for dc in dc_all:
+            dtxt = dc.get_text(strip=True).replace(',', '').replace('원', '').strip()
+            if dtxt.isdigit() and int(dtxt) > 0:
+                data['discount'] = int(dtxt)
+                break
 
     # 2. 모델명
     for row in soup.select('.product-spec-list dl'):
