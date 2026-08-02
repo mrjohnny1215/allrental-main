@@ -191,7 +191,12 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   const [selectedColor, setSelectedColor] = useState(colors[0] || '');
   const [showCardModal, setShowCardModal] = useState(false);
 
-  const basePrice = parsePrice(product.price);
+  // 렌탈세계 동일 실시간 가격 계산: 최종월료 = it_price + 관리주기추가금(기간별 상이)
+  const itPrice = parsePrice(detail.it_price) || parsePrice(product.price);
+  const periodPrices = detail.period_prices || {};
+  const addForPeriod = periodPrices[selectedPeriod] || {};
+  const cycleAdd = addForPeriod[selectedCycle] || 0;
+  const basePrice = itPrice + cycleAdd;
   const calculatedPrice = basePrice.toLocaleString();
 
   const handleConsult = () => {
@@ -271,7 +276,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
             <div className="bg-blue-50 rounded-lg p-3 border border-blue-100">
               <div className="flex justify-between items-center mb-1">
                 <span className="text-sm text-gray-600">월 렌탈료</span>
-                <span className="text-xl font-bold text-gray-900">{product.price}원</span>
+                <span className="text-xl font-bold text-gray-900">{calculatedPrice}원</span>
               </div>
               {product.discount && product.discount !== '0' && (
                 <div className="flex justify-between items-center pt-1 border-t border-blue-200">

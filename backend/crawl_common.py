@@ -37,9 +37,11 @@ HEADERS = {
     'Sec-Fetch-Site': 'same-origin',
     'Sec-Fetch-User': '?1',
     'Upgrade-Insecure-Requests': '1',
+    'X-Requested-With': 'XMLHttpRequest',
 }
 
 CARD_URL = 'https://rentalsegye.com/theme/tlpartner11/page/get_card_data.php?iid={iid}'
+OPTION_URL = 'https://rentalsegye.com/page/product_option.php'
 
 
 def get_session():
@@ -55,6 +57,15 @@ def normalize_url(u):
         .replace('http://www.rentalsegye.com', 'http://rentalsegye.com')
         .replace('https://rentalsegye.com', 'https://rentalsegye.com')
     )
+
+
+def _extract_iid(u):
+    """URL에서 상품 iid(no 파라미터) 추출."""
+    m = re.search(r'[?&]no=(\d+)', u or '')
+    if m:
+        return m.group(1)
+    m = re.search(r'/product\.php/(\d+)', u or '')
+    return m.group(1) if m else ''
 
 
 def _opt_texts(sel):
@@ -129,6 +140,8 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
         'breadcrumb': [],
         'recommendations': [],
         'brand': '',
+        'it_price': '',
+        'period_prices': {},
         'product_type': '',
         'as_period': '',
     }
@@ -145,6 +158,7 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
         v = it_price_el.get('value').replace(',', '').strip()
         if v.isdigit():
             data['price'] = int(v)
+            data['it_price'] = int(v)
     # 할인적용가 (card_sale_amount 차감 또는 별도 표시)
     cs = soup.select_one('input[name=card_sale_amount]')
     if cs and cs.get('value'):
@@ -196,6 +210,50 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
                     name = v.split(',')[0] if ',' in v else t
                     if name and name not in data['colors']:
                         data['colors'].append(name)
+
+    # 4-2. 기간별 옵션 추가금 수집 (렌탈세계 실시간 가격 계산용)
+    # 렌탈세계: 최종월료 = it_price + 관리주기추가금(기간별 상이)
+    # 기간마다 product_option.php AJAX 호출 → 관리주기/사이즈별 추가금 파싱
+    try:
+        from urllib.parse import urlparse, parse_qs
+        parsed = urlparse(url)
+        qs = parse_qs(parsed.query)
+        iid = qs.get('no', [None])[0]
+        if iid and data['rental_periods']:
+            ref = url
+            for period in data['rental_periods']:
+                try:
+                    post_data = {
+                        'iid': iid,
+                        'ro_id': period,
+                        'ro_idx': '0',
+                        'rental_count': '2',
+                        'ro_title': ''.join(data['rental_periods']),
+                    }
+                    pr = session.post(
+                        'https://rentalsegye.com/page/product_option.php',
+                        data=post_data, timeout=15, verify=False, headers={'Referer': ref, **HEADERS}
+                    )
+                    if pr.status_code == 200:
+                        # option value 형태: "셀프관리,12500,0" or "슈퍼싱글" (추가금 없음)
+                        opts = re.findall(r'<option value="([^"]*)">([^<]*)</option>', pr.text)
+                        price_map = {}
+                        for val, txt in opts:
+                            if not val or txt == '선택':
+                                continue
+                            parts = val.split(',')
+                            name = parts[0].strip()
+                            add = 0
+                            if len(parts) >= 2 and parts[1].strip().isdigit():
+                                add = int(parts[1])
+                            if name:
+                                price_map[name] = add
+                        if price_map:
+                            data['period_prices'][period] = price_map
+                except Exception:
+                    continue
+    except Exception:
+        pass
 
     # 5. 제품상세 이미지 — 실제 구조: #section-info / #section-detail 내 speedycdn img
     for sec_id in ('#section-info', '#section-detail'):
@@ -305,5 +363,34 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
             })
             if len(data['recommendations']) >= 12:
                 break
+
+    # 10. 약정별 관리주기 추가금 (실시간 금액 계산용)
+    # 렌탈세계: 최종월료 = it_price + 관리주기추가금, 관리주기추가금은 기간별 상이
+    # 기간 선택 시 AJAX로 옵션 재로드 -> value="이름,추가금,타입"
+    if data['rental_periods'] and (data['maintenance_cycles'] or data['sizes']):
+        periods = data['rental_periods']
+        ro_title = ''.join(periods)
+        for period in periods:
+            try:
+                payload = {
+                    'iid': _extract_iid(url),
+                    'ro_id': period,
+                    'ro_idx': '0',
+                    'rental_count': str(len(periods)),
+                    'ro_title': ro_title,
+                }
+                orsp = session.post(OPTION_URL, data=payload, headers=HEADERS, timeout=15, verify=False)
+                if orsp.status_code == 200:
+                    osoup = BeautifulSoup(orsp.text, 'html.parser')
+                    for o in osoup.find_all('option'):
+                        val = o.get('value', '')
+                        if ',' in val:
+                            parts = val.split(',')
+                            name = parts[0].strip()
+                            add = parts[1].strip() if len(parts) > 1 else '0'
+                            if name and add.isdigit():
+                                data['period_prices'].setdefault(period, {})[name] = int(add)
+            except Exception:
+                continue
 
     return data
