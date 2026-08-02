@@ -551,10 +551,6 @@ export default function App() {
               <h1 className="text-2xl font-black tracking-tight">ALL<span className="text-blue-200">렌탈</span></h1>
               <p className="text-xs text-blue-100 mt-0.5">프리미엄 렌탈 서비스</p>
             </div>
-            <div className="text-right">
-              <p className="text-xs text-blue-100">전체 상품</p>
-              <p className="text-xs font-semibold">{products.length}개</p>
-            </div>
           </div>
         </div>
         <div className="bg-white/10 backdrop-blur-sm border-t border-white/20">
