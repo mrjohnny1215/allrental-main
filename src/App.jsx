@@ -656,11 +656,6 @@ export default function App() {
       {/* 하단 플로팅 상담 버튼 */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-2xl z-30">
         <div className="max-w-7xl mx-auto px-4 py-3 flex gap-2">
-          <a href={`tel:${SITE_CONFIG.phone}`}
-            className="flex-1 bg-gray-900 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg hover:bg-gray-800 transition-all flex items-center justify-center gap-2">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-            전화 상담
-          </a>
           {SITE_CONFIG.kakaoUrl && (
             <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
               className="flex-1 bg-yellow-400 text-gray-900 font-bold py-3.5 px-6 rounded-xl shadow-lg hover:bg-yellow-300 transition-all flex items-center justify-center gap-2">
@@ -680,9 +675,8 @@ export default function App() {
               if (target) {
                 setSelectedProduct(target);
                 window.scrollTo(0, 0);
-              } else {
-                window.open(rec.url, '_blank');
               }
+              // 우리 사이트에 없는 상품은 렌탈세계로 리다이렉트하지 않고 무시
             }}
           />
         </ErrorBoundary>
