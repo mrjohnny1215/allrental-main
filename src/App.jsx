@@ -1,5 +1,29 @@
-import { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { SITE_CONFIG } from './config';
+
+// ==========================================
+// 에러 경계 (상세 페이지 크래시 시 빈 화면 방지)
+// ==========================================
+class ErrorBoundary extends React.Component {
+  constructor(props) { super(props); this.state = { hasError: false }; }
+  static getDerivedStateFromError() { return { hasError: true }; }
+  componentDidCatch(error, info) { console.error('상세페이지 에러:', error, info); }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
+          <div className="text-center">
+            <div className="text-4xl mb-3">⚠️</div>
+            <p className="text-gray-700 font-medium mb-1">페이지를 불러오지 못했습니다</p>
+            <button onClick={() => { this.setState({ hasError: false }); window.location.reload(); }}
+              className="mt-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm">새로고침</button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 // ==========================================
 // 추천상품 자동 회전 캐러셀 (렌탈세계 동일)
@@ -95,6 +119,11 @@ function ProductDetailModal({ product, onClose, onSelectRecommend }) {
   const catKey = product.category;
   const detail = product.detail || {};
   const isMattress = catKey === 'mattress';
+
+  // 상세 페이지 진입 시 스크롤 맨 위로
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // 실제 렌탈세계 데이터만 사용 (하드코딩 폴백 제거)
   const periods = detail.rental_periods && detail.rental_periods.length
@@ -623,21 +652,21 @@ export default function App() {
       </div>
 
       {selectedProduct && (
-        <ProductDetailModal
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-          onSelectRecommend={(rec) => {
-            // 추천상품 URL로 우리 데이터에서 매칭
-            const target = products.find((p) => normalizeUrl(p.url) === normalizeUrl(rec.url));
-            if (target) {
-              setSelectedProduct(target);
-              window.scrollTo(0, 0);
-            } else {
-              // 우리 데이터에 없으면 렌탈세계 원본으로 새 창
-              window.open(rec.url, '_blank');
-            }
-          }}
-        />
+        <ErrorBoundary>
+          <ProductDetailModal
+            product={selectedProduct}
+            onClose={() => setSelectedProduct(null)}
+            onSelectRecommend={(rec) => {
+              const target = products.find((p) => normalizeUrl(p.url) === normalizeUrl(rec.url));
+              if (target) {
+                setSelectedProduct(target);
+                window.scrollTo(0, 0);
+              } else {
+                window.open(rec.url, '_blank');
+              }
+            }}
+          />
+        </ErrorBoundary>
       )}
     </div>
   );
