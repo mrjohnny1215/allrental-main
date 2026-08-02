@@ -7,6 +7,10 @@ import crawl_bidet, crawl_water, crawl_air, crawl_mattress
 ROOT = os.path.dirname(os.path.dirname(__file__))
 PROD = json.load(open(os.path.join(ROOT, 'products_data.json'), encoding='utf-8'))
 
+# URL 정규화: www.rentalsegye.com -> rentalsegye.com (프론트 normalizeUrl과 일치)
+def norm_url(u):
+    return u.replace('https://www.rentalsegye.com', 'https://rentalsegye.com').replace('http://www.rentalsegye.com', 'http://rentalsegye.com')
+
 mods = {
     'bidet': crawl_bidet,
     'water': crawl_water,
@@ -18,9 +22,12 @@ sess = requests.Session()
 merged = {}
 total = len(PROD)
 done = 0
+# products_data.json url도 정규화해서 저장 (프론트와 키 일치)
+for item in PROD:
+    item['url'] = norm_url(item['url'])
 for item in PROD:
     cat = item['category']
-    url = item['url']
+    url = norm_url(item['url'])
     try:
         d = mods[cat].crawl_product_detail(sess, url)
         d['category'] = cat  # 통계/프론트용 카테고리 병합
@@ -31,6 +38,9 @@ for item in PROD:
     if done % 20 == 0:
         print(f'  {done}/{total} 완료', flush=True)
     time.sleep(0.3)
+
+# products_data.json url 정규화 반영
+json.dump(PROD, open(os.path.join(ROOT, 'products_data.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 out = os.path.join(ROOT, 'merged_products.json')
 json.dump(merged, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
