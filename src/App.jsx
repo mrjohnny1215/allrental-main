@@ -198,6 +198,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   const cycleAdd = addForPeriod[selectedCycle] || 0;
   const basePrice = itPrice + cycleAdd;
   const calculatedPrice = basePrice.toLocaleString();
+  console.log('[DEBUG가격]', { itPrice, selectedPeriod, selectedCycle, periodKeys: Object.keys(periodPrices), addForPeriod, cycleAdd, basePrice });
 
   const handleConsult = () => {
     const brand = extractBrand(product.desc);
