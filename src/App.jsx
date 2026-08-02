@@ -129,6 +129,9 @@ function ProductDetailModal({ product, onClose, onSelectRecommend }) {
     else window.scrollTo(0, 0);
   }, [product]);
 
+  // 렌탈 불가 상품 (렌탈세계에서 판매/렌탈 중단된 상품)
+  const notAvailable = detail.not_available;
+
   // 실제 렌탈세계 데이터만 사용 (하드코딩 폴백 제거)
   const periods = detail.rental_periods && detail.rental_periods.length
     ? detail.rental_periods
@@ -212,6 +215,15 @@ function ProductDetailModal({ product, onClose, onSelectRecommend }) {
       )}
 
       <div className="max-w-3xl mx-auto px-4 py-4">
+        {notAvailable && (
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-4 flex items-center gap-3">
+            <span className="text-2xl">⚠️</span>
+            <div>
+              <div className="text-sm font-bold text-amber-900">현재 렌탈 신청 불가 상품입니다</div>
+              <div className="text-xs text-amber-700 mt-0.5">렌탈세계에서 판매/렌탈이 종료된 상품으로, 상세 옵션을 제공해 드리지 못합니다. 다른 상품을 추천해 드릴까요?</div>
+            </div>
+          </div>
+        )}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
           <div className="bg-gray-50 rounded-xl p-3 flex flex-col items-center justify-center overflow-hidden">
             {product.logo && <img src={product.logo} alt="logo" className="h-7 w-auto object-contain mb-2" onError={(e) => (e.target.style.display = 'none')} />}

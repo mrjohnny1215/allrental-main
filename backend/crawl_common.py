@@ -46,6 +46,17 @@ def get_session():
     return requests.Session()
 
 
+def normalize_url(u):
+    """프론트(App.jsx)와 동일한 URL 정규화."""
+    if not u:
+        return ''
+    return (
+        u.replace('https://www.rentalsegye.com', 'https://rentalsegye.com')
+        .replace('http://www.rentalsegye.com', 'http://rentalsegye.com')
+        .replace('https://rentalsegye.com', 'https://rentalsegye.com')
+    )
+
+
 def _opt_texts(sel):
     out = []
     if not sel:
@@ -58,183 +69,217 @@ def _opt_texts(sel):
     return out
 
 
-def crawl_product_detail(session, url, category=None):
-    """카테고리별로 정확히 매핑해 상세 정보를 추출한다."""
-    try:
-        session.headers.update({'User-Agent': random.choice(USER_AGENTS), **HEADERS})
-        r = session.get(url, timeout=20, verify=False)
-        if r.status_code != 200:
-            return {'url': url, 'error': f'HTTP {r.status_code}'}
-        r.encoding = 'utf-8'
-        soup = BeautifulSoup(r.text, 'html.parser')
+def crawl_product_detail(session, url, category=None, max_retries=3):
+    """카테고리별로 정확히 매핑해 상세 정보를 추출한다.
 
-        data = {
+    렌탈세계는 대량 요청 시 일시적으로 HTTP 400(Blocked)를 뱉는다.
+    그래서 최대 max_retries 회 재시도(지수 백오프)한다.
+    """
+    last_err = None
+    for attempt in range(max_retries):
+        try:
+            session.headers.update({'User-Agent': random.choice(USER_AGENTS), **HEADERS})
+            r = session.get(url, timeout=20, verify=False)
+            if r.status_code == 200:
+                break
+            last_err = f'HTTP {r.status_code}'
+            # 400/429/5xx 는 잠시 뒤 재시도
+            if attempt < max_retries - 1:
+                time.sleep(2 ** attempt + random.uniform(0.5, 1.5))
+                continue
+            return {'url': url, 'error': last_err}
+        except Exception as e:
+            last_err = str(e)
+            if attempt < max_retries - 1:
+                time.sleep(2 ** attempt + random.uniform(0.5, 1.5))
+                continue
+            return {'url': url, 'error': last_err}
+    else:
+        return {'url': url, 'error': last_err or 'unknown'}
+
+    r.encoding = 'utf-8'
+    soup = BeautifulSoup(r.text, 'html.parser')
+
+    # 렌탈 불가 상품 판별 ("현재 렌탈중인 상품이 아닙니다" alert 등)
+    page_text = r.text
+    if '현재 렌탈중인 상품이 아닙니다' in page_text or '렌탈중인 상품이 아닙니다' in page_text:
+        return {
             'url': url,
-            'title': '',
-            'model': '',
-            'price': '',
-            'discount': '',
-            'rental_periods': [],
-            'maintenance_cycles': [],
-            'colors': [],
-            'sizes': [],
-            'care_types': [],
-            'detail_images': [],
-            'partner_cards': [],
-            'promotion': [],
-            'breadcrumb': [],
-            'recommendations': [],
+            'not_available': True,
+            'title': (soup.select_one('h1.product-title') or soup.select_one('h1')).get_text(strip=True) if (soup.select_one('h1.product-title') or soup.select_one('h1')) else '',
+            'rental_periods': [], 'maintenance_cycles': [], 'colors': [],
+            'sizes': [], 'care_types': [], 'detail_images': [], 'partner_cards': [],
+            'promotion': [], 'breadcrumb': [], 'recommendations': [],
         }
 
-        # 1. 상품명
-        h1 = soup.select_one('h1.product-title') or soup.select_one('h1')
-        if h1:
-            data['title'] = h1.get_text(strip=True)
+    data = {
+        'url': url,
+        'title': '',
+        'model': '',
+        'price': '',
+        'discount': '',
+        'rental_periods': [],
+        'maintenance_cycles': [],
+        'colors': [],
+        'sizes': [],
+        'care_types': [],
+        'detail_images': [],
+        'partner_cards': [],
+        'promotion': [],
+        'breadcrumb': [],
+        'recommendations': [],
+    }
 
-        # 1-2. 가격 (월 렌탈료 / 할인적용가) — 렌탈세계와 동일하게 단일 기본 월료 표시
-        cp = soup.select_one('.card-price-normal') or soup.select_one('.price-normal')
-        if cp:
-            ptxt = cp.get_text(strip=True).replace(',', '').replace('원', '').strip()
-            if ptxt.isdigit():
-                data['price'] = int(ptxt)
-        dc = soup.select_one('.discount.highlight') or soup.select_one('.card-price.discount')
-        if dc:
-            dtxt = dc.get_text(strip=True).replace(',', '').replace('원', '').strip()
-            if dtxt.isdigit():
-                data['discount'] = int(dtxt)
+    # 1. 상품명
+    h1 = soup.select_one('h1.product-title') or soup.select_one('h1')
+    if h1:
+        data['title'] = h1.get_text(strip=True)
 
-        # 2. 모델명
-        for row in soup.select('.product-spec-list dl'):
-            dt = row.select_one('dt'); dd = row.select_one('dd')
-            if dt and dd and '모델명' in dt.get_text(strip=True):
-                data['model'] = dd.get_text(strip=True)
-                break
+    # 1-2. 가격 (월 렌탈료 / 할인적용가) — 렌탈세계와 동일하게 단일 기본 월료 표시
+    cp = soup.select_one('.card-price-normal') or soup.select_one('.price-normal')
+    if cp:
+        ptxt = cp.get_text(strip=True).replace(',', '').replace('원', '').strip()
+        if ptxt.isdigit():
+            data['price'] = int(ptxt)
+    dc = soup.select_one('.discount.highlight') or soup.select_one('.card-price.discount')
+    if dc:
+        dtxt = dc.get_text(strip=True).replace(',', '').replace('원', '').strip()
+        if dtxt.isdigit():
+            data['discount'] = int(dtxt)
 
-        # 3. 렌탈 기간 (공통)
-        for opt in soup.select('input[name="rental_option_1"]'):
-            v = (opt.get('value') or '').strip()
-            if v and v not in data['rental_periods']:
-                data['rental_periods'].append(v)
+    # 2. 모델명
+    for row in soup.select('.product-spec-list dl'):
+        dt = row.select_one('dt'); dd = row.select_one('dd')
+        if dt and dd and '모델명' in dt.get_text(strip=True):
+            data['model'] = dd.get_text(strip=True)
+            break
 
-        # 4. 카테고리별 옵션 매핑
-        opt2 = soup.select_one('#rental_option_2')
-        opt3 = soup.select_one('#rental_option_3')
-        opt2_label = ''
-        if opt2:
-            lbl = soup.find('label', attrs={'for': opt2.get('id')})
-            if lbl:
-                opt2_label = lbl.get_text(strip=True)
+    # 3. 렌탈 기간 (공통)
+    for opt in soup.select('input[name="rental_option_1"]'):
+        v = (opt.get('value') or '').strip()
+        if v and v not in data['rental_periods']:
+            data['rental_periods'].append(v)
 
-        if category == 'mattress':
-            # #rental_option_2 = 사이즈, #rental_option_3 = 관리유형
-            data['sizes'] = _opt_texts(opt2)
-            data['care_types'] = _opt_texts(opt3)
-        else:
-            # water/bidet/air : #rental_option_2 = 관리주기
-            data['maintenance_cycles'] = _opt_texts(opt2)
-            # 색상 (정수기 등) : #rental_supply_1
-            supply = soup.select_one('#rental_supply_1')
-            if supply:
-                for o in supply.find_all('option'):
-                    v = (o.get('value') or '').strip()
-                    t = o.get_text(strip=True)
-                    if v and t and t != '선택':
-                        name = v.split(',')[0] if ',' in v else t
-                        if name and name not in data['colors']:
-                            data['colors'].append(name)
+    # 4. 카테고리별 옵션 매핑
+    opt2 = soup.select_one('#rental_option_2')
+    opt3 = soup.select_one('#rental_option_3')
+    opt2_label = ''
+    if opt2:
+        lbl = soup.find('label', attrs={'for': opt2.get('id')})
+        if lbl:
+            opt2_label = lbl.get_text(strip=True)
 
-        # 5. 제품상세 이미지 (#section-detail 내 모든 img)
-        detail = soup.select_one('#section-detail')
-        if detail:
-            for img in detail.find_all('img'):
+    if category == 'mattress':
+        # #rental_option_2 = 사이즈, #rental_option_3 = 관리유형
+        data['sizes'] = _opt_texts(opt2)
+        data['care_types'] = _opt_texts(opt3)
+    else:
+        # water/bidet/air : #rental_option_2 = 관리주기
+        data['maintenance_cycles'] = _opt_texts(opt2)
+        # 색상 (정수기 등) : #rental_supply_1
+        supply = soup.select_one('#rental_supply_1')
+        if supply:
+            for o in supply.find_all('option'):
+                v = (o.get('value') or '').strip()
+                t = o.get_text(strip=True)
+                if v and t and t != '선택':
+                    name = v.split(',')[0] if ',' in v else t
+                    if name and name not in data['colors']:
+                        data['colors'].append(name)
+
+    # 5. 제품상세 이미지 — 실제 구조: #section-info / #section-detail 내 speedycdn img
+    for sec_id in ('#section-info', '#section-detail'):
+        sec = soup.select_one(sec_id)
+        if sec:
+            for img in sec.find_all('img'):
                 src = img.get('src') or ''
-                if 'speedycdn' in src:
-                    data['detail_images'].append(src)
+                if 'speedycdn' in src or src.startswith('//tlpartner'):
+                    full = src if src.startswith('http') else ('https:' + src if src.startswith('//') else src)
+                    if full not in data['detail_images']:
+                        data['detail_images'].append(full)
 
-        # 6. 프로모션 (span.form-label '프로모션' 근처)
-        promo = soup.find('span', class_='form-label', string=lambda t: t and '프로모션' in t)
-        if promo:
-            grp = promo.find_next(class_='radio-group') or promo.find_next('div')
-            if grp:
-                for lbl in grp.find_all('label'):
-                    txt = lbl.get_text(strip=True)
-                    if txt and txt not in data['promotion']:
-                        data['promotion'].append(txt)
+    # 6. 프로모션 (span.form-label '프로모션' 근처)
+    promo = soup.find('span', class_='form-label', string=lambda t: t and '프로모션' in t)
+    if promo:
+        grp = promo.find_next(class_='radio-group') or promo.find_next('div')
+        if grp:
+            for lbl in grp.find_all('label'):
+                txt = lbl.get_text(strip=True)
+                if txt and txt not in data['promotion']:
+                    data['promotion'].append(txt)
 
-        # 7. 제휴카드 (AJAX) — 렌탈세계 UI와 동일하게 카드별 구조화
-        btn = soup.select_one('.btn-card-infomation')
-        if btn:
-            iid = btn.get('data-iid', '')
-            if iid:
-                try:
-                    cr = session.get(CARD_URL.format(iid=iid), timeout=15, verify=False)
-                    if cr.status_code == 200:
-                        csoup = BeautifulSoup(cr.text, 'html.parser')
-                        cont = csoup.select_one('.card-information-container')
-                        card_items = cont.select('.card-information-item') if cont else []
-                        if card_items:
-                            for ci in card_items:
-                                img = ci.select_one('.card-information-image img')
-                                cname = (img.get('alt') or '').strip() if img else ''
-                                if not cname:
-                                    nm = ci.select_one('.card-information-name')
-                                    cname = nm.get_text(strip=True) if nm else ''
-                                if not cname:
-                                    cname = ci.get_text(strip=True).split('\n')[0][:30]
-                                benefits = [l.strip() for l in ci.get_text('\n', strip=True).split('\n') if l.strip()]
-                                # 카드명 줄은 benefits에서 제외
-                                benefits = [b for b in benefits if b != cname]
-                                rec = {
-                                    'name': cname,
-                                    'image': ('https:' + img.get('src')) if (img and img.get('src', '').startswith('//')) else (img.get('src') if img else ''),
-                                    'benefits': benefits,
-                                }
-                                if rec['name'] and rec not in data['partner_cards']:
-                                    data['partner_cards'].append(rec)
-                        else:
-                            # 폴백: 일반 텍스트
-                            full = csoup.get_text('\n', strip=True)
-                            if full:
-                                data['partner_cards'].append({'name': '제휴카드', 'image': '', 'benefits': [full[:400]]})
-                except Exception:
-                    pass
+    # 7. 제휴카드 (AJAX) — 렌탈세계 UI와 동일하게 카드별 구조화
+    btn = soup.select_one('.btn-card-infomation')
+    if btn:
+        iid = btn.get('data-iid', '')
+        if iid:
+            try:
+                cr = session.get(CARD_URL.format(iid=iid), timeout=15, verify=False)
+                if cr.status_code == 200:
+                    csoup = BeautifulSoup(cr.text, 'html.parser')
+                    cont = csoup.select_one('.card-information-container')
+                    card_items = cont.select('.card-information-item') if cont else []
+                    if card_items:
+                        for ci in card_items:
+                            img = ci.select_one('.card-information-image img')
+                            cname = (img.get('alt') or '').strip() if img else ''
+                            if not cname:
+                                nm = ci.select_one('.card-information-name')
+                                cname = nm.get_text(strip=True) if nm else ''
+                            if not cname:
+                                cname = ci.get_text(strip=True).split('\n')[0][:30]
+                            benefits = [l.strip() for l in ci.get_text('\n', strip=True).split('\n') if l.strip()]
+                            # 카드명 줄은 benefits에서 제외
+                            benefits = [b for b in benefits if b != cname]
+                            rec = {
+                                'name': cname,
+                                'image': ('https:' + img.get('src')) if (img and img.get('src', '').startswith('//')) else (img.get('src') if img else ''),
+                                'benefits': benefits,
+                            }
+                            if rec['name'] and rec not in data['partner_cards']:
+                                data['partner_cards'].append(rec)
+                    else:
+                        # 폴백: 일반 텍스트
+                        full = csoup.get_text('\n', strip=True)
+                        if full:
+                            data['partner_cards'].append({'name': '제휴카드', 'image': '', 'benefits': [full[:400]]})
+            except Exception:
+                pass
 
-        # 8. 브레드크럼 (HOME > 카테고리 > ...) — 상품명은 제외하고 경로만
-        for nav in soup.select('nav, .location, ol, ul'):
-            links = [a.get_text(strip=True) for a in nav.find_all('a')]
-            txt = nav.get_text(' > ', strip=True)
-            if 'HOME' in txt and ('주방' in txt or '정수' in txt or '비데' in txt or '공기' in txt or '가구' in txt or '환경' in txt):
-                # HOME 이후 실제 카테고리 경로
-                parts = [p.strip() for p in txt.split('>')]
-                # 마지막 요소는 상품명이므로 제외
-                cats = [p for p in parts if p and p != 'HOME' and not p.startswith('[')]
-                if cats:
-                    data['breadcrumb'] = cats
+    # 8. 브레드크럼 (HOME > 카테고리 > ...) — 상품명은 제외하고 경로만
+    for nav in soup.select('nav, .location, ol, ul'):
+        links = [a.get_text(strip=True) for a in nav.find_all('a')]
+        txt = nav.get_text(' > ', strip=True)
+        if 'HOME' in txt and ('주방' in txt or '정수' in txt or '비데' in txt or '공기' in txt or '가구' in txt or '환경' in txt):
+            # HOME 이후 실제 카테고리 경로
+            parts = [p.strip() for p in txt.split('>')]
+            # 마지막 요소는 상품명이므로 제외
+            cats = [p for p in parts if p and p != 'HOME' and not p.startswith('[')]
+            if cats:
+                data['breadcrumb'] = cats
+            break
+
+    # 9. 추천상품 (자동 회전 캐러셀용) — 상품별 관련 상품 10개
+    # '.swiper-wrapper a[href*=product.php]' 패턴 수집
+    seen = set()
+    for a in soup.select('a[href*="product.php"]'):
+        t = a.get_text(' ', strip=True)
+        href = a.get('href', '')
+        if '월 렌탈료' in t and href and href not in seen:
+            seen.add(href)
+            # 가격 파싱
+            m_price = re.search(r'월 렌탈료\s*([\d,]+)', t)
+            m_disc = re.search(r'할인적용\s*([\d,]+)', t)
+            img = a.select_one('img')
+            name = t.split('월 렌탈료')[0].strip()
+            data['recommendations'].append({
+                'name': name,
+                'price': m_price.group(1).replace(',', '') if m_price else '',
+                'discount': (m_disc.group(1).replace(',', '') if m_disc and m_disc.group(1) != '0' else ''),
+                'image': ('https:' + img.get('src')) if (img and img.get('src', '').startswith('//')) else (img.get('src') if img else ''),
+                'url': href if href.startswith('http') else ('https://rentalsegye.com' + href),
+            })
+            if len(data['recommendations']) >= 12:
                 break
 
-        # 9. 추천상품 (자동 회전 캐러셀용) — 상품별 관련 상품 10개
-        # '.swiper-wrapper a[href*=product.php]' 패턴 수집
-        seen = set()
-        for a in soup.select('a[href*="product.php"]'):
-            t = a.get_text(' ', strip=True)
-            href = a.get('href', '')
-            if '월 렌탈료' in t and href and href not in seen:
-                seen.add(href)
-                # 가격 파싱
-                m_price = re.search(r'월 렌탈료\s*([\d,]+)', t)
-                m_disc = re.search(r'할인적용\s*([\d,]+)', t)
-                img = a.select_one('img')
-                name = t.split('월 렌탈료')[0].strip()
-                data['recommendations'].append({
-                    'name': name,
-                    'price': m_price.group(1).replace(',', '') if m_price else '',
-                    'discount': (m_disc.group(1).replace(',', '') if m_disc and m_disc.group(1) != '0' else ''),
-                    'image': ('https:' + img.get('src')) if (img and img.get('src', '').startswith('//')) else (img.get('src') if img else ''),
-                    'url': href if href.startswith('http') else ('https://rentalsegye.com' + href),
-                })
-                if len(data['recommendations']) >= 12:
-                    break
-
-        return data
-    except Exception as e:
-        return {'url': url, 'error': str(e)}
+    return data
