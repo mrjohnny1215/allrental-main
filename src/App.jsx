@@ -158,6 +158,9 @@ function ProductDetailModal({ product, onClose, onSelectRecommend }) {
   const recommendations = detail.recommendations && detail.recommendations.length
     ? detail.recommendations
     : [];
+  const brand = detail.brand || '';
+  const productType = detail.product_type || '';
+  const asPeriod = detail.as_period || '';
 
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0] || '');
   const [selectedCycle, setSelectedCycle] = useState(cycles[0] || '');
@@ -232,10 +235,14 @@ function ProductDetailModal({ product, onClose, onSelectRecommend }) {
             </div>
           </div>
           <div>
+            <div className="text-xs text-gray-500 mb-1">브랜드</div>
+            <div className="text-lg font-bold text-blue-700 mb-3">{brand || extractBrand(product.desc)}</div>
             <div className="text-xs text-gray-500 mb-1">모델명</div>
             <div className="text-sm font-mono text-gray-800 mb-3">{product.model}</div>
-            <div className="text-xs text-gray-500 mb-1">렌탈사</div>
-            <div className="text-lg font-bold text-blue-700 mb-4">{extractBrand(product.desc)}</div>
+            <div className="text-xs text-gray-500 mb-1">제품종류</div>
+            <div className="text-sm font-semibold text-gray-800 mb-3">{productType || '-'}</div>
+            <div className="text-xs text-gray-500 mb-1">AS기간</div>
+            <div className="text-sm font-semibold text-gray-800 mb-3">{asPeriod || '-'}</div>
 
             <div className="bg-blue-50 rounded-lg p-3 border border-blue-100">
               <div className="flex justify-between items-center mb-1">

@@ -128,6 +128,9 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
         'promotion': [],
         'breadcrumb': [],
         'recommendations': [],
+        'brand': '',
+        'product_type': '',
+        'as_period': '',
     }
 
     # 1. 상품명
@@ -197,6 +200,20 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
                     full = src if src.startswith('http') else ('https:' + src if src.startswith('//') else src)
                     if full not in data['detail_images']:
                         data['detail_images'].append(full)
+
+    # 5-2. 상품 스펙 (브랜드 / 모델명 / 제품종류 / AS기간) — 렌탈세계 <dl><dt>라벨</dt><dd>값</dd>
+    for dl in soup.select('dl'):
+        dts = [d.get_text(strip=True) for d in dl.select('dt')]
+        dds = [d.get_text(strip=True) for d in dl.select('dd')]
+        for dt, dd in zip(dts, dds):
+            if not dd:
+                continue
+            if dt == '브랜드' and not data['brand']:
+                data['brand'] = dd
+            elif dt == '제품종류' and not data['product_type']:
+                data['product_type'] = dd
+            elif dt in ('AS기간', 'A/S기간', '사후지원') and not data['as_period']:
+                data['as_period'] = dd
 
     # 6. 프로모션 (span.form-label '프로모션' 근처)
     promo = soup.find('span', class_='form-label', string=lambda t: t and '프로모션' in t)
