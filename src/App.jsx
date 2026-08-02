@@ -125,7 +125,6 @@ const parsePrice = (s) => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) 
 function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }) {
   const catKey = product.category;
   const detail = product.detail || product || {};
-  if (typeof window !== 'undefined') window.__detail = detail; // 임시 디버그
   const isMattress = catKey === 'mattress';
 
   // 오버레이 스크롤 컨테이너 ref
