@@ -2,6 +2,75 @@ import { useState, useEffect, useMemo } from 'react';
 import { SITE_CONFIG } from './config';
 
 // ==========================================
+// 추천상품 자동 회전 캐러셀 (렌탈세계 동일)
+// ==========================================
+function RecommendCarousel({ items, onSelect }) {
+  const [idx, setIdx] = useState(0);
+  const len = items.length;
+  useEffect(() => {
+    if (len <= 1) return;
+    const t = setInterval(() => setIdx((i) => (i + 1) % len), 3000);
+    return () => clearInterval(t);
+  }, [len]);
+
+  // 한 화면에 보여줄 슬라이드 수 (모바일 2개, 데스크탑 4개)
+  const visible = 4;
+  const pages = Math.max(1, Math.ceil(len / visible));
+  const pageIdx = Math.floor(idx / visible) % pages;
+
+  return (
+    <div className="mb-8">
+      <h3 className="text-base font-bold text-gray-900 mb-3 flex items-center gap-2">
+        <span className="text-blue-600">📋</span> 추천 상품
+      </h3>
+      <div className="relative overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out gap-3"
+          style={{ transform: `translateX(-${pageIdx * 100}%)` }}
+        >
+          {Array.from({ length: pages }).map((_, p) => (
+            <div key={p} className="flex gap-3 shrink-0" style={{ width: '100%' }}>
+              {items.slice(p * visible, p * visible + visible).map((it, i) => (
+                <button key={i} onClick={() => onSelect && onSelect(it)}
+                  className="flex-1 bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-lg transition-all text-left">
+                  <div className="h-24 bg-gray-50 flex items-center justify-center p-2">
+                    {it.image ? (
+                      <img src={it.image.startsWith('//') ? 'https:' + it.image : it.image} alt={it.name}
+                        className="max-h-full max-w-full object-contain" onError={(e) => (e.target.style.display = 'none')} />
+                    ) : null}
+                  </div>
+                  <div className="p-2">
+                    <div className="text-[10px] font-bold text-gray-800 line-clamp-2 leading-tight mb-1 h-7 overflow-hidden">{it.name}</div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-[9px] text-gray-500">월료</span>
+                      <span className="text-xs font-bold text-gray-900">{Number(it.price || 0).toLocaleString()}원</span>
+                    </div>
+                    {it.discount && (
+                      <div className="flex justify-between items-center">
+                        <span className="text-[9px] text-red-600">할인</span>
+                        <span className="text-[11px] font-bold text-red-600">{Number(it.discount).toLocaleString()}원</span>
+                      </div>
+                    )}
+                  </div>
+                </button>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+      {pages > 1 && (
+        <div className="flex justify-center gap-1.5 mt-3">
+          {Array.from({ length: pages }).map((_, p) => (
+            <button key={p} onClick={() => setIdx(p * visible)}
+              className={`h-2 rounded-full transition-all ${p === pageIdx ? 'w-5 bg-blue-600' : 'w-2 bg-gray-300'}`} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ==========================================
 // 유틸
 // ==========================================
 function normalizeUrl(u) {
@@ -22,7 +91,7 @@ const parsePrice = (s) => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) 
 // ==========================================
 // 상품 상세 모달
 // ==========================================
-function ProductDetailModal({ product, onClose }) {
+function ProductDetailModal({ product, onClose, onSelectRecommend }) {
   const catKey = product.category;
   const detail = product.detail || {};
   const isMattress = catKey === 'mattress';
@@ -50,6 +119,9 @@ function ProductDetailModal({ product, onClose }) {
     ? detail.partner_cards
     : [];
   const promotion = detail.promotion && detail.promotion.length ? detail.promotion : '';
+  const recommendations = detail.recommendations && detail.recommendations.length
+    ? detail.recommendations
+    : [];
 
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0] || '');
   const [selectedCycle, setSelectedCycle] = useState(cycles[0] || '');
@@ -88,6 +160,23 @@ function ProductDetailModal({ product, onClose }) {
         </button>
         <h1 className="text-base font-bold text-gray-900 truncate">{product.desc}</h1>
       </div>
+
+      {/* 브레드크럼 (렌탈세계 동일) */}
+      {detail.breadcrumb && detail.breadcrumb.length > 0 && (
+        <div className="bg-gray-100 border-b border-gray-200 px-4 py-2 max-w-3xl mx-auto w-full">
+          <div className="text-xs text-gray-500 flex items-center gap-1 flex-wrap">
+            <span>HOME</span>
+            {detail.breadcrumb.map((c, i) => (
+              <span key={i} className="flex items-center gap-1">
+                <span className="text-gray-300">›</span>
+                <span>{c}</span>
+              </span>
+            ))}
+            <span className="text-gray-300">›</span>
+            <span className="text-gray-700 font-medium">{product.desc}</span>
+          </div>
+        </div>
+      )}
 
       <div className="max-w-3xl mx-auto px-4 py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
@@ -252,7 +341,18 @@ function ProductDetailModal({ product, onClose }) {
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
           이메일 상담신청
         </button>
+
+        {recommendations.length > 0 && (
+          <RecommendCarousel items={recommendations} onSelect={onSelectRecommend} />
+        )}
       </div>
+
+      {/* footer (빈 영역 - 추후 정보 입력 예정) */}
+      <footer className="bg-gray-900 text-white mt-8">
+        <div className="max-w-3xl mx-auto px-4 py-8 text-center text-sm text-gray-400">
+          ALL렌탈
+        </div>
+      </footer>
 
       {showCardModal && (
         <div className="fixed inset-0 bg-black/70 z-[60] flex items-center justify-center p-4" onClick={() => setShowCardModal(false)}>
@@ -506,7 +606,21 @@ export default function App() {
       </div>
 
       {selectedProduct && (
-        <ProductDetailModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+        <ProductDetailModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+          onSelectRecommend={(rec) => {
+            // 추천상품 URL로 우리 데이터에서 매칭
+            const target = products.find((p) => normalizeUrl(p.url) === normalizeUrl(rec.url));
+            if (target) {
+              setSelectedProduct(target);
+              window.scrollTo(0, 0);
+            } else {
+              // 우리 데이터에 없으면 렌탈세계 원본으로 새 창
+              window.open(rec.url, '_blank');
+            }
+          }}
+        />
       )}
     </div>
   );

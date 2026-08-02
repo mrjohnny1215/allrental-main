@@ -15,6 +15,7 @@ import requests
 from bs4 import BeautifulSoup
 import urllib3
 import random
+import re
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -81,6 +82,8 @@ def crawl_product_detail(session, url, category=None):
             'detail_images': [],
             'partner_cards': [],
             'promotion': [],
+            'breadcrumb': [],
+            'recommendations': [],
         }
 
         # 1. 상품명
@@ -195,6 +198,42 @@ def crawl_product_detail(session, url, category=None):
                                 data['partner_cards'].append({'name': '제휴카드', 'image': '', 'benefits': [full[:400]]})
                 except Exception:
                     pass
+
+        # 8. 브레드크럼 (HOME > 카테고리 > ...) — 상품명은 제외하고 경로만
+        for nav in soup.select('nav, .location, ol, ul'):
+            links = [a.get_text(strip=True) for a in nav.find_all('a')]
+            txt = nav.get_text(' > ', strip=True)
+            if 'HOME' in txt and ('주방' in txt or '정수' in txt or '비데' in txt or '공기' in txt or '가구' in txt or '환경' in txt):
+                # HOME 이후 실제 카테고리 경로
+                parts = [p.strip() for p in txt.split('>')]
+                # 마지막 요소는 상품명이므로 제외
+                cats = [p for p in parts if p and p != 'HOME' and not p.startswith('[')]
+                if cats:
+                    data['breadcrumb'] = cats
+                break
+
+        # 9. 추천상품 (자동 회전 캐러셀용) — 상품별 관련 상품 10개
+        # '.swiper-wrapper a[href*=product.php]' 패턴 수집
+        seen = set()
+        for a in soup.select('a[href*="product.php"]'):
+            t = a.get_text(' ', strip=True)
+            href = a.get('href', '')
+            if '월 렌탈료' in t and href and href not in seen:
+                seen.add(href)
+                # 가격 파싱
+                m_price = re.search(r'월 렌탈료\s*([\d,]+)', t)
+                m_disc = re.search(r'할인적용\s*([\d,]+)', t)
+                img = a.select_one('img')
+                name = t.split('월 렌탈료')[0].strip()
+                data['recommendations'].append({
+                    'name': name,
+                    'price': m_price.group(1).replace(',', '') if m_price else '',
+                    'discount': (m_disc.group(1).replace(',', '') if m_disc and m_disc.group(1) != '0' else ''),
+                    'image': ('https:' + img.get('src')) if (img and img.get('src', '').startswith('//')) else (img.get('src') if img else ''),
+                    'url': href if href.startswith('http') else ('https://rentalsegye.com' + href),
+                })
+                if len(data['recommendations']) >= 12:
+                    break
 
         return data
     except Exception as e:
