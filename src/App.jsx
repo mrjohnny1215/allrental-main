@@ -78,185 +78,206 @@ function ProductDetailModal({ product, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 overflow-y-auto" onClick={onClose}>
-      <div className="bg-white rounded-2xl max-w-3xl w-full my-8 shadow-2xl" onClick={(e) => e.stopPropagation()}>
-        <div className="flex items-center justify-between border-b border-gray-200 px-5 py-4 rounded-t-2xl bg-white">
-          <h2 className="text-base sm:text-lg font-bold text-gray-900 truncate pr-3">{product.desc}</h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-2xl w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full hover:bg-gray-100">×</button>
-        </div>
+    <div className="min-h-screen bg-gray-50">
+      {/* 상단 바 (뒤로가기) */}
+      <div className="sticky top-0 z-40 bg-white border-b border-gray-200 px-4 py-3 flex items-center gap-3">
+        <button onClick={onBack}
+          className="flex items-center gap-1 text-gray-600 hover:text-gray-900 text-sm font-medium flex-shrink-0">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+          목록
+        </button>
+        <h1 className="text-base font-bold text-gray-900 truncate">{product.desc}</h1>
+      </div>
 
-        <div className="p-5">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-            <div className="bg-gray-50 rounded-xl p-3 flex flex-col items-center justify-center overflow-hidden">
-              {product.logo && <img src={product.logo} alt="logo" className="h-7 w-auto object-contain mb-2" onError={(e) => (e.target.style.display = 'none')} />}
-              <div className="w-full h-56 flex items-center justify-center overflow-hidden">
-                <img src={product.image} alt={product.desc} className="h-full w-full object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x300?text=ALL렌탈')} />
-              </div>
-            </div>
-            <div>
-              <div className="text-xs text-gray-500 mb-1">모델명</div>
-              <div className="text-sm font-mono text-gray-800 mb-3">{product.model}</div>
-              <div className="text-xs text-gray-500 mb-1">렌탈사</div>
-              <div className="text-lg font-bold text-blue-700 mb-4">{extractBrand(product.desc)}</div>
-
-              <div className="bg-blue-50 rounded-lg p-3 border border-blue-100">
-                <div className="flex justify-between items-center mb-1">
-                  <span className="text-sm text-gray-600">월 렌탈료</span>
-                  <span className="text-xl font-bold text-gray-900">{product.price}원</span>
-                </div>
-                {product.discount && product.discount !== '0' && (
-                  <div className="flex justify-between items-center pt-1 border-t border-blue-200">
-                    <span className="text-sm text-red-600">할인적용</span>
-                    <span className="text-lg font-bold text-red-600">{product.discount}원</span>
-                  </div>
-                )}
-              </div>
+      <div className="max-w-3xl mx-auto px-4 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <div className="bg-gray-50 rounded-xl p-3 flex flex-col items-center justify-center overflow-hidden">
+            {product.logo && <img src={product.logo} alt="logo" className="h-7 w-auto object-contain mb-2" onError={(e) => (e.target.style.display = 'none')} />}
+            <div className="w-full h-64 flex items-center justify-center overflow-hidden">
+              <img src={product.image} alt={product.desc} className="h-full w-full object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x300?text=ALL렌탈')} />
             </div>
           </div>
+          <div>
+            <div className="text-xs text-gray-500 mb-1">모델명</div>
+            <div className="text-sm font-mono text-gray-800 mb-3">{product.model}</div>
+            <div className="text-xs text-gray-500 mb-1">렌탈사</div>
+            <div className="text-lg font-bold text-blue-700 mb-4">{extractBrand(product.desc)}</div>
 
-          <div className="space-y-5 mb-6">
+            <div className="bg-blue-50 rounded-lg p-3 border border-blue-100">
+              <div className="flex justify-between items-center mb-1">
+                <span className="text-sm text-gray-600">월 렌탈료</span>
+                <span className="text-xl font-bold text-gray-900">{product.price}원</span>
+              </div>
+              {product.discount && product.discount !== '0' && (
+                <div className="flex justify-between items-center pt-1 border-t border-blue-200">
+                  <span className="text-sm text-red-600">할인적용</span>
+                  <span className="text-lg font-bold text-red-600">{product.discount}원</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-5 mb-6">
+          <div>
+            <label className="block text-sm font-bold text-gray-700 mb-2">렌탈 기간</label>
+            {periods.length > 0 ? (
+              <div className="grid grid-cols-4 gap-2">
+                {periods.map((period) => (
+                  <button key={period} onClick={() => setSelectedPeriod(period)}
+                    className={`py-2.5 px-2 rounded-lg border-2 text-sm font-semibold transition-all ${selectedPeriod === period ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
+                    <div>{period}</div>
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div className="text-sm text-gray-400 bg-gray-50 rounded-lg p-3 border border-gray-200">해당 상품의 렌탈 기간 정보가 없습니다.</div>
+            )}
+          </div>
+
+          {cycles.length > 0 && (
             <div>
-              <label className="block text-sm font-bold text-gray-700 mb-2">렌탈 기간</label>
-              {periods.length > 0 ? (
-                <div className="grid grid-cols-4 gap-2">
-                  {periods.map((period) => (
-                    <button key={period} onClick={() => setSelectedPeriod(period)}
-                      className={`py-2.5 px-2 rounded-lg border-2 text-sm font-semibold transition-all ${selectedPeriod === period ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
-                      <div>{period}</div>
+              <label className="block text-sm font-bold text-gray-700 mb-2">관리 주기</label>
+              <select value={selectedCycle} onChange={(e) => setSelectedCycle(e.target.value)}
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white">
+                {cycles.map((c) => <option key={c} value={c}>{c}</option>)}
+              </select>
+            </div>
+          )}
+
+          {isMattress ? (
+            sizes.length > 0 && (
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">매트리스 사이즈 / 관리등급</label>
+                <div className="flex flex-wrap gap-2">
+                  {sizes.map((item) => (
+                    <button key={item} onClick={() => setSelectedColor(item)}
+                      className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
+                      {item}
                     </button>
                   ))}
                 </div>
-              ) : (
-                <div className="text-sm text-gray-400 bg-gray-50 rounded-lg p-3 border border-gray-200">해당 상품의 렌탈 기간 정보가 없습니다.</div>
-              )}
-            </div>
-
-            {cycles.length > 0 && (
-              <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">관리 주기</label>
-                <select value={selectedCycle} onChange={(e) => setSelectedCycle(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white">
-                  {cycles.map((c) => <option key={c} value={c}>{c}</option>)}
-                </select>
               </div>
-            )}
-
-            {isMattress ? (
-              sizes.length > 0 && (
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">매트리스 사이즈 / 관리등급</label>
-                  <div className="flex flex-wrap gap-2">
-                    {sizes.map((item) => (
-                      <button key={item} onClick={() => setSelectedColor(item)}
-                        className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
-                        {item}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )
-            ) : (
-              colors.length > 0 && (
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">제품 색상</label>
-                  <div className="flex flex-wrap gap-2">
-                    {colors.map((item) => (
-                      <button key={item} onClick={() => setSelectedColor(item)}
-                        className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
-                        {item}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )
-            )}
-
-            {isMattress && careTypes.length > 0 && (
+            )
+          ) : (
+            colors.length > 0 && (
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">관리 유형</label>
+                <label className="block text-sm font-bold text-gray-700 mb-2">제품 색상</label>
                 <div className="flex flex-wrap gap-2">
-                  {careTypes.map((item) => (
-                    <span key={item} className="px-4 py-2 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 text-sm font-medium">
+                  {colors.map((item) => (
+                    <button key={item} onClick={() => setSelectedColor(item)}
+                      className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
                       {item}
-                    </span>
+                    </button>
                   ))}
                 </div>
               </div>
-            )}
+            )
+          )}
 
-            {promotion ? (
-              <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-4 border border-red-100">
-                <h4 className="text-sm font-bold text-red-900 mb-2 flex items-center">
-                  <span className="mr-2">🎉</span> 진행 중인 프로모션
-                </h4>
-                <div className="text-sm text-red-700 font-medium">• {promotion}</div>
-              </div>
-            ) : (
-              <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
-                <h4 className="text-sm font-bold text-gray-600 mb-2 flex items-center">
-                  <span className="mr-2">🎉</span> 진행 중인 프로모션
-                </h4>
-                <div className="text-sm text-gray-400">해당 상품의 프로모션 정보가 없습니다.</div>
-              </div>
-            )}
-
-            {cards.length > 0 && (
-              <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-100">
-                <div className="flex items-center justify-between mb-3">
-                  <h4 className="text-sm font-bold text-purple-900 flex items-center">
-                    <span className="mr-2">💳</span> 제휴카드 안내
-                  </h4>
-                  <button onClick={() => setShowCardModal(true)} className="text-xs bg-purple-600 text-white px-3 py-1 rounded-full hover:bg-purple-700">자세히 보기</button>
-                </div>
-                <div className="space-y-2">
-                  {cards.slice(0, 2).map((card, i) => (
-                    <div key={i} className="bg-white rounded-lg p-3 flex justify-between items-center border border-purple-100 text-sm">
-                      <span className="text-gray-800">{card}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {detailImages.length > 0 && (
-            <div className="mb-6">
-              <label className="block text-sm font-bold text-gray-700 mb-2">제품 상세</label>
-              <div className="space-y-3">
-                {detailImages.map((img, i) => (
-                  <img
-                    key={i}
-                    src={img.startsWith('//') ? 'https:' + img : img}
-                    alt={`${product.desc} 상세이미지 ${i + 1}`}
-                    className="w-full rounded-xl border border-gray-200"
-                    loading="lazy"
-                    onError={(e) => { e.target.style.display = 'none'; }}
-                  />
+          {isMattress && careTypes.length > 0 && (
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-2">관리 유형</label>
+              <div className="flex flex-wrap gap-2">
+                {careTypes.map((item) => (
+                  <span key={item} className="px-4 py-2 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 text-sm font-medium">
+                    {item}
+                  </span>
                 ))}
               </div>
             </div>
           )}
 
-          <button onClick={handleConsult}
-            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 rounded-xl shadow-lg hover:from-blue-700 hover:to-blue-800 transition-all text-lg flex items-center justify-center gap-2 active:scale-[0.98]">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-            이메일 상담신청
-          </button>
+          {promotion ? (
+            <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-4 border border-red-100">
+              <h4 className="text-sm font-bold text-red-900 mb-2 flex items-center">
+                <span className="mr-2">🎉</span> 진행 중인 프로모션
+              </h4>
+              <div className="text-sm text-red-700 font-medium">• {promotion}</div>
+            </div>
+          ) : (
+            <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+              <h4 className="text-sm font-bold text-gray-600 mb-2 flex items-center">
+                <span className="mr-2">🎉</span> 진행 중인 프로모션
+              </h4>
+              <div className="text-sm text-gray-400">해당 상품의 프로모션 정보가 없습니다.</div>
+            </div>
+          )}
+
+          {cards.length > 0 && (
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-100">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="text-sm font-bold text-purple-900 flex items-center">
+                  <span className="mr-2">💳</span> 제휴카드 안내
+                </h4>
+                <button onClick={() => setShowCardModal(true)} className="text-xs bg-purple-600 text-white px-3 py-1 rounded-full hover:bg-purple-700">자세히 보기</button>
+              </div>
+              <div className="space-y-2">
+                {cards.slice(0, 2).map((card, i) => (
+                  <div key={i} className="bg-white rounded-lg p-3 flex items-center gap-3 border border-purple-100">
+                    {card.image ? (
+                      <img src={card.image.startsWith('//') ? 'https:' + card.image : card.image} alt={card.name} className="h-7 w-auto object-contain flex-shrink-0" onError={(e) => (e.target.style.display = 'none')} />
+                    ) : null}
+                    <span className="text-sm font-semibold text-gray-800">{card.name}</span>
+                  </div>
+                ))}
+                {cards.length > 2 && (
+                  <div className="text-xs text-purple-600 text-center pt-1">외 {cards.length - 2}개 카드 더보기</div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
+
+        {detailImages.length > 0 && (
+          <div className="mb-6">
+            <label className="block text-sm font-bold text-gray-700 mb-2">제품 상세</label>
+            <div className="space-y-3">
+              {detailImages.map((img, i) => (
+                <img
+                  key={i}
+                  src={img.startsWith('//') ? 'https:' + img : img}
+                  alt={`${product.desc} 상세이미지 ${i + 1}`}
+                  className="w-full rounded-xl border border-gray-200"
+                  loading="lazy"
+                  onError={(e) => { e.target.style.display = 'none'; }}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        <button onClick={handleConsult}
+          className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 rounded-xl shadow-lg hover:from-blue-700 hover:to-blue-800 transition-all text-lg flex items-center justify-center gap-2 active:scale-[0.98] mb-8">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+          이메일 상담신청
+        </button>
       </div>
 
       {showCardModal && (
         <div className="fixed inset-0 bg-black/70 z-[60] flex items-center justify-center p-4" onClick={() => setShowCardModal(false)}>
           <div className="bg-white rounded-2xl max-w-lg w-full p-6" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-bold text-gray-900">제휴카드 상세 안내</h3>
+              <h3 className="text-lg font-bold text-gray-900 flex items-center"><span className="mr-2">💳</span> 제휴카드 안내</h3>
               <button onClick={() => setShowCardModal(false)} className="text-gray-400 hover:text-gray-600 text-2xl">×</button>
             </div>
-            <div className="space-y-3 max-h-96 overflow-y-auto">
+            <div className="space-y-4 max-h-[70vh] overflow-y-auto">
               {cards.map((card, idx) => (
-                <div key={idx} className="bg-purple-50 rounded-lg p-4 border border-purple-100 flex items-start gap-2 text-sm text-gray-800">
-                  <span className="text-purple-600 font-bold">•</span>
-                  <span>{card}</span>
+                <div key={idx} className="bg-purple-50 rounded-xl p-4 border border-purple-100">
+                  <div className="flex items-center gap-3 mb-3">
+                    {card.image ? (
+                      <img src={card.image.startsWith('//') ? 'https:' + card.image : card.image} alt={card.name} className="h-8 w-auto object-contain" onError={(e) => (e.target.style.display = 'none')} />
+                    ) : null}
+                    <span className="text-sm font-bold text-purple-900">{card.name}</span>
+                  </div>
+                  <ul className="space-y-1.5">
+                    {card.benefits && card.benefits.map((b, bi) => (
+                      <li key={bi} className="text-xs text-gray-700 flex items-start gap-1.5">
+                        <span className="text-purple-500 mt-0.5">•</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>

@@ -71,6 +71,8 @@ def crawl_product_detail(session, url, category=None):
             'url': url,
             'title': '',
             'model': '',
+            'price': '',
+            'discount': '',
             'rental_periods': [],
             'maintenance_cycles': [],
             'colors': [],
@@ -85,6 +87,18 @@ def crawl_product_detail(session, url, category=None):
         h1 = soup.select_one('h1.product-title') or soup.select_one('h1')
         if h1:
             data['title'] = h1.get_text(strip=True)
+
+        # 1-2. 가격 (월 렌탈료 / 할인적용가) — 렌탈세계와 동일하게 단일 기본 월료 표시
+        cp = soup.select_one('.card-price-normal') or soup.select_one('.price-normal')
+        if cp:
+            ptxt = cp.get_text(strip=True).replace(',', '').replace('원', '').strip()
+            if ptxt.isdigit():
+                data['price'] = int(ptxt)
+        dc = soup.select_one('.discount.highlight') or soup.select_one('.card-price.discount')
+        if dc:
+            dtxt = dc.get_text(strip=True).replace(',', '').replace('원', '').strip()
+            if dtxt.isdigit():
+                data['discount'] = int(dtxt)
 
         # 2. 모델명
         for row in soup.select('.product-spec-list dl'):
@@ -144,7 +158,7 @@ def crawl_product_detail(session, url, category=None):
                     if txt and txt not in data['promotion']:
                         data['promotion'].append(txt)
 
-        # 7. 제휴카드 (AJAX)
+        # 7. 제휴카드 (AJAX) — 렌탈세계 UI와 동일하게 카드별 구조화
         btn = soup.select_one('.btn-card-infomation')
         if btn:
             iid = btn.get('data-iid', '')
@@ -153,15 +167,32 @@ def crawl_product_detail(session, url, category=None):
                     cr = session.get(CARD_URL.format(iid=iid), timeout=15, verify=False)
                     if cr.status_code == 200:
                         csoup = BeautifulSoup(cr.text, 'html.parser')
-                        items = csoup.select('.card-item, .partner-card, li, tr')
-                        for it in items:
-                            t = it.get_text(' ', strip=True)
-                            if t and len(t) > 3 and t not in data['partner_cards']:
-                                data['partner_cards'].append(t)
-                        if not data['partner_cards']:
+                        cont = csoup.select_one('.card-information-container')
+                        card_items = cont.select('.card-information-item') if cont else []
+                        if card_items:
+                            for ci in card_items:
+                                img = ci.select_one('.card-information-image img')
+                                cname = (img.get('alt') or '').strip() if img else ''
+                                if not cname:
+                                    nm = ci.select_one('.card-information-name')
+                                    cname = nm.get_text(strip=True) if nm else ''
+                                if not cname:
+                                    cname = ci.get_text(strip=True).split('\n')[0][:30]
+                                benefits = [l.strip() for l in ci.get_text('\n', strip=True).split('\n') if l.strip()]
+                                # 카드명 줄은 benefits에서 제외
+                                benefits = [b for b in benefits if b != cname]
+                                rec = {
+                                    'name': cname,
+                                    'image': ('https:' + img.get('src')) if (img and img.get('src', '').startswith('//')) else (img.get('src') if img else ''),
+                                    'benefits': benefits,
+                                }
+                                if rec['name'] and rec not in data['partner_cards']:
+                                    data['partner_cards'].append(rec)
+                        else:
+                            # 폴백: 일반 텍스트
                             full = csoup.get_text('\n', strip=True)
                             if full:
-                                data['partner_cards'].append(full[:300])
+                                data['partner_cards'].append({'name': '제휴카드', 'image': '', 'benefits': [full[:400]]})
                 except Exception:
                     pass
 
