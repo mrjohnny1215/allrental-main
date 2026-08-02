@@ -486,8 +486,8 @@ export default function App() {
     const loadAll = async () => {
       try {
         const [listRes, detailRes] = await Promise.all([
-          fetch('/products_data.json'),
-          fetch('/merged_products.json'),
+          fetch('/products_data.json?v=20250101'),
+          fetch('/merged_products.json?v=20250101'),
         ]);
         const list = await listRes.json();
         const detailRaw = await detailRes.json();
