@@ -80,17 +80,17 @@ function ProductDetailModal({ product, onClose }) {
   return (
     <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 overflow-y-auto" onClick={onClose}>
       <div className="bg-white rounded-2xl max-w-3xl w-full my-8 shadow-2xl" onClick={(e) => e.stopPropagation()}>
-        <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between rounded-t-2xl z-10">
-          <h2 className="text-lg font-bold text-gray-900 truncate pr-4">{product.desc}</h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-2xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">×</button>
+        <div className="flex items-center justify-between border-b border-gray-200 px-5 py-4 rounded-t-2xl bg-white">
+          <h2 className="text-base sm:text-lg font-bold text-gray-900 truncate pr-3">{product.desc}</h2>
+          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-2xl w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full hover:bg-gray-100">×</button>
         </div>
 
-        <div className="p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center gap-3">
-              {product.logo && <img src={product.logo} alt="logo" className="h-8 w-auto object-contain mx-auto" onError={(e) => (e.target.style.display = 'none')} />}
-              <div className="w-full flex items-center justify-center">
-                <img src={product.image} alt={product.desc} className="max-h-64 w-auto object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x300?text=ALL렌탈')} />
+        <div className="p-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+            <div className="bg-gray-50 rounded-xl p-3 flex flex-col items-center justify-center overflow-hidden">
+              {product.logo && <img src={product.logo} alt="logo" className="h-7 w-auto object-contain mb-2" onError={(e) => (e.target.style.display = 'none')} />}
+              <div className="w-full h-56 flex items-center justify-center overflow-hidden">
+                <img src={product.image} alt={product.desc} className="h-full w-full object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x300?text=ALL렌탈')} />
               </div>
             </div>
             <div>
