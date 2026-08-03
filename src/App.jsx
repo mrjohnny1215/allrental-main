@@ -125,7 +125,6 @@ const parsePrice = (s) => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) 
 function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }) {
   const catKey = product.category;
   const detail = product.detail || product || {};
-  if (typeof window !== 'undefined') window.__detail = detail; // 임시 디버그
   const isMattress = catKey === 'mattress';
 
   // 오버레이 스크롤 컨테이너 ref
@@ -492,15 +491,17 @@ export default function App() {
         const list = await listRes.json();
         const detailRaw = await detailRes.json();
 
-        // 상세 데이터: merged_products.json 은 {url: detail} flat 구조 (URL 정규화 키맵)
+        // 상세 데이터: merged_products.json 은 {url: detail} flat 구조
+        // 매칭 키를 URL 전체가 아닌 'no' 파라미터로 (cid/gid 차이와 무관하게 정확 매칭)
         const detailMap = {};
+        const noOf = (u) => { const m = /no=(\d+)/.exec(u); return m ? m[1] : u; };
         for (const url of Object.keys(detailRaw)) {
-          detailMap[normalizeUrl(url)] = detailRaw[url];
+          detailMap[noOf(url)] = detailRaw[url];
         }
 
         const merged = list.map((item) => ({
           ...item,
-          detail: detailMap[normalizeUrl(item.url)] || null,
+          detail: detailMap[noOf(item.url)] || null,
         }));
         setProducts(merged);
       } catch (e) {
