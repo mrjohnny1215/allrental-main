@@ -187,8 +187,8 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   const asPeriod = detail.as_period || '';
 
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0] || '');
-  const [selectedCycle, setSelectedCycle] = useState('');
-  const [selectedColor, setSelectedColor] = useState('');
+  const [selectedCycle, setSelectedCycle] = useState(cycles[0] || '');
+  const [selectedColor, setSelectedColor] = useState(colors[0] || '');
   const [showCardModal, setShowCardModal] = useState(false);
 
   // 렌탈세계 동일 실시간 가격 계산: 최종월료 = it_price + 관리주기추가금(기간별 상이)
