@@ -5,16 +5,17 @@ import { SITE_CONFIG } from './config';
 // 에러 경계 (상세 페이지 크래시 시 빈 화면 방지)
 // ==========================================
 class ErrorBoundary extends React.Component {
-  constructor(props) { super(props); this.state = { hasError: false }; }
-  static getDerivedStateFromError() { return { hasError: true }; }
+  constructor(props) { super(props); this.state = { hasError: false, errMsg: '' }; }
+  static getDerivedStateFromError(error) { return { hasError: true, errMsg: error && error.message ? error.message : String(error) }; }
   componentDidCatch(error, info) { console.error('상세페이지 에러:', error, info); }
   render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
-          <div className="text-center">
+          <div className="text-center max-w-md">
             <div className="text-4xl mb-3">⚠️</div>
             <p className="text-gray-700 font-medium mb-1">페이지를 불러오지 못했습니다</p>
+            <p className="text-xs text-red-600 mt-2 break-words">{this.state.errMsg}</p>
             <button onClick={() => { this.setState({ hasError: false }); window.location.reload(); }}
               className="mt-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm">새로고침</button>
           </div>
@@ -204,6 +205,9 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   const productType = d.product_type || '';
   const asPeriod = d.as_period || '';
 
+  // periodPrices는 아래 useState 초기값에서 참조하므로, 선언을 먼저 해야 함 (TDZ 방지)
+  const periodPrices = d.period_prices || {};
+
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0] || '');
   const [selectedCycle, setSelectedCycle] = useState(
     (periodPrices[periods[0]] ? Object.keys(periodPrices[periods[0]])[0] : '') || cycles[0] || ''
@@ -213,7 +217,6 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
 
   // 렌탈세계 동일 실시간 가격 계산: 최종월료 = it_price + 관리주기추가금(기간별 상이)
   const itPrice = parsePrice(d.it_price) || parsePrice(product.price);
-  const periodPrices = d.period_prices || {};
   const addForPeriod = periodPrices[selectedPeriod] || {};
   const cycleAdd = addForPeriod[selectedCycle] || 0;
   const basePrice = itPrice + cycleAdd;
@@ -663,7 +666,7 @@ export default function App() {
             const brand = extractBrand(p.desc);
             return (
               <div key={idx} onClick={() => setSelectedProduct(p)}
-                className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all">
+                className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all" data-testid="card">
                 <div className="h-10 px-3 flex justify-center items-center bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
                   {p.logo && <img src={p.logo} alt="" className="max-h-6 max-w-[80px] object-contain" onError={(e) => (e.target.style.display = 'none')} />}
                 </div>
@@ -687,7 +690,7 @@ export default function App() {
                       </div>
                     )}
                   </div>
-                  <button className="mt-2.5 w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white text-[10px] font-bold py-2 rounded-lg">상세보기</button>
+                  <button onClick={(e) => { e.stopPropagation(); setSelectedProduct(p); }} className="mt-2.5 w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white text-[10px] font-bold py-2 rounded-lg">상세보기</button>
                 </div>
               </div>
             );
