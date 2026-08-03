@@ -123,6 +123,7 @@ const parsePrice = (s) => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) 
 // 상품 상세 모달
 // ==========================================
 function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }) {
+  if (!product) return null;
   const catKey = product.category;
   const detail = product.detail || product || {};
   // detail 필드 안전 기본값 (null/undefined 접근 방지)
