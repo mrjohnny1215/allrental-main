@@ -125,6 +125,23 @@ const parsePrice = (s) => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) 
 function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }) {
   const catKey = product.category;
   const detail = product.detail || product || {};
+  // detail 필드 안전 기본값 (null/undefined 접근 방지)
+  const safeDetail = {
+    it_price: detail.it_price,
+    period_prices: detail.period_prices || {},
+    rental_periods: detail.rental_periods || [],
+    maintenance_cycles: detail.maintenance_cycles || [],
+    colors: detail.colors || [],
+    sizes: detail.sizes || [],
+    care_types: detail.care_types || [],
+    detail_images: detail.detail_images || [],
+    cards: detail.cards || [],
+    promotion: detail.promotion,
+    product_type: detail.product_type || '',
+    as_period: detail.as_period || '',
+  };
+  // 하위 코드 호환: detail을 safeDetail로 교체
+  const d = safeDetail;
   const isMattress = catKey === 'mattress';
 
   // 오버레이 스크롤 컨테이너 ref
@@ -140,26 +157,26 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   const notAvailable = detail.not_available;
 
   // 실제 렌탈세계 데이터만 사용 (하드코딩 폴백 제거)
-  const periods = detail.rental_periods && detail.rental_periods.length
-    ? detail.rental_periods
+  const periods = d.rental_periods && d.rental_periods.length
+    ? d.rental_periods
     : [];
-  const cycles = detail.maintenance_cycles && detail.maintenance_cycles.length
-    ? detail.maintenance_cycles
+  const cycles = d.maintenance_cycles && d.maintenance_cycles.length
+    ? d.maintenance_cycles
     : [];
-  const colors = detail.colors && detail.colors.length
-    ? detail.colors
+  const colors = d.colors && d.colors.length
+    ? d.colors
     : [];
-  const sizes = detail.sizes && detail.sizes.length
-    ? detail.sizes
+  const sizes = d.sizes && d.sizes.length
+    ? d.sizes
     : [];
-  const careTypes = detail.care_types && detail.care_types.length
-    ? detail.care_types
+  const careTypes = d.care_types && d.care_types.length
+    ? d.care_types
     : [];
-  const detailImages = detail.detail_images && detail.detail_images.length
-    ? detail.detail_images
+  const detailImages = d.detail_images && d.detail_images.length
+    ? d.detail_images
     : [];
-  const cards = detail.partner_cards && detail.partner_cards.length
-    ? detail.partner_cards
+  const cards = d.partner_cards && d.partner_cards.length
+    ? d.partner_cards
     : [];
   const promotion = detail.promotion && detail.promotion.length ? detail.promotion : '';
   const recommendations = detail.recommendations && detail.recommendations.length
@@ -182,9 +199,9 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
       }));
   }
   const allRecommendations = [...recommendations, ...crossRecs].slice(0, 12);
-  const brand = detail.brand || '';
-  const productType = detail.product_type || '';
-  const asPeriod = detail.as_period || '';
+  const brand = d.brand || '';
+  const productType = d.product_type || '';
+  const asPeriod = d.as_period || '';
 
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0] || '');
   const [selectedCycle, setSelectedCycle] = useState(
@@ -194,8 +211,8 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   const [showCardModal, setShowCardModal] = useState(false);
 
   // 렌탈세계 동일 실시간 가격 계산: 최종월료 = it_price + 관리주기추가금(기간별 상이)
-  const itPrice = parsePrice(detail.it_price) || parsePrice(product.price);
-  const periodPrices = detail.period_prices || {};
+  const itPrice = parsePrice(d.it_price) || parsePrice(product.price);
+  const periodPrices = d.period_prices || {};
   const addForPeriod = periodPrices[selectedPeriod] || {};
   const cycleAdd = addForPeriod[selectedCycle] || 0;
   const basePrice = itPrice + cycleAdd;
@@ -493,18 +510,15 @@ export default function App() {
         const list = await listRes.json();
         const detailRaw = await detailRes.json();
 
-        // 상세 데이터: merged_products.json 은 {url: detail} flat 구조
-        // 매칭 키를 'no' 파라미터로 (cid/gid 차이와 무관하게 정확 매칭), 실패 시 url 폴백
+        // 상세 데이터: merged_products.json 은 {url: detail} flat 구조 (URL 정규화 키맵)
         const detailMap = {};
-        const noOf = (u) => { const m = /no=(\d+)/.exec(u); return m ? m[1] : u; };
         for (const url of Object.keys(detailRaw)) {
-          detailMap[noOf(url)] = detailRaw[url];
           detailMap[normalizeUrl(url)] = detailRaw[url];
         }
 
         const merged = list.map((item) => ({
           ...item,
-          detail: detailMap[noOf(item.url)] || null,
+          detail: detailMap[normalizeUrl(item.url)] || null,
         }));
         setProducts(merged);
       } catch (e) {
