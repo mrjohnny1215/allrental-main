@@ -16,6 +16,7 @@ from bs4 import BeautifulSoup
 import urllib3
 import random
 import re
+import time
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -37,7 +38,6 @@ HEADERS = {
     'Sec-Fetch-Site': 'same-origin',
     'Sec-Fetch-User': '?1',
     'Upgrade-Insecure-Requests': '1',
-    'X-Requested-With': 'XMLHttpRequest',
 }
 
 CARD_URL = 'https://rentalsegye.com/theme/tlpartner11/page/get_card_data.php?iid={iid}'
@@ -90,7 +90,7 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
     for attempt in range(max_retries):
         try:
             session.headers.update({'User-Agent': random.choice(USER_AGENTS), **HEADERS})
-            r = session.get(url, timeout=20, verify=False)
+            r = session.get(url, timeout=(5,8), verify=False)
             if r.status_code == 200:
                 break
             last_err = f'HTTP {r.status_code}'
@@ -232,7 +232,7 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
                     }
                     pr = session.post(
                         'https://rentalsegye.com/page/product_option.php',
-                        data=post_data, timeout=15, verify=False, headers={'Referer': ref, **HEADERS}
+                        data=post_data, timeout=(5,8), verify=False, headers={'Referer': ref, **HEADERS}
                     )
                     if pr.status_code == 200:
                         # option value 형태: "셀프관리,12500,0" or "슈퍼싱글" (추가금 없음)
@@ -296,7 +296,7 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
         iid = btn.get('data-iid', '')
         if iid:
             try:
-                cr = session.get(CARD_URL.format(iid=iid), timeout=15, verify=False)
+                cr = session.get(CARD_URL.format(iid=iid), timeout=(5,8), verify=False)
                 if cr.status_code == 200:
                     csoup = BeautifulSoup(cr.text, 'html.parser')
                     cont = csoup.select_one('.card-information-container')
@@ -379,7 +379,7 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
                     'rental_count': str(len(periods)),
                     'ro_title': ro_title,
                 }
-                orsp = session.post(OPTION_URL, data=payload, headers=HEADERS, timeout=15, verify=False)
+                orsp = session.post(OPTION_URL, data=payload, headers=HEADERS, timeout=(5,8), verify=False)
                 if orsp.status_code == 200:
                     osoup = BeautifulSoup(orsp.text, 'html.parser')
                     for o in osoup.find_all('option'):

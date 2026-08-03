@@ -187,8 +187,8 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   const asPeriod = detail.as_period || '';
 
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0] || '');
-  const [selectedCycle, setSelectedCycle] = useState(cycles[0] || '');
-  const [selectedColor, setSelectedColor] = useState(colors[0] || '');
+  const [selectedCycle, setSelectedCycle] = useState('');
+  const [selectedColor, setSelectedColor] = useState('');
   const [showCardModal, setShowCardModal] = useState(false);
 
   // 렌탈세계 동일 실시간 가격 계산: 최종월료 = it_price + 관리주기추가금(기간별 상이)
@@ -294,7 +294,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
             {periods.length > 0 ? (
               <div className="grid grid-cols-4 gap-2">
                 {periods.map((period) => (
-                  <button key={period} onClick={() => setSelectedPeriod(period)}
+                  <button key={period} onClick={() => { setSelectedPeriod(period); const cyc = periodPrices[period] ? Object.keys(periodPrices[period]) : []; setSelectedCycle(cyc[0] || ''); }}
                     className={`py-2.5 px-2 rounded-lg border-2 text-sm font-semibold transition-all ${selectedPeriod === period ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
                     <div>{period}</div>
                   </button>
@@ -305,12 +305,12 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
             )}
           </div>
 
-          {cycles.length > 0 && (
+          {periodPrices[selectedPeriod] && Object.keys(periodPrices[selectedPeriod]).length > 0 && (
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-2">관리 주기</label>
               <select value={selectedCycle} onChange={(e) => setSelectedCycle(e.target.value)}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white">
-                {cycles.map((c) => <option key={c} value={c}>{c}</option>)}
+                {Object.keys(periodPrices[selectedPeriod]).map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
             </div>
           )}
