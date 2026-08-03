@@ -494,11 +494,12 @@ export default function App() {
         const detailRaw = await detailRes.json();
 
         // 상세 데이터: merged_products.json 은 {url: detail} flat 구조
-        // 매칭 키를 URL 전체가 아닌 'no' 파라미터로 (cid/gid 차이와 무관하게 정확 매칭)
+        // 매칭 키를 'no' 파라미터로 (cid/gid 차이와 무관하게 정확 매칭), 실패 시 url 폴백
         const detailMap = {};
         const noOf = (u) => { const m = /no=(\d+)/.exec(u); return m ? m[1] : u; };
         for (const url of Object.keys(detailRaw)) {
           detailMap[noOf(url)] = detailRaw[url];
+          detailMap[normalizeUrl(url)] = detailRaw[url];
         }
 
         const merged = list.map((item) => ({
