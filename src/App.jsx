@@ -154,7 +154,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   }, [product]);
 
   // 렌탈 불가 상품 (렌탈세계에서 판매/렌탈 중단된 상품)
-  const notAvailable = detail.not_available;
+  const notAvailable = d.not_available;
 
   // 실제 렌탈세계 데이터만 사용 (하드코딩 폴백 제거)
   const periods = d.rental_periods && d.rental_periods.length
@@ -178,9 +178,9 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   const cards = d.partner_cards && d.partner_cards.length
     ? d.partner_cards
     : [];
-  const promotion = detail.promotion && detail.promotion.length ? detail.promotion : '';
-  const recommendations = detail.recommendations && detail.recommendations.length
-    ? detail.recommendations
+  const promotion = d.promotion && d.promotion.length ? d.promotion : '';
+  const recommendations = d.recommendations && d.recommendations.length
+    ? d.recommendations
     : [];
   // 교차 추천: 렌탈세계는 같은 카테고리만 추천하므로, 다른 카테고리 인기 상품(월료 낮은 순)을 섞어서 다양성 확보
   const recNos = new Set(recommendations.map((r) => getNo(r.url)));
