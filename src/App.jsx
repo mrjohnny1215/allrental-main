@@ -187,7 +187,9 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   const asPeriod = detail.as_period || '';
 
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0] || '');
-  const [selectedCycle, setSelectedCycle] = useState(cycles[0] || '');
+  const [selectedCycle, setSelectedCycle] = useState(
+    (periodPrices[periods[0]] ? Object.keys(periodPrices[periods[0]])[0] : '') || cycles[0] || ''
+  );
   const [selectedColor, setSelectedColor] = useState(colors[0] || '');
   const [showCardModal, setShowCardModal] = useState(false);
 
