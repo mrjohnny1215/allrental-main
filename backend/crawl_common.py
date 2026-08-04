@@ -179,10 +179,30 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
             break
 
     # 3. 렌탈 기간 (공통)
+    # 렌탈세계는 상품마다 value 형태가 다름:
+    #   - 단순: "3년"
+    #   - 복합: "3년,36500,0" (기간, 기간추가금, 타입)
+    # 기간만 clean 하게 저장하고, 기간추가금은 period_prices[기간]={'기본': 추가금} 로 보관
+    def _split_period(v):
+        v = (v or '').strip()
+        if ',' in v:
+            parts = v.split(',')
+            period = parts[0].strip()
+            add = 0
+            if len(parts) >= 2 and parts[1].strip().isdigit():
+                add = int(parts[1])
+            return period, add
+        return v, 0
+
+    period_base_add = {}
     for opt in soup.select('input[name="rental_option_1"]'):
         v = (opt.get('value') or '').strip()
-        if v and v not in data['rental_periods']:
-            data['rental_periods'].append(v)
+        if not v:
+            continue
+        period, add = _split_period(v)
+        if period and period not in data['rental_periods']:
+            data['rental_periods'].append(period)
+            period_base_add[period] = add
 
     # 4. 카테고리별 옵션 매핑
     opt2 = soup.select_one('#rental_option_2')
@@ -193,13 +213,30 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
         if lbl:
             opt2_label = lbl.get_text(strip=True)
 
+    # 옵션 value 에서 이름만 추출 (렌탈세계는 "이름,추가금,타입" 형태일 수 있음)
+    def _opt_names(sel):
+        out = []
+        if not sel:
+            return out
+        for o in sel.find_all('option'):
+            v = (o.get('value') or '').strip()
+            t = o.get_text(strip=True)
+            if not v and not t:
+                continue
+            if t == '선택' or v == '선택':
+                continue
+            name = v.split(',')[0].strip() if ',' in v else (t or v)
+            if name and name not in out:
+                out.append(name)
+        return out
+
     if category == 'mattress':
         # #rental_option_2 = 사이즈, #rental_option_3 = 관리유형
-        data['sizes'] = _opt_texts(opt2)
-        data['care_types'] = _opt_texts(opt3)
+        data['sizes'] = _opt_names(opt2)
+        data['care_types'] = _opt_names(opt3)
     else:
         # water/bidet/air : #rental_option_2 = 관리주기
-        data['maintenance_cycles'] = _opt_texts(opt2)
+        data['maintenance_cycles'] = _opt_names(opt2)
         # 색상 (정수기 등) : #rental_supply_1
         supply = soup.select_one('#rental_supply_1')
         if supply:
@@ -207,7 +244,7 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
                 v = (o.get('value') or '').strip()
                 t = o.get_text(strip=True)
                 if v and t and t != '선택':
-                    name = v.split(',')[0] if ',' in v else t
+                    name = v.split(',')[0].strip() if ',' in v else t
                     if name and name not in data['colors']:
                         data['colors'].append(name)
 
@@ -254,6 +291,19 @@ def crawl_product_detail(session, url, category=None, max_retries=3):
                     continue
     except Exception:
         pass
+
+    # 4-3. period_prices 보강 (UI 가격 계산/관리주기 표시용)
+    # (a) AJAX로 채워진 기간은 그대로 유지
+    # (b) 비어있는 기간은: 관리주기가 있으면 {관리주기:0}, 없으면 {기본:기간추가금} 로 채움
+    for period in data['rental_periods']:
+        if period not in data['period_prices'] or not data['period_prices'][period]:
+            if data['maintenance_cycles'] or data['sizes']:
+                combos = data['maintenance_cycles'] or data['sizes']
+                data['period_prices'][period] = {c: 0 for c in combos}
+            else:
+                data['period_prices'][period] = {'기본': period_base_add.get(period, 0)}
+                if '기본' not in data['maintenance_cycles']:
+                    data['maintenance_cycles'].append('기본')
 
     # 5. 제품상세 이미지 — 실제 구조: #section-info / #section-detail 내 speedycdn img
     for sec_id in ('#section-info', '#section-detail'):
