@@ -137,7 +137,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
     sizes: detail.sizes || [],
     care_types: detail.care_types || [],
     detail_images: detail.detail_images || [],
-    cards: detail.cards || [],
+    partner_cards: detail.partner_cards || [],
     promotion: detail.promotion,
     product_type: detail.product_type || '',
     as_period: detail.as_period || '',
@@ -507,9 +507,11 @@ export default function App() {
   useEffect(() => {
     const loadAll = async () => {
       try {
+        // 빌드 시점마다 바뀌는 캐시 키 주입 (vite.config.js define으로 주입, 미설정 시 날짜 기반 폴백)
+        const CACHE_BUST = (import.meta.env.VITE_CACHE_BUST || `d${new Date().toISOString().slice(0, 10).replace(/-/g, '')}`);
         const [listRes, detailRes] = await Promise.all([
-          fetch('/products_data.json?v=20250101'),
-          fetch('/merged_products.json?v=20250101'),
+          fetch(`/products_data.json?v=${CACHE_BUST}`),
+          fetch(`/merged_products.json?v=${CACHE_BUST}`),
         ]);
         const list = await listRes.json();
         const detailRaw = await detailRes.json();
