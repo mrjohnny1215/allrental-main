@@ -283,7 +283,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
           <div className="bg-gray-50 rounded-xl p-3 flex flex-col items-center justify-center overflow-hidden">
             {product.logo && <img src={product.logo} alt="logo" className="h-7 w-auto object-contain mb-2" onError={(e) => (e.target.style.display = 'none')} />}
             <div className="w-full h-64 flex items-center justify-center overflow-hidden">
-              <img src={product.image} alt={product.desc} className="h-full w-full object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x300?text=ALL렌탈')} />
+              <img src={(product.image || (product.detail_images && product.detail_images[0]) || 'https://via.placeholder.com/300x300?text=ALL렌탈')} alt={product.desc} className="h-full w-full object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x300?text=ALL렌탈')} />
             </div>
           </div>
           <div>
@@ -675,7 +675,7 @@ export default function App() {
                 <div className="relative h-36 bg-gradient-to-b from-white to-gray-50 flex items-center justify-center p-3">
                   {p.label && <span className={`absolute top-2 left-2 text-[10px] font-bold px-2 py-1 rounded text-white ${labelStyle}`}>{p.label}</span>}
                   {p.label2 && <span className="absolute top-2 right-2 text-[10px] font-bold px-2 py-1 rounded text-white bg-emerald-500">{p.label2}</span>}
-                  <img src={p.image} alt={p.desc} className="max-h-full max-w-full object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/150x150?text=ALL렌탈')} />
+                  <img src={(p.image || (p.detail_images && p.detail_images[0]) || 'https://via.placeholder.com/150x150?text=ALL렌탈')} alt={p.desc} className="max-h-full max-w-full object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/150x150?text=ALL렌탈')} />
                 </div>
                 <div className="p-3 flex flex-col flex-1">
                   <div className="text-[11px] font-bold text-gray-800 mb-1 line-clamp-2 leading-snug min-h-[2.2rem]">{p.desc}</div>
