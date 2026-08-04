@@ -11,9 +11,9 @@ export const SITE_CONFIG = {
 
   // 카테고리 표시 순서/이름
   categories: [
-    { key: 'bidet', name: '비데' },
     { key: 'water', name: '정수기' },
     { key: 'air', name: '공기청정기' },
+    { key: 'bidet', name: '비데' },
     { key: 'mattress', name: '매트리스' },
   ],
 
