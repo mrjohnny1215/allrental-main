@@ -873,8 +873,9 @@ export default function App() {
             return (
               <div key={idx} onClick={() => setSelectedProduct(p)}
                 className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all" data-testid="card">
-                <div className="h-10 px-3 flex justify-center items-center bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
-                  {p.logo && <img src={p.logo} alt="" className="max-h-6 max-w-[80px] object-contain" onError={(e) => (e.target.style.display = 'none')} />}
+                {/* 사진 위 작은 브랜드 로고 (렌탈세계 동일) */}
+                <div className="h-9 px-3 flex justify-center items-center bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
+                  {p.logo && <img src={p.logo} alt="" className="max-h-5 max-w-[70px] object-contain" onError={(e) => (e.target.style.display = 'none')} />}
                 </div>
                 <div className="relative h-36 bg-gradient-to-b from-white to-gray-50 flex items-center justify-center p-3">
                   {p.label && <span className={`absolute top-2 left-2 text-[10px] font-bold px-2 py-1 rounded text-white ${labelStyle}`}>{p.label}</span>}
@@ -882,17 +883,26 @@ export default function App() {
                   <SmartImage src={(p.image || (p.detail_images && p.detail_images[0]) || '')} alt={p.desc} brand={brand} className="" />
                 </div>
                 <div className="p-3 flex flex-col flex-1">
-                  <div className="text-[11px] font-bold text-gray-800 mb-1 line-clamp-2 leading-snug min-h-[2.2rem]">{p.desc}</div>
-                  <div className="text-[9px] text-gray-400 mb-1 truncate font-mono bg-gray-50 px-1.5 py-0.5 rounded">{brand} · {p.model}</div>
+                  {/* 라벨 (반값할인/타사보상 등 한 줄) */}
+                  {(p.label || p.label2) && (
+                    <div className="flex flex-wrap gap-1 mb-1">
+                      {p.label && <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded text-white ${labelStyle}`}>{p.label}</span>}
+                      {p.label2 && <span className="text-[9px] font-bold px-1.5 py-0.5 rounded text-white bg-emerald-500">{p.label2}</span>}
+                    </div>
+                  )}
+                  {/* 모델명 (렌탈세계: WPU-IAC414) */}
+                  <div className="text-[9px] text-gray-400 mb-0.5 truncate font-mono">{p.model}</div>
+                  {/* 상품명 (렌탈세계: [SK매직] 원코크 얼음물 직수얼음 정수기) */}
+                  <div className="text-[11px] font-bold text-gray-800 mb-2 line-clamp-2 leading-snug min-h-[2.2rem]">{p.desc}</div>
                   <div className="mt-auto space-y-1">
                     <div className="flex justify-between items-center">
                       <span className="text-[9px] text-gray-500">월 렌탈료</span>
-                      <span className="text-sm font-bold text-gray-900">{p.price}원</span>
+                      <span className="text-sm font-bold text-gray-900">{Number(p.price || 0).toLocaleString()}원</span>
                     </div>
                     {isDiscounted && (
                       <div className="flex justify-between items-center bg-red-50 px-1.5 py-1 rounded">
                         <span className="text-[9px] text-red-600 font-semibold">할인적용</span>
-                        <span className="text-xs font-bold text-red-600">{p.discount}원</span>
+                        <span className="text-xs font-bold text-red-600">{Number(p.discount || 0).toLocaleString()}원</span>
                       </div>
                     )}
                   </div>
