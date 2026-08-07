@@ -732,7 +732,12 @@ export default function App() {
       }
     }
 
-    // 비데(bidet)는 브랜드 + 렌탈료(priceFilter)만 사용
+    // 비데(bidet): 렌탈료(priceFilter)만 사용
+    if (activeCategory === 'bidet') {
+      if (priceFilter !== 'all') {
+        arr = arr.filter((p) => classifyPriceRange(p.price) === priceFilter);
+      }
+    }
 
     const sorted = [...arr];
     if (sort === 'price_asc') sorted.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
