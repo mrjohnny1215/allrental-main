@@ -191,7 +191,7 @@ function classifyAirFunc(desc = '') {
   if (d.includes('제습')) return '제습기능';
   if (d.includes('펫') || d.includes('반려')) return '펫기능';
   if (d.includes('환기')) return '환기청정기';
-  return '일반청정';
+  return ''; // 렌탈세계엔 '일반청정' 칩 없음 → 매칭 안 되면 필터에서 제외
 }
 // 매트리스 타입 (우리 실제 상품 특성 기준)
 function classifyMattressType(desc = '') {
@@ -826,7 +826,8 @@ export default function App() {
               필터 초기화
             </button>
           </div>
-          <FilterChips label="브랜드" options={brands} value={brandFilter} onChange={setBrandFilter} />
+          {/* 렌탈세계 동일 구조: 맨 위 '렌탈사' 자리에 브랜드 배치 (우리 데이터엔 렌탈사 없음) */}
+          <FilterChips label="렌탈사" options={brands} value={brandFilter} onChange={setBrandFilter} />
           {activeCategory === 'water' && (
             <>
               <FilterChips label="기능" options={['냉수전용','냉온전용','얼음냉온','얼음냉정','온수전용','정수전용','커피정수기','탄산정수기']} value={funcFilter} onChange={setFuncFilter} />
@@ -838,15 +839,12 @@ export default function App() {
           {activeCategory === 'air' && (
             <>
               <FilterChips label="평형" options={['10평이하','11~20평','21~30평','31~50평']} value={areaFilter} onChange={setAreaFilter} />
-              <FilterChips label="기능" options={['가습기능','온풍기능','제습기능','펫기능','환기청정기','일반청정']} value={airFuncFilter} onChange={setAirFuncFilter} />
+              <FilterChips label="기능" options={['가습기능','온풍기능','제습기능','펫기능','환기청정기']} value={airFuncFilter} onChange={setAirFuncFilter} />
               <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
             </>
           )}
           {activeCategory === 'bidet' && (
-            <>
-              <FilterChips label="브랜드" options={brands} value={brandFilter} onChange={setBrandFilter} />
-              <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
-            </>
+            <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
           )}
           {activeCategory === 'mattress' && (
             <>
