@@ -661,9 +661,13 @@ export default function App() {
     loadAll();
   }, []);
 
-  // 현재 카테고리 상품
+  // 현재 카테고리 상품 (이름/금액 데이터가 비어있는 상품은 카드에 빈 칸으로 나오므로 제외)
   const categoryProducts = useMemo(
-    () => products.filter((p) => p.category === activeCategory),
+    () => products.filter(
+      (p) => p.category === activeCategory &&
+        (p.desc && p.desc.trim() !== '') &&
+        (p.price !== '' && p.price !== null && p.price !== undefined)
+    ),
     [products, activeCategory]
   );
 
