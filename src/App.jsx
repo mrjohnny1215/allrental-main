@@ -60,8 +60,7 @@ function RecommendCarousel({ items, onSelect }) {
                   className="flex-1 bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-lg transition-all text-left">
                   <div className="h-24 bg-gray-50 flex items-center justify-center p-2">
                     {it.image ? (
-                      <img src={it.image.startsWith('//') ? 'https:' + it.image : it.image} alt={it.name}
-                        className="max-h-full max-w-full object-contain" onError={(e) => (e.target.style.display = 'none')} />
+                      <SmartImage src={it.image.startsWith('//') ? 'https:' + it.image : it.image} alt={it.name} brand={extractBrand(it.name)} className="h-24" />
                     ) : null}
                   </div>
                   <div className="p-2">
@@ -141,6 +140,32 @@ function classifyMethod(desc = '') {
   const d = desc;
   if (d.includes('탱크') || d.includes('저수조') || d.includes('저장')) return '탱크형';
   return '직수형';
+}
+
+// ==========================================
+// 스마트 이미지 (외부 CDN 깨져도 깨끗한 로컬 브랜드 폴백)
+// - lazy loading (loading="lazy")
+// - onError 시 외부 placeholder 가 아닌 로컬 브랜드 라벨로 대체 (CDN/외부망 의존 제거)
+// ==========================================
+function SmartImage({ src, alt, brand, className }) {
+  const [errored, setErrored] = useState(false);
+  if (errored || !src) {
+    return (
+      <div className={`flex flex-col items-center justify-center text-center ${className || ''}`}>
+        <span className="text-3xl mb-1">📦</span>
+        <span className="text-[10px] font-bold text-gray-400 leading-tight px-1">{brand || 'ALL렌탈'}</span>
+      </div>
+    );
+  }
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      className={`max-h-full max-w-full object-contain ${className || ''}`}
+      onError={() => setErrored(true)}
+    />
+  );
 }
 function classifyPriceRange(price = 0) {
   const p = parsePrice(price);
@@ -366,9 +391,18 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
           <div className="bg-gray-50 rounded-xl p-3 flex flex-col items-center justify-center overflow-hidden">
             {product.logo && <img src={product.logo} alt="logo" className="h-7 w-auto object-contain mb-2" onError={(e) => (e.target.style.display = 'none')} />}
-            <div className="w-full h-64 flex items-center justify-center overflow-hidden">
-              <img src={(product.image || (product.detail_images && product.detail_images[0]) || 'https://via.placeholder.com/300x300?text=ALL렌탈')} alt={product.desc} className="h-full w-full object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x300?text=ALL렌탈')} />
+            <div className="w-full h-56 sm:h-64 flex items-center justify-center overflow-hidden">
+              <SmartImage src={(product.image || (product.detail_images && product.detail_images[0]) || '')} alt={product.desc} brand={brand || extractBrand(product.desc)} className="h-full" />
             </div>
+            {detailImages.length > 1 && (
+              <div className="flex gap-1.5 mt-3 w-full overflow-x-auto pb-1">
+                {detailImages.slice(0, 6).map((img, i) => (
+                  <img key={i} src={img} alt={`${product.desc} ${i + 1}`} loading="lazy"
+                    className="h-12 w-12 object-cover rounded-lg border border-gray-200 flex-shrink-0 bg-white"
+                    onError={(e) => (e.target.style.display = 'none')} />
+                ))}
+              </div>
+            )}
           </div>
           <div>
             <div className="text-xs text-gray-500 mb-1">브랜드</div>
@@ -748,7 +782,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex overflow-x-auto gap-2 py-2">
               {SITE_CONFIG.categories.map((c) => (
-                <button key={c.key} onClick={() => { setActiveCategory(c.key); setBrandFilter('all'); setSearch(''); setFuncFilter('all'); setTypeFilter('all'); setMethodFilter('all'); setPriceFilter('all'); setAreaFilter('all'); setAirFuncFilter('all'); setMattressTypeFilter('all'); }}>
+                <button key={c.key} onClick={() => { setActiveCategory(c.key); setBrandFilter('all'); setSearch(''); setFuncFilter('all'); setTypeFilter('all'); setMethodFilter('all'); setPriceFilter('all'); setAreaFilter('all'); setAirFuncFilter('all'); setMattressTypeFilter('all'); }}
                   className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl transition-all flex-shrink-0 w-20 ${activeCategory === c.key ? 'bg-white text-blue-700 shadow-lg' : 'text-white hover:bg-white/20'}`}>
                   <div className={`w-12 h-12 rounded-lg overflow-hidden border-2 flex items-center justify-center bg-white/90 ${activeCategory === c.key ? 'border-blue-600' : 'border-transparent'}`}>
                     {categoryImages[c.key] ? (
@@ -786,6 +820,12 @@ export default function App() {
 
         {/* 스마트 필터 (클릭 칩) */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-3 mb-3 flex flex-col gap-2.5">
+          <div className="flex justify-end">
+            <button onClick={() => { setBrandFilter('all'); setFuncFilter('all'); setTypeFilter('all'); setMethodFilter('all'); setPriceFilter('all'); setAreaFilter('all'); setAirFuncFilter('all'); setMattressTypeFilter('all'); }}
+              className="text-[11px] text-gray-400 hover:text-blue-600 font-medium px-2 py-0.5 rounded border border-gray-200 hover:border-blue-300 transition-colors">
+              필터 초기화
+            </button>
+          </div>
           <FilterChips label="브랜드" options={brands} value={brandFilter} onChange={setBrandFilter} />
           {activeCategory === 'water' && (
             <>
@@ -803,7 +843,10 @@ export default function App() {
             </>
           )}
           {activeCategory === 'bidet' && (
-            <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
+            <>
+              <FilterChips label="브랜드" options={brands} value={brandFilter} onChange={setBrandFilter} />
+              <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
+            </>
           )}
           {activeCategory === 'mattress' && (
             <>
@@ -815,7 +858,7 @@ export default function App() {
 
         <div className="text-sm text-gray-500 mb-3">{filtered.length}개 상품</div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3">
           {filtered.map((p, idx) => {
             const isDiscounted = p.discount && p.discount !== '0' && p.discount !== '';
             const labelStyle = p.label === '반값할인' ? 'bg-red-500' : p.label === 'BEST' ? 'bg-yellow-500' : p.label === '타사보상' ? 'bg-gray-500' : p.label2 ? 'bg-emerald-500' : 'bg-blue-500';
@@ -829,7 +872,7 @@ export default function App() {
                 <div className="relative h-36 bg-gradient-to-b from-white to-gray-50 flex items-center justify-center p-3">
                   {p.label && <span className={`absolute top-2 left-2 text-[10px] font-bold px-2 py-1 rounded text-white ${labelStyle}`}>{p.label}</span>}
                   {p.label2 && <span className="absolute top-2 right-2 text-[10px] font-bold px-2 py-1 rounded text-white bg-emerald-500">{p.label2}</span>}
-                  <img src={(p.image || (p.detail_images && p.detail_images[0]) || 'https://via.placeholder.com/150x150?text=ALL렌탈')} alt={p.desc} className="max-h-full max-w-full object-contain" onError={(e) => (e.target.src = 'https://via.placeholder.com/150x150?text=ALL렌탈')} />
+                  <SmartImage src={(p.image || (p.detail_images && p.detail_images[0]) || '')} alt={p.desc} brand={brand} className="" />
                 </div>
                 <div className="p-3 flex flex-col flex-1">
                   <div className="text-[11px] font-bold text-gray-800 mb-1 line-clamp-2 leading-snug min-h-[2.2rem]">{p.desc}</div>
