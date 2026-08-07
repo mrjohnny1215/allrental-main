@@ -118,7 +118,88 @@ function extractBrand(desc = '') {
   return m ? m[1] : '기타';
 }
 
+// 정수기 기능/타입/정수방식 분류 (제목 키워드 기반)
+function classifyFunc(desc = '') {
+  const d = desc;
+  if (d.includes('얼음') && d.includes('냉온')) return '얼음냉온';
+  if (d.includes('얼음') && d.includes('냉정')) return '얼음냉정';
+  if (d.includes('탄산')) return '탄산정수기';
+  if (d.includes('커피')) return '커피정수기';
+  if (d.includes('냉온')) return '냉온전용';
+  if (d.includes('냉수')) return '냉수전용';
+  if (d.includes('온수')) return '온수전용';
+  return '정수전용';
+}
+function classifyType(desc = '') {
+  const d = desc;
+  if (d.includes('빌트인') || d.includes('매립')) return '빌트인';
+  if (d.includes('스탠드')) return '스탠드형';
+  if (d.includes('하프') || d.includes('언더') || d.includes('캐비닛')) return '하프형';
+  return '스탠드형';
+}
+function classifyMethod(desc = '') {
+  const d = desc;
+  if (d.includes('탱크') || d.includes('저수조') || d.includes('저장')) return '탱크형';
+  return '직수형';
+}
+function classifyPriceRange(price = 0) {
+  const p = parsePrice(price);
+  if (p <= 10000) return '1만원이하';
+  if (p < 20000) return '1만원대';
+  if (p < 30000) return '2만원대';
+  if (p < 40000) return '3만원대';
+  if (p <= 100000) return '4~10만원';
+  return '10만원이상';
+}
+// 공기청정기 평형/기능
+function classifyArea(desc = '') {
+  const d = desc;
+  const m = d.match(/(\d+)\s*평/);
+  if (m) { const n = parseInt(m[1],10); if (n<=10) return '10평이하'; if (n<=20) return '11~20평'; if (n<=30) return '21~30평'; return '31~50평'; }
+  if (d.includes('대형') || d.includes('30평') || d.includes('50평')) return '31~50평';
+  return '11~20평';
+}
+function classifyAirFunc(desc = '') {
+  const d = desc;
+  if (d.includes('가습')) return '가습기능';
+  if (d.includes('온풍')) return '온풍기능';
+  if (d.includes('제습')) return '제습기능';
+  if (d.includes('펫') || d.includes('반려')) return '펫기능';
+  if (d.includes('환기')) return '환기청정기';
+  return '일반청정';
+}
+// 매트리스 타입 (우리 실제 상품 특성 기준)
+function classifyMattressType(desc = '') {
+  const d = desc;
+  if (d.includes('탑퍼')) return '탑퍼교체';
+  if (d.includes('메모리')) return '메모리폼';
+  if (d.includes('커버') || d.includes('원바디')) return '커버교체';
+  if (d.includes('온열')) return '온열';
+  return '일반';
+}
+
 const parsePrice = (s) => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) || 0;
+
+// ==========================================
+// 스마트 필터 칩 버튼 그룹
+// ==========================================
+function FilterChips({ label, options, value, onChange }) {
+  return (
+    <div className="flex flex-wrap items-center gap-1.5">
+      <span className="text-xs font-bold text-gray-500 w-14 flex-shrink-0">{label}</span>
+      <button onClick={() => onChange('all')}
+        className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-all ${value === 'all' ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-gray-300'}`}>
+        전체
+      </button>
+      {options.map((opt) => (
+        <button key={opt} onClick={() => onChange(opt)}
+          className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-all ${value === opt ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-gray-300'}`}>
+          {opt}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 // ==========================================
 // 상품 상세 모달
@@ -236,7 +317,10 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
       (product.discount && product.discount !== '0' ? `🎉 할인적용가: ${product.discount}원\n` : '') +
       `\n상세 견적 및 설치 가능 여부 부탁드립니다.`
     );
-    const subject = encodeURIComponent(`${brand} 렌탈 상담 신청`);
+    if (SITE_CONFIG.kakaoUrl) {
+      window.open(SITE_CONFIG.kakaoUrl, '_blank', 'noreferrer');
+      return;
+    }
     window.location.href = `mailto:${SITE_CONFIG.consultEmail}?subject=${subject}&body=${msg}`;
   };
 
@@ -441,9 +525,9 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
         )}
 
         <button onClick={handleConsult}
-          className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 rounded-xl shadow-lg hover:from-blue-700 hover:to-blue-800 transition-all text-lg flex items-center justify-center gap-2 active:scale-[0.98] mb-8">
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-          이메일 상담신청
+          className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold py-4 rounded-xl shadow-lg hover:from-yellow-500 hover:to-yellow-600 transition-all text-lg flex items-center justify-center gap-2 active:scale-[0.98] mb-8">
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c5.5 0 10 3.6 10 8s-4.5 8-10 8c-1.1 0-2.2-.1-3.2-.4L4 20l.9-3.3C3.3 15.5 2 13.3 2 11c0-4.4 4.5-8 10-8z"/></svg>
+          카톡 상담신청
         </button>
 
         {allRecommendations.length > 0 && (
@@ -502,6 +586,13 @@ export default function App() {
   const [search, setSearch] = useState('');
   const [brandFilter, setBrandFilter] = useState('all');
   const [sort, setSort] = useState('default');
+  const [funcFilter, setFuncFilter] = useState('all');
+  const [typeFilter, setTypeFilter] = useState('all');
+  const [methodFilter, setMethodFilter] = useState('all');
+  const [priceFilter, setPriceFilter] = useState('all');
+  const [areaFilter, setAreaFilter] = useState('all');
+  const [airFuncFilter, setAirFuncFilter] = useState('all');
+  const [mattressTypeFilter, setMattressTypeFilter] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
@@ -542,9 +633,10 @@ export default function App() {
     [products, activeCategory]
   );
 
-  // 브랜드 목록 (현재 카테고리 기준)
+  // 브랜드 목록 (현재 카테고리 기준, '기타' 제외)
   const brands = useMemo(() => {
     const set = new Set(categoryProducts.map((p) => extractBrand(p.desc)));
+    set.delete('기타');
     return Array.from(set);
   }, [categoryProducts]);
 
@@ -566,6 +658,44 @@ export default function App() {
       arr = arr.filter((p) => extractBrand(p.desc) === brandFilter);
     }
 
+    if (activeCategory === 'water') {
+      if (funcFilter !== 'all') {
+        arr = arr.filter((p) => classifyFunc(p.desc) === funcFilter);
+      }
+      if (typeFilter !== 'all') {
+        arr = arr.filter((p) => classifyType(p.desc) === typeFilter);
+      }
+      if (methodFilter !== 'all') {
+        arr = arr.filter((p) => classifyMethod(p.desc) === methodFilter);
+      }
+      if (priceFilter !== 'all') {
+        arr = arr.filter((p) => classifyPriceRange(p.price) === priceFilter);
+      }
+    }
+
+    if (activeCategory === 'air') {
+      if (areaFilter !== 'all') {
+        arr = arr.filter((p) => classifyArea(p.desc) === areaFilter);
+      }
+      if (airFuncFilter !== 'all') {
+        arr = arr.filter((p) => classifyAirFunc(p.desc) === airFuncFilter);
+      }
+      if (priceFilter !== 'all') {
+        arr = arr.filter((p) => classifyPriceRange(p.price) === priceFilter);
+      }
+    }
+
+    if (activeCategory === 'mattress') {
+      if (mattressTypeFilter !== 'all') {
+        arr = arr.filter((p) => classifyMattressType(p.desc) === mattressTypeFilter);
+      }
+      if (priceFilter !== 'all') {
+        arr = arr.filter((p) => classifyPriceRange(p.price) === priceFilter);
+      }
+    }
+
+    // 비데(bidet)는 브랜드 + 렌탈료(priceFilter)만 사용
+
     const sorted = [...arr];
     if (sort === 'price_asc') sorted.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
     else if (sort === 'price_desc') sorted.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
@@ -578,7 +708,7 @@ export default function App() {
       });
     }
     return sorted;
-  }, [categoryProducts, search, brandFilter, sort]);
+  }, [categoryProducts, search, brandFilter, sort, funcFilter, typeFilter, methodFilter, priceFilter, areaFilter, airFuncFilter, mattressTypeFilter, activeCategory]);
 
   const currentName = SITE_CONFIG.categories.find((c) => c.key === activeCategory)?.name || '';
 
@@ -618,7 +748,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex overflow-x-auto gap-2 py-2">
               {SITE_CONFIG.categories.map((c) => (
-                <button key={c.key} onClick={() => { setActiveCategory(c.key); setBrandFilter('all'); setSearch(''); }}
+                <button key={c.key} onClick={() => { setActiveCategory(c.key); setBrandFilter('all'); setSearch(''); setFuncFilter('all'); setTypeFilter('all'); setMethodFilter('all'); setPriceFilter('all'); setAreaFilter('all'); setAirFuncFilter('all'); setMattressTypeFilter('all'); }}>
                   className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl transition-all flex-shrink-0 w-20 ${activeCategory === c.key ? 'bg-white text-blue-700 shadow-lg' : 'text-white hover:bg-white/20'}`}>
                   <div className={`w-12 h-12 rounded-lg overflow-hidden border-2 flex items-center justify-center bg-white/90 ${activeCategory === c.key ? 'border-blue-600' : 'border-transparent'}`}>
                     {categoryImages[c.key] ? (
@@ -636,8 +766,8 @@ export default function App() {
       </header>
 
       <div className="max-w-7xl mx-auto px-3 py-4">
-        {/* 검색/필터 바 */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-3 mb-4 flex flex-col md:flex-row gap-2">
+        {/* 검색/정렬 바 */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-3 mb-3 flex flex-col md:flex-row gap-2">
           <input
             type="text"
             value={search}
@@ -645,11 +775,6 @@ export default function App() {
             placeholder={`${currentName} 모델명·상품명 검색`}
             className="flex-1 p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-sm"
           />
-          <select value={brandFilter} onChange={(e) => setBrandFilter(e.target.value)}
-            className="p-2.5 border border-gray-300 rounded-lg outline-none text-sm bg-white md:w-40">
-            <option value="all">전체 브랜드</option>
-            {brands.map((b) => <option key={b} value={b}>{b}</option>)}
-          </select>
           <select value={sort} onChange={(e) => setSort(e.target.value)}
             className="p-2.5 border border-gray-300 rounded-lg outline-none text-sm bg-white md:w-40">
             <option value="default">기본 정렬</option>
@@ -657,6 +782,35 @@ export default function App() {
             <option value="price_desc">월료 높은순</option>
             <option value="brand">브랜드순</option>
           </select>
+        </div>
+
+        {/* 스마트 필터 (클릭 칩) */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-3 mb-3 flex flex-col gap-2.5">
+          <FilterChips label="브랜드" options={brands} value={brandFilter} onChange={setBrandFilter} />
+          {activeCategory === 'water' && (
+            <>
+              <FilterChips label="기능" options={['냉수전용','냉온전용','얼음냉온','얼음냉정','온수전용','정수전용','커피정수기','탄산정수기']} value={funcFilter} onChange={setFuncFilter} />
+              <FilterChips label="타입" options={['빌트인','스탠드형','하프형']} value={typeFilter} onChange={setTypeFilter} />
+              <FilterChips label="정수방식" options={['직수형','탱크형']} value={methodFilter} onChange={setMethodFilter} />
+              <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
+            </>
+          )}
+          {activeCategory === 'air' && (
+            <>
+              <FilterChips label="평형" options={['10평이하','11~20평','21~30평','31~50평']} value={areaFilter} onChange={setAreaFilter} />
+              <FilterChips label="기능" options={['가습기능','온풍기능','제습기능','펫기능','환기청정기','일반청정']} value={airFuncFilter} onChange={setAirFuncFilter} />
+              <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
+            </>
+          )}
+          {activeCategory === 'bidet' && (
+            <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
+          )}
+          {activeCategory === 'mattress' && (
+            <>
+              <FilterChips label="타입" options={['탑퍼교체','메모리폼','커버교체','온열','일반']} value={mattressTypeFilter} onChange={setMattressTypeFilter} />
+              <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
+            </>
+          )}
         </div>
 
         <div className="text-sm text-gray-500 mb-3">{filtered.length}개 상품</div>

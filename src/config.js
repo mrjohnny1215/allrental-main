@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   phone: '1877-2237',
 
   // 카카오톡 채널 URL (비워두면 버튼 숨김)
-  kakaoUrl: '',
+  kakaoUrl: 'http://pf.kakao.com/_vftBX',
 
   // 카테고리 표시 순서/이름
   categories: [
