@@ -127,7 +127,8 @@
     "brand": "웰스",
     "model": "BM750RWA",
     "price": 22900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=19904&cid=1379&gid=1408",
@@ -320,7 +321,8 @@
     "brand": "웰스",
     "model": "BM750RWA",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 4900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=32677&cid=1379&gid=1408",
@@ -697,7 +699,10 @@
     "brand": "SK매직",
     "model": "BID-S51DR15WH",
     "price": 23900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ]
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45444&cid=1379&gid=1408",
@@ -853,7 +858,11 @@
     "brand": "코웨이",
     "model": "BAS51-A",
     "price": 28900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 3900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42272&cid=1377&gid=1424",
@@ -866,7 +875,11 @@
     "brand": "SK매직",
     "model": "WPU-IAC414",
     "price": 39400,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 14400
   },
   {
     "url": "https://rentalsegye.com/product.php?no=26139&cid=1377&gid=1424",
@@ -879,7 +892,11 @@
     "brand": "코웨이",
     "model": "CPI-7400N",
     "price": 37260,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 12260
   },
   {
     "url": "https://rentalsegye.com/product.php?no=32208&cid=1377&gid=1424",
@@ -892,7 +909,8 @@
     "brand": "청호나이스",
     "model": "WI-36C90620N",
     "price": 39900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 9900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=41298&cid=1377&gid=1424",
@@ -905,7 +923,11 @@
     "brand": "코웨이",
     "model": "CHP-7212N",
     "price": 26910,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 1910
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42269&cid=1377&gid=1424",
@@ -918,7 +940,11 @@
     "brand": "SK매직",
     "model": "WPU-JAC115",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 1900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47139&cid=1377&gid=1424",
@@ -931,7 +957,11 @@
     "brand": "코웨이",
     "model": "CHP-7220N",
     "price": 26010,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 1010
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47810&cid=1377&gid=1424",
@@ -944,7 +974,8 @@
     "brand": "청호나이스",
     "model": "WI-37C90720N",
     "price": 36900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 6900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=43137&cid=1377&gid=1424",
@@ -957,7 +988,11 @@
     "brand": "코웨이",
     "model": "CHPI-7430N",
     "price": 36810,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 11810
   },
   {
     "url": "https://rentalsegye.com/product.php?no=43140&cid=1377&gid=1424",
@@ -970,7 +1005,11 @@
     "brand": "코웨이",
     "model": "CHPI-7410N",
     "price": 41310,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 16310
   },
   {
     "url": "https://rentalsegye.com/product.php?no=43527&cid=1377&gid=1424",
@@ -983,7 +1022,11 @@
     "brand": "코웨이",
     "model": "CHPI-7420N",
     "price": 44010,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 19010
   },
   {
     "url": "https://rentalsegye.com/product.php?no=25600&cid=1377&gid=1424",
@@ -1008,7 +1051,11 @@
     "brand": "SK매직",
     "model": "WPU-IAC425S",
     "price": 39000,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 14000
   },
   {
     "url": "https://rentalsegye.com/product.php?no=32998&cid=1377&gid=1424",
@@ -1060,7 +1107,8 @@
     "brand": "코웨이",
     "model": "CHP-6340L",
     "price": 27810,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 2810
   },
   {
     "url": "https://rentalsegye.com/product.php?no=36388&cid=1377&gid=1424",
@@ -1073,7 +1121,8 @@
     "brand": "쿠쿠",
     "model": "CP-AHS100HEW/EG/EBR/EB/PK",
     "price": 36810,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 10810
   },
   {
     "url": "https://rentalsegye.com/product.php?no=38406&cid=1377&gid=1424",
@@ -1098,7 +1147,8 @@
     "brand": "웰스",
     "model": "WP270UWA",
     "price": 29900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 7900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=24545&cid=1377&gid=1424",
@@ -1111,7 +1161,8 @@
     "brand": "웰스",
     "model": "WP270UWA",
     "price": 36900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 14900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=37469&cid=1377&gid=1424",
@@ -1136,7 +1187,8 @@
     "brand": "코웨이",
     "model": "CHP-700L",
     "price": 60100,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 35100
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11147&cid=1377&gid=1424",
@@ -1149,7 +1201,8 @@
     "brand": "코웨이",
     "model": "CHP-5700R",
     "price": 51900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 26900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11180&cid=1377&gid=1424",
@@ -1162,7 +1215,8 @@
     "brand": "코웨이",
     "model": "CHPI-620L",
     "price": 44010,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 19010
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11187&cid=1377&gid=1424",
@@ -1175,7 +1229,8 @@
     "brand": "코웨이",
     "model": "CHPI-5801L",
     "price": 50310,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 25310
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11237&cid=1377&gid=1424",
@@ -1188,7 +1243,11 @@
     "brand": "코웨이",
     "model": "CPSI-8510L",
     "price": 44010,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 19010
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11284&cid=1377&gid=1424",
@@ -1239,7 +1298,8 @@
     "brand": "쿠쿠",
     "model": "CP-QN3002S",
     "price": 27900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 1900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11361&cid=1377&gid=1424",
@@ -1291,7 +1351,8 @@
     "brand": "현대큐밍",
     "model": "P-R40C(R)S",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 4900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11379&cid=1377&gid=1424",
@@ -1317,7 +1378,8 @@
     "brand": "청호나이스",
     "model": "WP-45S9P010M",
     "price": 32900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 2900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11396&cid=1377&gid=1424",
@@ -1408,7 +1470,11 @@
     "brand": "코웨이",
     "model": "CHPI-7521L",
     "price": 36360,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 11360
   },
   {
     "url": "https://rentalsegye.com/product.php?no=17341&cid=1377&gid=1424",
@@ -1421,7 +1487,11 @@
     "brand": "코웨이",
     "model": "CPI-7511L",
     "price": 34560,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 9560
   },
   {
     "url": "https://rentalsegye.com/product.php?no=17343&cid=1377&gid=1424",
@@ -1434,7 +1504,11 @@
     "brand": "코웨이",
     "model": "CHPI-7511L",
     "price": 38160,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 13160
   },
   {
     "url": "https://rentalsegye.com/product.php?no=18011&cid=1377&gid=1424",
@@ -1447,7 +1521,8 @@
     "brand": "웰스",
     "model": "WK470",
     "price": 51900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 29900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=19340&cid=1377&gid=1424",
@@ -1460,7 +1535,8 @@
     "brand": "현대큐밍",
     "model": "P-A52C",
     "price": 22900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=19341&cid=1377&gid=1424",
@@ -1473,7 +1549,8 @@
     "brand": "현대큐밍",
     "model": "P-A52S",
     "price": 23900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 1900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=19829&cid=1377&gid=1424",
@@ -1499,7 +1576,8 @@
     "brand": "청호나이스",
     "model": "WI-53C9600M",
     "price": 31900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 1900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42270&cid=1377&gid=1424",
@@ -1512,7 +1590,11 @@
     "brand": "SK매직",
     "model": "WPU-JAC104S(WW)",
     "price": 26000,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 1000
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42274&cid=1377&gid=1424",
@@ -1525,7 +1607,11 @@
     "brand": "SK매직",
     "model": "WPU-JAC104S",
     "price": 26000,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 1000
   },
   {
     "url": "https://rentalsegye.com/product.php?no=19869&cid=1377&gid=1424",
@@ -1576,7 +1662,8 @@
     "brand": "웰스",
     "model": "WM071RWA",
     "price": 35900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 13900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=20169&cid=1377&gid=1424",
@@ -1626,7 +1713,8 @@
     "brand": "코웨이",
     "model": "CHP-3140N",
     "price": 32760,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 7760
   },
   {
     "url": "https://rentalsegye.com/product.php?no=20913&cid=1377&gid=1424",
@@ -1639,7 +1727,8 @@
     "brand": "코웨이",
     "model": "CHP-8200N",
     "price": 30060,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 5060
   },
   {
     "url": "https://rentalsegye.com/product.php?no=21671&cid=1377&gid=1424",
@@ -1652,7 +1741,8 @@
     "brand": "코웨이",
     "model": "CHP-8210N",
     "price": 30060,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 5060
   },
   {
     "url": "https://rentalsegye.com/product.php?no=21669&cid=1377&gid=1424",
@@ -1704,7 +1794,8 @@
     "brand": "코웨이",
     "model": "CHP-8310L",
     "price": 30060,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 5060
   },
   {
     "url": "https://rentalsegye.com/product.php?no=22107&cid=1377&gid=1424",
@@ -1717,7 +1808,8 @@
     "brand": "현대큐밍",
     "model": "P-R40SS",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 4900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=26995&cid=1377&gid=1424",
@@ -1756,7 +1848,8 @@
     "brand": "현대큐밍",
     "model": "HQP-M50SW",
     "price": 29900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 7900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=25597&cid=1377&gid=1424",
@@ -1769,7 +1862,10 @@
     "brand": "코웨이",
     "model": "CP-7211N",
     "price": 23760,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ]
   },
   {
     "url": "https://rentalsegye.com/product.php?no=26417&cid=1377&gid=1424",
@@ -1808,7 +1904,11 @@
     "brand": "코웨이",
     "model": "CHPI-7400N",
     "price": 40860,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 15860
   },
   {
     "url": "https://rentalsegye.com/product.php?no=37398&cid=1377&gid=1424",
@@ -1821,7 +1921,8 @@
     "brand": "청호나이스",
     "model": "WI-60C80511M",
     "price": 37900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 7900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=26423&cid=1377&gid=1424",
@@ -1834,7 +1935,8 @@
     "brand": "청호나이스",
     "model": "WP-46S9P510M",
     "price": 30900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=26424&cid=1377&gid=1424",
@@ -1860,7 +1962,8 @@
     "brand": "코웨이",
     "model": "CHPI-5810L",
     "price": 55900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 30900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=27607&cid=1377&gid=1424",
@@ -1886,7 +1989,8 @@
     "brand": "쿠쿠",
     "model": "CP-AHSC100HEB/EW",
     "price": 37710,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 11710
   },
   {
     "url": "https://rentalsegye.com/product.php?no=28172&cid=1377&gid=1424",
@@ -1912,7 +2016,8 @@
     "brand": "코웨이",
     "model": "CHP-5720L",
     "price": 44900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 19900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=33327&cid=1377&gid=1424",
@@ -1938,7 +2043,8 @@
     "brand": "현대큐밍",
     "model": "HQP-M40SW",
     "price": 32900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 10900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=29170&cid=1377&gid=1424",
@@ -1951,7 +2057,8 @@
     "brand": "현대큐밍",
     "model": "HQP-M50SW",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 4900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=31350&cid=1377&gid=1424",
@@ -2003,7 +2110,8 @@
     "brand": "쿠쿠",
     "model": "CP-QRP3002S",
     "price": 29900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 3900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=30055&cid=1377&gid=1424",
@@ -2042,7 +2150,8 @@
     "brand": "청호나이스",
     "model": "WI-70S90010M",
     "price": 43900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 13900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=30248&cid=1377&gid=1424",
@@ -2081,7 +2190,8 @@
     "brand": "쿠쿠",
     "model": "CP-SS100WSV/HGM/HGP/HGB",
     "price": 39900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 13900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=32177&cid=1377&gid=1424",
@@ -2094,7 +2204,8 @@
     "brand": "청호나이스",
     "model": "WI-80S9P510M",
     "price": 47900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 17900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34599&cid=1377&gid=1424",
@@ -2107,7 +2218,8 @@
     "brand": "청호나이스",
     "model": "WP-80S9P510M",
     "price": 39900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 9900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=36099&cid=1377&gid=1424",
@@ -2120,7 +2232,8 @@
     "brand": "웰스",
     "model": "WR872MWA",
     "price": 39900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 17900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=32260&cid=1377&gid=1424",
@@ -2158,7 +2271,8 @@
     "brand": "쿠쿠",
     "model": "CP-ACS1610SNW",
     "price": 57900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 31900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=32597&cid=1377&gid=1424",
@@ -2184,7 +2298,8 @@
     "brand": "쿠쿠",
     "model": "CP-AAS100ULDS/ULW",
     "price": 40900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 14900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=32999&cid=1377&gid=1424",
@@ -2210,7 +2325,8 @@
     "brand": "코웨이",
     "model": "CP-6340L",
     "price": 26010,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 1010
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34424&cid=1377&gid=1424",
@@ -2249,7 +2365,11 @@
     "brand": "SK매직",
     "model": "WPU-JCC104",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 1900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34643&cid=1377&gid=1424",
@@ -2274,7 +2394,10 @@
     "brand": "코웨이",
     "model": "CHP-5711L",
     "price": 23310,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ]
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34816&cid=1377&gid=1424",
@@ -2299,7 +2422,8 @@
     "brand": "세스코",
     "model": "EWBS551",
     "price": 22900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 1900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=35128&cid=1377&gid=1424",
@@ -2364,7 +2488,8 @@
     "brand": "세스코",
     "model": "EWBD151",
     "price": 25900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 4900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=36097&cid=1377&gid=1424",
@@ -2403,7 +2528,8 @@
     "brand": "SK매직",
     "model": "WPU-IC110F",
     "price": 54900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "discount": 29900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42302&cid=1377&gid=1424",
@@ -2416,7 +2542,8 @@
     "brand": "SK매직",
     "model": "WPU-B600F",
     "price": 28900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "discount": 3900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42297&cid=1377&gid=1424",
@@ -2455,7 +2582,8 @@
     "brand": "현대큐밍",
     "model": "HQPS1CYOE",
     "price": 27900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 5900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=36806&cid=1377&gid=1424",
@@ -2481,7 +2609,11 @@
     "brand": "코웨이",
     "model": "CHP-5711R",
     "price": 25110,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 110
   },
   {
     "url": "https://rentalsegye.com/product.php?no=36869&cid=1377&gid=1424",
@@ -2494,7 +2626,8 @@
     "brand": "청호나이스",
     "model": "WI-70S9P010M",
     "price": 44900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 14900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=37346&cid=1377&gid=1424",
@@ -2507,7 +2640,8 @@
     "brand": "청호나이스",
     "model": "WI-60C90521M",
     "price": 38900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 8900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=37177&cid=1377&gid=1424",
@@ -2520,7 +2654,8 @@
     "brand": "현대큐밍",
     "model": "HQPI73CG0E",
     "price": 44900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 22900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=37266&cid=1377&gid=1424",
@@ -2533,7 +2668,8 @@
     "brand": "세스코",
     "model": "EWDD951",
     "price": 41900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 20900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=37651&cid=1377&gid=1424",
@@ -2546,7 +2682,8 @@
     "brand": "청호나이스",
     "model": "WI-55S90510M",
     "price": 39900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 9900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=37652&cid=1377&gid=1424",
@@ -2559,7 +2696,8 @@
     "brand": "청호나이스",
     "model": "WI-55S9P510M",
     "price": 40900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 10900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=38260&cid=1377&gid=1424",
@@ -2598,7 +2736,8 @@
     "brand": "쿠쿠",
     "model": "CP-ACSR1620SW",
     "price": 58900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 32900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=38413&cid=1377&gid=1424",
@@ -2636,7 +2775,8 @@
     "brand": "쿠쿠",
     "model": "CP-AFRP1601SW",
     "price": 32900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 6900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=39229&cid=1377&gid=1424",
@@ -2688,7 +2828,8 @@
     "brand": "웰스",
     "model": "WS672",
     "price": 25900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 3900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=40917&cid=1377&gid=1424",
@@ -2701,7 +2842,8 @@
     "brand": "웰스",
     "model": "WS674",
     "price": 28900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 6900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=41402&cid=1377&gid=1424",
@@ -2727,7 +2869,8 @@
     "brand": "코웨이",
     "model": "CHP-1111N",
     "price": 27810,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 2810
   },
   {
     "url": "https://rentalsegye.com/product.php?no=41338&cid=1377&gid=1424",
@@ -2778,7 +2921,8 @@
     "brand": "현대큐밍",
     "model": "HQPA70SW0G",
     "price": 53900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 31900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42303&cid=1377&gid=1424",
@@ -2791,7 +2935,8 @@
     "brand": "SK매직",
     "model": "WPU-B610F",
     "price": 35900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "discount": 10900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42266&cid=1377&gid=1424",
@@ -2804,7 +2949,11 @@
     "brand": "SK매직",
     "model": "WPU-JAC115P",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 1900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42267&cid=1377&gid=1424",
@@ -2817,7 +2966,11 @@
     "brand": "SK매직",
     "model": "WPU-IAC425P",
     "price": 39000,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 14000
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42283&cid=1377&gid=1424",
@@ -2830,7 +2983,8 @@
     "brand": "청호나이스",
     "model": "WP-30B90620N",
     "price": 33900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 3900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42306&cid=1377&gid=1424",
@@ -2895,7 +3049,8 @@
     "brand": "SK매직",
     "model": "WPU-TDC10R",
     "price": 27900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "discount": 2900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42311&cid=1377&gid=1424",
@@ -2908,7 +3063,8 @@
     "brand": "SK매직",
     "model": "WPU-B700F",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "discount": 1900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42312&cid=1377&gid=1424",
@@ -2921,7 +3077,8 @@
     "brand": "SK매직",
     "model": "WPU-B710F",
     "price": 29900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "discount": 4900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42360&cid=1377&gid=1424",
@@ -2996,7 +3153,10 @@
     "brand": "코웨이",
     "model": "CHP-5730L",
     "price": 23310,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ]
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47011&cid=1377&gid=1424",
@@ -3009,7 +3169,11 @@
     "brand": "코웨이",
     "model": "CHP-5730R",
     "price": 25110,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 110
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47173&cid=1377&gid=1424",
@@ -3022,7 +3186,8 @@
     "brand": "쿠쿠",
     "model": "CP-DN1201S",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=43138&cid=1377&gid=1424",
@@ -3035,7 +3200,11 @@
     "brand": "코웨이",
     "model": "CPI-7410N",
     "price": 37710,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 12710
   },
   {
     "url": "https://rentalsegye.com/product.php?no=43680&cid=1377&gid=1424",
@@ -3048,7 +3217,8 @@
     "brand": "쿠쿠",
     "model": "CP-AMS100EBE/WH/BR/PK/BK",
     "price": 26010,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 10
   },
   {
     "url": "https://rentalsegye.com/product.php?no=46971&cid=1377&gid=1424",
@@ -3073,7 +3243,10 @@
     "brand": "SK매직",
     "model": "WPU-JAC125S",
     "price": 24000,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ]
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45160&cid=1377&gid=1424",
@@ -3099,7 +3272,8 @@
     "brand": "세스코",
     "model": "EWES552",
     "price": 27900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 6900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45440&cid=1377&gid=1424",
@@ -3112,7 +3286,8 @@
     "brand": "세스코",
     "model": "EWES752",
     "price": 30900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 9900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45442&cid=1377&gid=1424",
@@ -3125,7 +3300,8 @@
     "brand": "세스코",
     "model": "EWES751",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 5900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45924&cid=1377&gid=1424",
@@ -3138,7 +3314,8 @@
     "brand": "코웨이",
     "model": "CHPI-5830L",
     "price": 58900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 33900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=46340&cid=1377&gid=1424",
@@ -3188,7 +3365,11 @@
     "brand": "코웨이",
     "model": "CHP-5730N",
     "price": 25110,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 110
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47141&cid=1377&gid=1424",
@@ -3201,7 +3382,10 @@
     "brand": "코웨이",
     "model": "CP-7220N",
     "price": 24210,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ]
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47200&cid=1377&gid=1424",
@@ -3240,7 +3424,8 @@
     "brand": "쿠쿠",
     "model": "CP-AHS101HEW",
     "price": 36810,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 10810
   },
   {
     "url": "https://rentalsegye.com/product.php?no=50222&cid=1377&gid=1424",
@@ -3277,7 +3462,11 @@
     "brand": "SK매직",
     "model": "WPU-IAC606",
     "price": 35900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 10900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=48331&cid=1377&gid=1424",
@@ -3290,7 +3479,8 @@
     "brand": "코웨이",
     "model": "CHPI-5820L",
     "price": 48060,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 23060
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47914&cid=1377&gid=1424",
@@ -3303,7 +3493,8 @@
     "brand": "쿠쿠",
     "model": "CP-AJS821SW",
     "price": 39860,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 13860
   },
   {
     "url": "https://rentalsegye.com/product.php?no=48609&cid=1377&gid=1424",
@@ -3328,7 +3519,8 @@
     "brand": "쿠쿠",
     "model": "CP-AQS100EWH",
     "price": 35010,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 9010
   },
   {
     "url": "https://rentalsegye.com/product.php?no=48070&cid=1377&gid=1424",
@@ -3341,7 +3533,11 @@
     "brand": "SK매직",
     "model": "WPU-MAC306SWH",
     "price": 32900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 7900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=48596&cid=1377&gid=1424",
@@ -3354,7 +3550,11 @@
     "brand": "SK매직",
     "model": "WPU-IAC506",
     "price": 41500,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 16500
   },
   {
     "url": "https://rentalsegye.com/product.php?no=48835&cid=1377&gid=1424",
@@ -3367,7 +3567,11 @@
     "brand": "코웨이",
     "model": "CHP-7211N_V2",
     "price": 25110,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 110
   },
   {
     "url": "https://rentalsegye.com/product.php?no=49323&cid=1377&gid=1424",
@@ -3380,7 +3584,8 @@
     "brand": "쿠쿠",
     "model": "CP-SS101WSV",
     "price": 37900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 11900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=49384&cid=1377&gid=1424",
@@ -3393,7 +3598,10 @@
     "brand": "코웨이",
     "model": "CP-7211N_V2",
     "price": 23310,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ]
   },
   {
     "url": "https://rentalsegye.com/product.php?no=49481&cid=1377&gid=1424",
@@ -3406,7 +3614,8 @@
     "brand": "청호나이스",
     "model": "WF-60C90521M",
     "price": 43900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 13900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=50184&cid=1377&gid=1424",
@@ -3419,7 +3628,8 @@
     "brand": "현대큐밍",
     "model": "HQPD11CC0G",
     "price": 26900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 4900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=50699&cid=1377&gid=1424",
@@ -3521,7 +3731,8 @@
     "brand": "코웨이",
     "model": "AP-1019D",
     "price": 27900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 2900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=43239&cid=1379&gid=1407",
@@ -3534,7 +3745,8 @@
     "brand": "코웨이",
     "model": "AP-3525I",
     "price": 45900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 20900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11438&cid=1379&gid=1407",
@@ -3560,7 +3772,11 @@
     "brand": "코웨이",
     "model": "AP-3018B",
     "price": 51900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "promotion": [
+      "반값할인"
+    ],
+    "discount": 26900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11451&cid=1379&gid=1407",
@@ -3573,7 +3789,8 @@
     "brand": "코웨이",
     "model": "AP-3519A",
     "price": 51900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 26900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=11460&cid=1379&gid=1407",
@@ -3586,7 +3803,8 @@
     "brand": "코웨이",
     "model": "APMS-1020A",
     "price": 26400,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 1400
   },
   {
     "url": "https://rentalsegye.com/product.php?no=28199&cid=1379&gid=1407",
@@ -3638,7 +3856,8 @@
     "brand": "코웨이",
     "model": "AP-3021D",
     "price": 43110,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 18110
   },
   {
     "url": "https://rentalsegye.com/product.php?no=18032&cid=1379&gid=1407",
@@ -3651,7 +3870,8 @@
     "brand": "웰스",
     "model": "AN734",
     "price": 34900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 12900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=19908&cid=1379&gid=1407",
@@ -3689,7 +3909,8 @@
     "desc": "[LG] 퓨리케어 공기청정기 48평형 화이트",
     "brand": "LG전자",
     "model": "AS480BWFA",
-    "price": 60500
+    "price": 60500,
+    "discount": 43500
   },
   {
     "url": "https://rentalsegye.com/product.php?no=39801&cid=1379&gid=1407",
@@ -3702,7 +3923,8 @@
     "brand": "세스코",
     "model": "EADS721",
     "price": 21900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=22075&cid=1379&gid=1407",
@@ -3792,7 +4014,8 @@
     "brand": "웰스",
     "model": "AR626",
     "price": 25900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 3900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=38910&cid=1379&gid=1407",
@@ -3830,7 +4053,8 @@
     "brand": "쿠쿠",
     "model": "AC-35U10FWS",
     "price": 27810,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 1810
   },
   {
     "url": "https://rentalsegye.com/product.php?no=30298&cid=1379&gid=1407",
@@ -3882,7 +4106,8 @@
     "brand": "코웨이",
     "model": "APD-1023A",
     "price": 30510,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 5510
   },
   {
     "url": "https://rentalsegye.com/product.php?no=39786&cid=1379&gid=1407",
@@ -3895,7 +4120,8 @@
     "brand": "캐리어",
     "model": "CAPS-F165KRAW",
     "price": 59900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_zd5pKjor_logo_carrier_251x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_zd5pKjor_logo_carrier_251x100.png",
+    "discount": 46900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34149&cid=1379&gid=1407",
@@ -3908,7 +4134,8 @@
     "brand": "코웨이",
     "model": "AP-2023K",
     "price": 30510,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 5510
   },
   {
     "url": "https://rentalsegye.com/product.php?no=33971&cid=1379&gid=1407",
@@ -3921,7 +4148,8 @@
     "brand": "코웨이",
     "model": "AP-1523D",
     "price": 25110,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 110
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34139&cid=1379&gid=1407",
@@ -3934,7 +4162,8 @@
     "brand": "코웨이",
     "model": "AP-1623M",
     "price": 27810,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 2810
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34720&cid=1379&gid=1407",
@@ -3947,7 +4176,8 @@
     "brand": "아이큐에어",
     "model": "HP100-EE",
     "price": 75000,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_VS5X7Pdw_logo_iqair_311x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_VS5X7Pdw_logo_iqair_311x100.png",
+    "discount": 58000
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34721&cid=1379&gid=1407",
@@ -3960,7 +4190,8 @@
     "brand": "아이큐에어",
     "model": "HP250-EE",
     "price": 99000,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_VS5X7Pdw_logo_iqair_311x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_VS5X7Pdw_logo_iqair_311x100.png",
+    "discount": 82000
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34722&cid=1379&gid=1407",
@@ -3973,7 +4204,8 @@
     "brand": "아이큐에어",
     "model": "GC-MultiGas-EE",
     "price": 115000,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_VS5X7Pdw_logo_iqair_311x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_VS5X7Pdw_logo_iqair_311x100.png",
+    "discount": 98000
   },
   {
     "url": "https://rentalsegye.com/product.php?no=35111&cid=1379&gid=1407",
@@ -3999,7 +4231,8 @@
     "brand": "세스코",
     "model": "EP-430",
     "price": 27900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 6900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=35122&cid=1379&gid=1407",
@@ -4012,7 +4245,8 @@
     "brand": "세스코",
     "model": "VS-411P",
     "price": 32900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 11900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=35124&cid=1379&gid=1407",
@@ -4025,7 +4259,8 @@
     "brand": "세스코",
     "model": "VS-411P",
     "price": 32900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 11900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=36481&cid=1379&gid=1407",
@@ -4051,7 +4286,10 @@
     "brand": "SK매직",
     "model": "ACL-15C1A",
     "price": 16900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ]
   },
   {
     "url": "https://rentalsegye.com/product.php?no=36482&cid=1379&gid=1407",
@@ -4077,7 +4315,8 @@
     "brand": "코웨이",
     "model": "AP-3522F",
     "price": 45900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 20900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=37089&cid=1379&gid=1407",
@@ -4116,7 +4355,8 @@
     "brand": "웰스",
     "model": "AP520VWA",
     "price": 25900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 3900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42313&cid=1379&gid=1407",
@@ -4129,7 +4369,8 @@
     "brand": "청호나이스",
     "model": "AP-40H8220",
     "price": 41900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 11900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=39800&cid=1379&gid=1407",
@@ -4142,7 +4383,8 @@
     "brand": "세스코",
     "model": "EADS531",
     "price": 30900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 9900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=39799&cid=1379&gid=1407",
@@ -4155,7 +4397,8 @@
     "brand": "세스코",
     "model": "EADS741",
     "price": 33900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 12900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=40000&cid=1379&gid=1407",
@@ -4192,7 +4435,8 @@
     "brand": "세스코",
     "model": "EADS731",
     "price": 33900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 12900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=40192&cid=1379&gid=1407",
@@ -4205,7 +4449,8 @@
     "brand": "세스코",
     "model": "EADS541",
     "price": 30900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 9900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=40193&cid=1379&gid=1407",
@@ -4218,7 +4463,8 @@
     "brand": "세스코",
     "model": "EADS711",
     "price": 21900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_IjlB1R02_logo_cesco_206x100.png",
+    "discount": 900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=40194&cid=1379&gid=1407",
@@ -4244,7 +4490,8 @@
     "brand": "웰스",
     "model": "AQ730",
     "price": 29900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 7900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=40611&cid=1379&gid=1407",
@@ -4270,7 +4517,8 @@
     "brand": "웰스",
     "model": "AS526CWA",
     "price": 23900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_5cBVIkhs_logo_wells_357x100.png",
+    "discount": 1900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=40616&cid=1379&gid=1407",
@@ -4283,7 +4531,8 @@
     "brand": "코웨이",
     "model": "AP-4025D",
     "price": 46710,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 21710
   },
   {
     "url": "https://rentalsegye.com/product.php?no=41199&cid=1379&gid=1407",
@@ -4296,7 +4545,8 @@
     "brand": "현대큐밍",
     "model": "HQAA313W0F",
     "price": 44900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 22900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=41390&cid=1379&gid=1407",
@@ -4309,7 +4559,8 @@
     "brand": "코웨이",
     "model": "AP-3024H",
     "price": 43110,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 18110
   },
   {
     "url": "https://rentalsegye.com/products.php?no=41643&cid=1379&gid=1407",
@@ -4358,7 +4609,8 @@
     "brand": "청호나이스",
     "model": "AP-30H8220",
     "price": 39900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 9900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42315&cid=1379&gid=1407",
@@ -4371,7 +4623,8 @@
     "brand": "SK매직",
     "model": "ACL-300",
     "price": 49900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "discount": 24900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42317&cid=1379&gid=1407",
@@ -4397,7 +4650,8 @@
     "brand": "청호나이스",
     "model": "AP-23H8550",
     "price": 38900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 8900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42319&cid=1379&gid=1407",
@@ -4410,7 +4664,10 @@
     "brand": "SK매직",
     "model": "ACL-25C1A",
     "price": 22900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ]
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42321&cid=1379&gid=1407",
@@ -4436,7 +4693,10 @@
     "brand": "SK매직",
     "model": "ACL-20C1A",
     "price": 18900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "promotion": [
+      "반값할인"
+    ]
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42325&cid=1379&gid=1407",
@@ -4449,7 +4709,8 @@
     "brand": "SK매직",
     "model": "ACL-22P1C",
     "price": 27900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_RW3hHro1_logo_sk_194x100.png",
+    "discount": 2900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=42326&cid=1379&gid=1407",
@@ -4525,7 +4786,8 @@
     "brand": "코웨이",
     "model": "AP-1225F",
     "price": 27900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 2900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=43462&cid=1379&gid=1407",
@@ -4586,7 +4848,8 @@
     "brand": "코웨이",
     "model": "AP-2425H",
     "price": 25400,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 400
   },
   {
     "url": "https://rentalsegye.com/product.php?no=43526&cid=1379&gid=1407",
@@ -4612,7 +4875,8 @@
     "brand": "아이큐에어",
     "model": "Atem X",
     "price": 89900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_VS5X7Pdw_logo_iqair_311x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_VS5X7Pdw_logo_iqair_311x100.png",
+    "discount": 72900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47491&cid=1379&gid=1407",
@@ -4648,7 +4912,8 @@
     "desc": "[LG] 퓨리케어 AI 오브제컬렉션 월핏 스탠드 공기청정기 35평형 카밍베이지",
     "brand": "LG전자",
     "model": "AS356LSAA",
-    "price": 43900
+    "price": 43900,
+    "discount": 19900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=50217&cid=1379&gid=1407",
@@ -4661,7 +4926,8 @@
     "brand": "현대큐밍",
     "model": "HQAD203",
     "price": 22900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47182&cid=1379&gid=1407",
@@ -4674,7 +4940,8 @@
     "brand": "쿠쿠",
     "model": "AC-35U20FWGE",
     "price": 30900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 4900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47181&cid=1379&gid=1407",
@@ -4700,7 +4967,8 @@
     "brand": "현대큐밍",
     "model": "HQAB303E0F",
     "price": 36900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 14900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45445&cid=1379&gid=1407",
@@ -4739,7 +5007,8 @@
     "brand": "쿠쿠",
     "model": "AC-40AB10FNW",
     "price": 38900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 12900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45461&cid=1379&gid=1407",
@@ -4851,7 +5120,8 @@
     "desc": "[LG] 퓨리케어 공기청정기 19평형 크리미스노우 + 360도 V필터 1개",
     "brand": "LG전자",
     "model": "AS195DWWA(V필터)",
-    "price": 28900
+    "price": 28900,
+    "discount": 4900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47050&cid=1379&gid=1407",
@@ -4863,7 +5133,8 @@
     "desc": "[LG] 퓨리케어 공기청정기 30평형 크리미스노우 + 360도 V필터 2개",
     "brand": "LG전자",
     "model": "AS305DWWA(V필터)",
-    "price": 39900
+    "price": 39900,
+    "discount": 15900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47054&cid=1379&gid=1407",
@@ -4925,7 +5196,8 @@
     "brand": "캐리어",
     "model": "FKAPF120PZA",
     "price": 40900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_zd5pKjor_logo_carrier_251x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_zd5pKjor_logo_carrier_251x100.png",
+    "discount": 27900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47209&cid=1379&gid=1407",
@@ -4938,7 +5210,8 @@
     "brand": "현대큐밍",
     "model": "SH-3025AH",
     "price": 28900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 6900
   },
   {
     "url": "https://rentalsegye.com/products.php?no=50355&cid=1379&gid=1407",
@@ -4963,7 +5236,8 @@
     "brand": "쿠쿠",
     "model": "AC-N25W10FWS",
     "price": 29900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_pRQd9fUT_logo_cuckoo_499x100.png",
+    "discount": 3900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47834&cid=1379&gid=1407",
@@ -4976,7 +5250,8 @@
     "brand": "현대큐밍",
     "model": "HQAV10340F",
     "price": 24900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 2900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47836&cid=1379&gid=1407",
@@ -4989,7 +5264,8 @@
     "brand": "현대큐밍",
     "model": "HQAB203E0F",
     "price": 29900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_qZYoMiDH_logo_quming_325x100.png",
+    "discount": 7900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47868&cid=1379&gid=1407",
@@ -5001,7 +5277,8 @@
     "desc": "[LG] 퓨리케어 AI 오브제컬렉션 360도 M7 공기청정기 34평형 카밍베이지 + 무빙휠",
     "brand": "LG전자",
     "model": "AS356NSMAM",
-    "price": 58900
+    "price": 58900,
+    "discount": 16900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47869&cid=1379&gid=1407",
@@ -5013,7 +5290,8 @@
     "desc": "[LG] 퓨리케어 AI 오브제컬렉션 360도 M7 공기청정기 34평형 네이처그린 + 무빙휠",
     "brand": "LG전자",
     "model": "AS356NGMAM",
-    "price": 58900
+    "price": 58900,
+    "discount": 16900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47870&cid=1379&gid=1407",
@@ -5148,7 +5426,8 @@
     "desc": "[LG] 퓨리케어 AI 오브제컬렉션 360도 M5 공기청정기 20평형 카밍베이지",
     "brand": "LG전자",
     "model": "AS206NSHA",
-    "price": 47900
+    "price": 47900,
+    "discount": 23900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=48436&cid=1379&gid=1407",
@@ -5173,7 +5452,8 @@
     "brand": "코웨이",
     "model": "APM-1226H",
     "price": 27900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 2900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=50183&cid=1379&gid=1407",
@@ -5290,7 +5570,8 @@
     "brand": "코웨이",
     "model": "CMSS-SP01SC,CMQ-SP01SC,CMK-SP01SC,CMLK-SP01SC,CMGK-SP01SC",
     "price": 38900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 13900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34493&cid=1486&gid=1580",
@@ -5303,7 +5584,8 @@
     "brand": "코웨이",
     "model": "CMSS-SP01S,CMQ-SP01S,CMK-SP01S,CMLK-SP01S,CMGK-SP01S",
     "price": 34900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 9900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=34697&cid=1486&gid=1580",
@@ -5329,7 +5611,8 @@
     "brand": "코웨이",
     "model": "CMSS-AS05,CMQ-AS05,CMK-AS05,CMLK-AS05",
     "price": 66900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 41900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=39203&cid=1486&gid=1580",
@@ -5342,7 +5625,8 @@
     "brand": "코웨이",
     "model": "CMSS-AS04,CMQ-AS04,CMK-AS04,CMLK-AS04",
     "price": 52900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 27900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=44945&cid=1486&gid=1580",
@@ -5420,7 +5704,8 @@
     "brand": "청호나이스",
     "model": "프레임 FBT + 듀얼 드림",
     "price": 33800,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 3800
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45243&cid=1486&gid=1580",
@@ -5433,7 +5718,8 @@
     "brand": "청호나이스",
     "model": "프레임 WB + 매트리스 William J",
     "price": 44800,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 14800
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45245&cid=1486&gid=1580",
@@ -5485,7 +5771,8 @@
     "brand": "청호나이스",
     "model": "프레임 FS + 듀얼 코지",
     "price": 42800,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 12800
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45389&cid=1486&gid=1580",
@@ -5498,7 +5785,8 @@
     "brand": "청호나이스",
     "model": "프레임 FS + 듀얼 코지",
     "price": 30800,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 800
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45397&cid=1486&gid=1580",
@@ -5511,7 +5799,8 @@
     "brand": "청호나이스",
     "model": "프레임 FH + 듀얼 드림",
     "price": 49800,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 19800
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45402&cid=1486&gid=1580",
@@ -5524,7 +5813,8 @@
     "brand": "청호나이스",
     "model": "프레임 FH + 듀얼 드림",
     "price": 35800,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 5800
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45424&cid=1486&gid=1580",
@@ -5537,7 +5827,8 @@
     "brand": "청호나이스",
     "model": "프레임 FBT + 듀얼 코지",
     "price": 33800,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 3800
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45426&cid=1486&gid=1580",
@@ -5550,7 +5841,8 @@
     "brand": "청호나이스",
     "model": "프레임 WB + 듀얼 드림",
     "price": 34800,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 4800
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45428&cid=1486&gid=1580",
@@ -5563,7 +5855,8 @@
     "brand": "청호나이스",
     "model": "프레임 FC + 매트리스 William J",
     "price": 43800,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 13800
   },
   {
     "url": "https://rentalsegye.com/product.php?no=45431&cid=1486&gid=1580",
@@ -5589,7 +5882,8 @@
     "brand": "청호나이스",
     "model": "네스티지 매트리스",
     "price": 38900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 8900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47467&cid=1486&gid=1580",
@@ -5628,7 +5922,8 @@
     "brand": "청호나이스",
     "model": "로얄스위트 프라임 매트리스",
     "price": 30900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_3rUDe0nN_logo_chungho_525x100.png",
+    "discount": 900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=47473&cid=1486&gid=1580",
@@ -5654,7 +5949,8 @@
     "brand": "코웨이",
     "model": "CMGK-SP02SC,CMLK-SP02SC,CMK-SP02SC,CMQ-SP02SC,CMSS-SP02SC",
     "price": 42900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 17900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=48599&cid=1486&gid=1580",
@@ -5667,7 +5963,8 @@
     "brand": "코웨이",
     "model": "CMGK-SP02S,CMLK-SP02S,CMK-SP02S,CMQ-SP02S,CMSS-SP02S",
     "price": 38900,
-    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png"
+    "logo": "https://tlpartner.speedycdn.net/data/file/item_code/990098083_QmYlbwPv_logo_coway_391x100.png",
+    "discount": 13900
   },
   {
     "url": "https://rentalsegye.com/product.php?no=41771&cid=1377",
