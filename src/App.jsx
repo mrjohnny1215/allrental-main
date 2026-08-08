@@ -193,14 +193,22 @@ function classifyAirFunc(desc = '') {
   if (d.includes('환기')) return '환기청정기';
   return ''; // 렌탈세계엔 '일반청정' 칩 없음 → 매칭 안 되면 필터에서 제외
 }
-// 매트리스 타입 (우리 실제 상품 특성 기준)
+// 매트리스 타입 (상품명 실제 특성 기준 — 렌탈세계 '타입' 필터와 유사한 의미 분류)
 function classifyMattressType(desc = '') {
   const d = desc;
   if (d.includes('탑퍼')) return '탑퍼교체';
   if (d.includes('메모리')) return '메모리폼';
   if (d.includes('커버') || d.includes('원바디')) return '커버교체';
   if (d.includes('온열')) return '온열';
-  return '일반';
+  if (d.includes('말총')) return '말총';
+  if (d.includes('하이브리드')) return '하이브리드';
+  if (d.includes('유로탑')) return '유로탑';
+  if (d.includes('포켓스프링')) return '포켓스프링';
+  if (d.includes('폼')) return '폼';
+  if (d.includes('모션') || d.includes('마사지') || d.includes('안마') || d.includes('진동')) return '모션/마사지';
+  // 라인업명 기반 보강 (코웨이/청호/SK매직/쿠쿠/젠티스 등)
+  if (d.includes('비렉스') || d.includes('엘리트') || d.includes('시그니처') || d.includes('스마트') || d.includes('모디') || d.includes('온리') || d.includes('듀얼') || d.includes('William') || d.includes('웜') || d.includes('레스티노') || d.includes('워커힐') || d.includes('디클라시') || d.includes('네스티지') || d.includes('로얄스위트') || d.includes('멜로우') || d.includes('고마르코') || d.includes('어댑트') || d.includes('헬렌') || d.includes('마제스틱') || d.includes('레인보우')) return '스프링매트리스';
+  return '기타';
 }
 
 const parsePrice = (s) => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) || 0;
@@ -857,7 +865,7 @@ export default function App() {
           )}
           {activeCategory === 'mattress' && (
             <>
-              <FilterChips label="타입" options={['탑퍼교체','메모리폼','커버교체','온열','일반']} value={mattressTypeFilter} onChange={setMattressTypeFilter} />
+              <FilterChips label="타입" options={['탑퍼교체','메모리폼','커버교체','온열','말총','하이브리드','유로탑','포켓스프링','폼','스프링매트리스']} value={mattressTypeFilter} onChange={setMattressTypeFilter} />
               <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
             </>
           )}
