@@ -847,10 +847,10 @@ export default function App() {
           <FilterChips label="렌탈사" options={brands} value={brandFilter} onChange={setBrandFilter} />
           {activeCategory === 'water' && (
             <>
-              <FilterChips label="기능" options={['냉수전용','냉온전용','얼음냉온','얼음냉정','온수전용','정수전용','커피정수기','탄산정수기']} value={funcFilter} onChange={setFuncFilter} />
+              <FilterChips label="기능" options={['냉온전용','얼음냉온','얼음냉정','정수전용','커피정수기']} value={funcFilter} onChange={setFuncFilter} />
               <FilterChips label="타입" options={['빌트인','스탠드형','하프형']} value={typeFilter} onChange={setTypeFilter} />
-              <FilterChips label="정수방식" options={['직수형','탱크형']} value={methodFilter} onChange={setMethodFilter} />
-              <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
+              <FilterChips label="정수방식" options={['직수형']} value={methodFilter} onChange={setMethodFilter} />
+              <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원']} value={priceFilter} onChange={setPriceFilter} />
             </>
           )}
           {activeCategory === 'air' && (
@@ -861,12 +861,12 @@ export default function App() {
             </>
           )}
           {activeCategory === 'bidet' && (
-            <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
+            <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대']} value={priceFilter} onChange={setPriceFilter} />
           )}
           {activeCategory === 'mattress' && (
             <>
               <FilterChips label="타입" options={['탑퍼교체','메모리폼','커버교체','온열','말총','하이브리드','유로탑','포켓스프링','폼','스프링매트리스']} value={mattressTypeFilter} onChange={setMattressTypeFilter} />
-              <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
+              <FilterChips label="렌탈료" options={['1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
             </>
           )}
         </div>
