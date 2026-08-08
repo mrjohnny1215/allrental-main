@@ -398,7 +398,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
         )}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
           <div className="bg-gray-50 rounded-xl p-3 flex flex-col items-center justify-center overflow-hidden">
-            {product.logo && <img src={product.logo} alt="logo" className="h-7 w-auto object-contain mb-2" onError={(e) => (e.target.style.display = 'none')} />}
+            {product.logo ? <img src={product.logo.startsWith('//') ? 'https:' + product.logo : product.logo} alt="logo" className="h-7 w-auto object-contain mb-2" onError={(e) => { e.target.style.display = 'none'; }} /> : <div className="text-sm font-bold text-blue-700 mb-2">{brand || extractBrand(product.desc)}</div>}
             <div className="w-full h-56 sm:h-64 flex items-center justify-center overflow-hidden">
               <SmartImage src={(product.image || (product.detail_images && product.detail_images[0]) || '')} alt={product.desc} brand={brand || extractBrand(product.desc)} className="h-full" />
             </div>
@@ -876,26 +876,31 @@ export default function App() {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3">
           {filtered.map((p, idx) => {
             const isDiscounted = p.discount && p.discount !== '0' && p.discount !== '';
-            const labelStyle = p.label === '반값할인' ? 'bg-red-500' : p.label === 'BEST' ? 'bg-yellow-500' : p.label === '타사보상' ? 'bg-gray-500' : p.label2 ? 'bg-emerald-500' : 'bg-blue-500';
+            const promos = (p.promotion && Array.isArray(p.promotion)) ? p.promotion : [];
+            const promoStyle = (t) => t === '반값할인' ? 'bg-red-500' : t === '타사보상' ? 'bg-gray-500' : t === 'BEST' ? 'bg-yellow-500' : 'bg-emerald-500';
             const brand = extractBrand(p.desc);
             return (
               <div key={idx} onClick={() => setSelectedProduct(p)}
                 className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all" data-testid="card">
                 {/* 사진 위 작은 브랜드 로고 (렌탈세계 동일) */}
                 <div className="h-9 px-3 flex justify-center items-center bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
-                  {p.logo && <img src={p.logo} alt="" className="max-h-5 max-w-[70px] object-contain" onError={(e) => (e.target.style.display = 'none')} />}
+                  {p.logo ? (
+                    <img src={p.logo.startsWith('//') ? 'https:' + p.logo : p.logo} alt="" className="max-h-5 max-w-[70px] object-contain" onError={(e) => { e.target.style.display = 'none'; }} />
+                  ) : (
+                    <span className="text-[10px] font-bold text-gray-500">{brand}</span>
+                  )}
                 </div>
                 <div className="relative h-36 bg-gradient-to-b from-white to-gray-50 flex items-center justify-center p-3">
-                  {p.label && <span className={`absolute top-2 left-2 text-[10px] font-bold px-2 py-1 rounded text-white ${labelStyle}`}>{p.label}</span>}
-                  {p.label2 && <span className="absolute top-2 right-2 text-[10px] font-bold px-2 py-1 rounded text-white bg-emerald-500">{p.label2}</span>}
+                  {promos[0] && <span className={`absolute top-2 left-2 text-[10px] font-bold px-2 py-1 rounded text-white ${promoStyle(promos[0])}`}>{promos[0]}</span>}
                   <SmartImage src={(p.image || (p.detail_images && p.detail_images[0]) || '')} alt={p.desc} brand={brand} className="" />
                 </div>
                 <div className="p-3 flex flex-col flex-1">
                   {/* 라벨 (반값할인/타사보상 등 한 줄) */}
-                  {(p.label || p.label2) && (
+                  {promos.length > 0 && (
                     <div className="flex flex-wrap gap-1 mb-1">
-                      {p.label && <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded text-white ${labelStyle}`}>{p.label}</span>}
-                      {p.label2 && <span className="text-[9px] font-bold px-1.5 py-0.5 rounded text-white bg-emerald-500">{p.label2}</span>}
+                      {promos.map((t, i) => (
+                        <span key={i} className={`text-[9px] font-bold px-1.5 py-0.5 rounded text-white ${promoStyle(t)}`}>{t}</span>
+                      ))}
                     </div>
                   )}
                   {/* 모델명 (렌탈세계: WPU-IAC414) */}
