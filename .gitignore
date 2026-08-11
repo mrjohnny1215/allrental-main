@@ -38,3 +38,25 @@ htmlcov/
 Thumbs.db
 ```
 .vercel
+
+# 임시 디버그/크롤 스크립트 (로컬 전용)
+backend/chk_*.cjs
+backend/peek_*.cjs
+backend/recrawl_empty.py
+backend/local_crawl_missing.js
+backend/missing_30.txt
+backend/peek_filter*.cjs
+backend/debug_filter*.cjs
+backend/chk_*.cjs
+backend/peek_real.cjs
+backend/recrawl_empty_pw.cjs
+backend/recrawl_empty.py
+backend/debug_filter*.cjs
+backend/chk_allchips.cjs
+backend/chk_coway*.cjs
+backend/chk_fixes.cjs
+backend/chk_periods_live.cjs
+backend/chk_coway2.cjs
+backend/shot_card.cjs
+backend/shot_promo.cjs
+backend/peek_real.cjs

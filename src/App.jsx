@@ -120,8 +120,8 @@ function extractBrand(desc = '') {
 // 정수기 기능/타입/정수방식 분류 (제목 키워드 기반)
 function classifyFunc(desc = '') {
   const d = desc;
-  if (d.includes('얼음') && d.includes('냉온')) return '얼음냉온';
   if (d.includes('얼음') && d.includes('냉정')) return '얼음냉정';
+  if (d.includes('얼음')) return '얼음냉온';
   if (d.includes('탄산')) return '탄산정수기';
   if (d.includes('커피')) return '커피정수기';
   if (d.includes('냉온')) return '냉온전용';
