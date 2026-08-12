@@ -117,8 +117,12 @@ function extractBrand(desc = '') {
   return m ? m[1] : '기타';
 }
 
-// 정수기 기능/타입/정수방식 분류 (제목 키워드 기반)
-function classifyFunc(desc = '') {
+// 정수기 기능 분류 — 렌탈세계 실제 '기능 XXX' 태그 우선, 없으면 제목 키워드 폴백
+function classifyFunc(product) {
+  const desc = product?.desc || '';
+  const tag = product?.func_tag;
+  const VALID = ['냉수전용','냉온전용','얼음냉온','얼음냉정','온수전용','정수전용','커피정수기','탄산정수기'];
+  if (tag && VALID.includes(tag)) return tag;
   const d = desc;
   if (d.includes('얼음') && d.includes('냉정')) return '얼음냉정';
   if (d.includes('얼음')) return '얼음냉온';
@@ -438,6 +442,17 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
         </div>
 
         <div className="space-y-5 mb-6">
+          {periodPrices[selectedPeriod] && Object.keys(periodPrices[selectedPeriod]).length > 0 && (
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-2">관리 주기</label>
+              <select value={selectedCycle} onChange={(e) => setSelectedCycle(e.target.value)}
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white">
+                <option value="">선택안함</option>
+                {Object.keys(periodPrices[selectedPeriod]).map((c) => <option key={c} value={c}>{c}</option>)}
+              </select>
+            </div>
+          )}
+
           <div>
             <label className="block text-sm font-bold text-gray-700 mb-2">렌탈 기간</label>
             {periods.length > 0 ? (
@@ -453,16 +468,6 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
               <div className="text-sm text-gray-400 bg-gray-50 rounded-lg p-3 border border-gray-200">해당 상품의 렌탈 기간 정보가 없습니다.</div>
             )}
           </div>
-
-          {periodPrices[selectedPeriod] && Object.keys(periodPrices[selectedPeriod]).length > 0 && (
-            <div>
-              <label className="block text-sm font-bold text-gray-700 mb-2">관리 주기</label>
-              <select value={selectedCycle} onChange={(e) => setSelectedCycle(e.target.value)}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white">
-                {Object.keys(periodPrices[selectedPeriod]).map((c) => <option key={c} value={c}>{c}</option>)}
-              </select>
-            </div>
-          )}
 
           {isMattress ? (
             sizes.length > 0 && (
@@ -636,6 +641,7 @@ export default function App() {
   const [airFuncFilter, setAirFuncFilter] = useState('all');
   const [mattressTypeFilter, setMattressTypeFilter] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [compareList, setCompareList] = useState([]);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -706,7 +712,7 @@ export default function App() {
 
     if (activeCategory === 'water') {
       if (funcFilter !== 'all') {
-        arr = arr.filter((p) => classifyFunc(p.desc) === funcFilter);
+        arr = arr.filter((p) => classifyFunc(p) === funcFilter);
       }
       if (typeFilter !== 'all') {
         arr = arr.filter((p) => classifyType(p.desc) === typeFilter);
@@ -847,9 +853,8 @@ export default function App() {
           <FilterChips label="렌탈사" options={brands} value={brandFilter} onChange={setBrandFilter} />
           {activeCategory === 'water' && (
             <>
-              <FilterChips label="기능" options={['냉온전용','얼음냉온','얼음냉정','정수전용','커피정수기']} value={funcFilter} onChange={setFuncFilter} />
+              <FilterChips label="기능" options={['냉수전용','냉온전용','얼음냉온','얼음냉정','정수전용','커피정수기','탄산정수기']} value={funcFilter} onChange={setFuncFilter} />
               <FilterChips label="타입" options={['빌트인','스탠드형','하프형']} value={typeFilter} onChange={setTypeFilter} />
-              <FilterChips label="정수방식" options={['직수형']} value={methodFilter} onChange={setMethodFilter} />
               <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원']} value={priceFilter} onChange={setPriceFilter} />
             </>
           )}
@@ -882,6 +887,21 @@ export default function App() {
             return (
               <div key={idx} onClick={() => setSelectedProduct(p)}
                 className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all" data-testid="card">
+                {/* 비교 담기 버튼 (우측 상단) */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCompareList((prev) =>
+                      prev.some((x) => x.url === p.url)
+                        ? prev.filter((x) => x.url !== p.url)
+                        : [...prev, p]
+                    );
+                  }}
+                  className={`absolute top-2 right-2 z-10 w-7 h-7 rounded-full flex items-center justify-center text-sm shadow ${compareList.some((x) => x.url === p.url) ? 'bg-blue-600 text-white' : 'bg-white/90 text-gray-500 hover:bg-white'}`}
+                  title="비교 담기"
+                >
+                  {compareList.some((x) => x.url === p.url) ? '✓' : '+'}
+                </button>
                 {/* 사진 위 작은 브랜드 로고 (렌탈세계 동일) */}
                 <div className="h-9 px-3 flex justify-center items-center bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
                   {p.logo ? (
@@ -934,7 +954,7 @@ export default function App() {
         )}
       </div>
 
-      {/* 하단 플로팅 상담 버튼 */}
+      {/* 하단 플로팅 상담 버튼 (상시 고정) */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-2xl z-30">
         <div className="max-w-7xl mx-auto px-4 py-3 flex gap-2">
           {SITE_CONFIG.kakaoUrl && (
@@ -943,8 +963,51 @@ export default function App() {
               카톡 상담
             </a>
           )}
+          <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
+            className="flex-1 bg-blue-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg hover:bg-blue-700 transition-all flex items-center justify-center gap-2">
+            1:1 문의
+          </a>
         </div>
       </div>
+
+      {/* 우측 상단 상시 플로팅 상담 아이콘 */}
+      {SITE_CONFIG.kakaoUrl && (
+        <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
+          className="fixed top-20 right-3 z-40 w-12 h-12 rounded-full bg-yellow-400 text-gray-900 shadow-lg hover:bg-yellow-300 transition-all flex items-center justify-center"
+          title="상담하기">
+          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c5.5 0 10 3.6 10 8s-4.5 8-10 8c-1.1 0-2.2-.1-3.2-.4L4 20l.9-3.3C3.3 15.5 2 13.3 2 11c0-4.4 4.5-8 10-8z"/></svg>
+        </a>
+      )}
+
+      {/* 비교 담기 바 */}
+      {compareList.length > 0 && (
+        <div className="fixed bottom-20 left-0 right-0 z-40 px-3">
+          <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-2xl border border-gray-200 p-3 flex items-center gap-2">
+            <span className="text-xs font-bold text-gray-700 flex-shrink-0">비교 {compareList.length}</span>
+            <div className="flex-1 flex gap-2 overflow-x-auto">
+              {compareList.map((c) => (
+                <div key={c.url} className="flex-shrink-0 flex items-center gap-1 bg-gray-100 rounded-lg px-2 py-1">
+                  <span className="text-[10px] text-gray-700 max-w-[100px] truncate">{c.desc}</span>
+                  <button onClick={() => setCompareList((prev) => prev.filter((x) => x.url !== c.url))} className="text-gray-400 hover:text-red-500 text-xs">✕</button>
+                </div>
+              ))}
+            </div>
+            <button
+              onClick={() => {
+                // 비교 모달은 간단히: 첫 상품 상세로
+                setSelectedProduct(compareList[0]);
+              }}
+              className="flex-shrink-0 bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-700">비교하기</button>
+          </div>
+        </div>
+      )}
+
+      {/* 우측 하단 위로 올라가기 버튼 */}
+      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-24 right-3 z-30 w-11 h-11 rounded-full bg-white border border-gray-200 text-gray-600 shadow-lg hover:bg-gray-50 transition-all flex items-center justify-center"
+        title="위로 올라가기">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+      </button>
 
       {selectedProduct && (
         <ErrorBoundary>
