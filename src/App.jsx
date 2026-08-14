@@ -822,7 +822,7 @@ export default function App() {
                       <span className="text-lg">📦</span>
                     )}
                   </div>
-                  <span className={`text-[11px] font-bold whitespace-nowrap ${activeCategory === c.key ? 'text-white' : 'text-blue-100'}`}>{c.name}</span>
+                  <span className={`text-[11px] font-bold whitespace-nowrap ${activeCategory === c.key ? 'text-blue-700' : 'text-blue-100'}`}>{c.name}</span>
                 </button>
               ))}
             </div>
