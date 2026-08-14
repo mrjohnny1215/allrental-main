@@ -791,7 +791,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-24">
+    <div className="min-h-screen bg-gray-50 pb-4">
       <header className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-white shadow-xl sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -843,14 +843,6 @@ export default function App() {
 
         {/* 스마트 필터 (클릭 칩) */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-3 mb-3 flex flex-col gap-2.5">
-          <div className="flex justify-end">
-            <button onClick={() => { setBrandFilter('all'); setFuncFilter('all'); setTypeFilter('all'); setMethodFilter('all'); setPriceFilter('all'); setAreaFilter('all'); setAirFuncFilter('all'); setMattressTypeFilter('all'); }}
-              className="text-[11px] text-gray-400 hover:text-blue-600 font-medium px-2 py-0.5 rounded border border-gray-200 hover:border-blue-300 transition-colors">
-              필터 초기화
-            </button>
-          </div>
-          {/* 렌탈세계 동일 구조: 맨 위 '렌탈사' 자리에 브랜드 배치 (우리 데이터엔 렌탈사 없음) */}
-          <FilterChips label="렌탈사" options={brands} value={brandFilter} onChange={setBrandFilter} />
           {activeCategory === 'water' && (
             <>
               <FilterChips label="기능" options={['냉수전용','냉온전용','얼음냉온','얼음냉정','정수전용','커피정수기','탄산정수기']} value={funcFilter} onChange={setFuncFilter} />
@@ -954,30 +946,9 @@ export default function App() {
         )}
       </div>
 
-      {/* 하단 플로팅 상담 버튼 (상시 고정) */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-2xl z-30">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex gap-2">
-          {SITE_CONFIG.kakaoUrl && (
-            <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
-              className="flex-1 bg-yellow-400 text-gray-900 font-bold py-3.5 px-6 rounded-xl shadow-lg hover:bg-yellow-300 transition-all flex items-center justify-center gap-2">
-              카톡 상담
-            </a>
-          )}
-          <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
-            className="flex-1 bg-blue-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg hover:bg-blue-700 transition-all flex items-center justify-center gap-2">
-            1:1 문의
-          </a>
-        </div>
-      </div>
+      {/* 하단 플로팅 상담 버튼 제거됨 (사용자 요청) */}
 
-      {/* 우측 상단 상시 플로팅 상담 아이콘 */}
-      {SITE_CONFIG.kakaoUrl && (
-        <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
-          className="fixed top-20 right-3 z-40 w-12 h-12 rounded-full bg-yellow-400 text-gray-900 shadow-lg hover:bg-yellow-300 transition-all flex items-center justify-center"
-          title="상담하기">
-          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c5.5 0 10 3.6 10 8s-4.5 8-10 8c-1.1 0-2.2-.1-3.2-.4L4 20l.9-3.3C3.3 15.5 2 13.3 2 11c0-4.4 4.5-8 10-8z"/></svg>
-        </a>
-      )}
+      {/* 우측 상단 상시 플로팅 상담 아이콘 제거됨 (사용자 요청) */}
 
       {/* 비교 담기 바 */}
       {compareList.length > 0 && (
