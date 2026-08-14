@@ -811,18 +811,18 @@ export default function App() {
         </div>
         <div className="bg-blue-900/40 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex overflow-x-auto gap-2 py-2.5">
+            <div className="flex overflow-x-auto gap-1.5 py-1.5">
               {SITE_CONFIG.categories.map((c) => (
                 <button key={c.key} onClick={() => { setActiveCategory(c.key); setBrandFilter('all'); setSearch(''); setFuncFilter('all'); setTypeFilter('all'); setMethodFilter('all'); setPriceFilter('all'); setAreaFilter('all'); setAirFuncFilter('all'); setMattressTypeFilter('all'); }}
-                  className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl transition-all flex-shrink-0 w-20 ${activeCategory === c.key ? 'bg-white text-blue-700 shadow-md font-black' : 'bg-white/15 text-white hover:bg-white/30 font-semibold'}`}>
-                  <div className={`w-12 h-12 rounded-lg overflow-hidden border-2 flex items-center justify-center ${activeCategory === c.key ? 'bg-white border-white' : 'bg-white/90 border-transparent'}`}>
+                  className={`flex flex-col items-center gap-0.5 px-2 py-1 rounded-lg transition-all flex-shrink-0 w-16 ${activeCategory === c.key ? 'bg-white text-blue-700 shadow-md font-black' : 'bg-white/15 text-white hover:bg-white/30 font-semibold'}`}>
+                  <div className={`w-9 h-9 rounded-md overflow-hidden border-2 flex items-center justify-center ${activeCategory === c.key ? 'bg-white border-white' : 'bg-white/90 border-transparent'}`}>
                     {categoryImages[c.key] ? (
                       <img src={categoryImages[c.key]} alt={c.name} className="max-w-full max-h-full object-contain" onError={(e) => (e.target.style.display = 'none')} />
                     ) : (
-                      <span className="text-lg">📦</span>
+                      <span className="text-base">📦</span>
                     )}
                   </div>
-                  <span className={`text-[11px] font-bold whitespace-nowrap ${activeCategory === c.key ? 'text-blue-700' : 'text-blue-100'}`}>{c.name}</span>
+                  <span className={`text-[10px] font-bold whitespace-nowrap ${activeCategory === c.key ? 'text-blue-700' : 'text-blue-100'}`}>{c.name}</span>
                 </button>
               ))}
             </div>
