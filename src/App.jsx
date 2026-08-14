@@ -417,12 +417,20 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
             )}
           </div>
           <div>
-            <div className="text-xs text-gray-500 mb-1">브랜드</div>
-            <div className="text-lg font-bold text-blue-700 mb-3">{brand || extractBrand(product.desc)}</div>
-            <div className="text-xs text-gray-500 mb-1">모델명</div>
-            <div className="text-sm font-mono text-gray-800 mb-3">{product.model}</div>
-            <div className="text-xs text-gray-500 mb-1">제품종류</div>
-            <div className="text-sm font-semibold text-gray-800 mb-3">{productType || '-'}</div>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-2">
+              <div>
+                <span className="text-xs text-gray-400">브랜드 </span>
+                <span className="text-base font-bold text-blue-700">{brand || extractBrand(product.desc)}</span>
+              </div>
+              <div>
+                <span className="text-xs text-gray-400">모델명 </span>
+                <span className="text-sm font-mono text-gray-800">{product.model}</span>
+              </div>
+            </div>
+            <div className="mb-3">
+              <span className="text-xs text-gray-400">제품종류 </span>
+              <span className="text-sm font-semibold text-gray-800">{productType || '-'}</span>
+            </div>
             <div className="text-xs text-gray-500 mb-1">AS기간</div>
             <div className="text-sm font-semibold text-gray-800 mb-3">{asPeriod || '-'}</div>
 
