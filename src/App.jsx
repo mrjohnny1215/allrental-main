@@ -320,7 +320,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
   }
   const allRecommendations = [...recommendations, ...crossRecs].slice(0, 12);
   const brand = d.brand || '';
-  const productType = d.product_type || '';
+  const productType = classifyFunc(product) || d.product_type || '';
   const asPeriod = d.as_period || '';
 
   // periodPrices는 아래 useState 초기값에서 참조하므로, 선언을 먼저 해야 함 (TDZ 방지)
@@ -685,11 +685,12 @@ export default function App() {
     [products, activeCategory]
   );
 
-  // 브랜드 목록 (현재 카테고리 기준, '기타' 제외)
+  // 브랜드 목록 (지정 순서 고정, 실제 데이터에 있는 것만)
+  const BRAND_ORDER = ['코웨이','청호나이스','쿠쿠','SK매직','현대큐밍','LG','웰스','세스코'];
   const brands = useMemo(() => {
     const set = new Set(categoryProducts.map((p) => extractBrand(p.desc)));
     set.delete('기타');
-    return Array.from(set);
+    return BRAND_ORDER.filter((b) => set.has(b));
   }, [categoryProducts]);
 
   // 검색 + 브랜드 + 정렬 적용
@@ -799,6 +800,13 @@ export default function App() {
               <h1 className="text-2xl font-black tracking-tight">ALL<span className="text-blue-200">렌탈</span></h1>
               <p className="text-xs text-blue-100 mt-0.5">프리미엄 렌탈 서비스</p>
             </div>
+            {SITE_CONFIG.kakaoUrl && (
+              <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
+                className="w-11 h-11 rounded-full bg-yellow-400 text-gray-900 shadow-lg hover:bg-yellow-300 transition-all flex items-center justify-center flex-shrink-0"
+                title="상담하기">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c5.5 0 10 3.6 10 8s-4.5 8-10 8c-1.1 0-2.2-.1-3.2-.4L4 20l.9-3.3C3.3 15.5 2 13.3 2 11c0-4.4 4.5-8 10-8z"/></svg>
+              </a>
+            )}
           </div>
         </div>
         <div className="bg-white/10 backdrop-blur-sm border-t border-white/20">
@@ -950,14 +958,7 @@ export default function App() {
 
       {/* 하단 플로팅 상담 버튼 제거됨 (사용자 요청) */}
 
-      {/* 우측 상단 상시 플로팅 상담 아이콘 */}
-      {SITE_CONFIG.kakaoUrl && (
-        <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
-          className="fixed top-20 right-3 z-40 w-12 h-12 rounded-full bg-yellow-400 text-gray-900 shadow-lg hover:bg-yellow-300 transition-all flex items-center justify-center"
-          title="상담하기">
-          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c5.5 0 10 3.6 10 8s-4.5 8-10 8c-1.1 0-2.2-.1-3.2-.4L4 20l.9-3.3C3.3 15.5 2 13.3 2 11c0-4.4 4.5-8 10-8z"/></svg>
-        </a>
-      )}
+      {/* 우측 상단 카톡 상담 아이콘은 헤더 내부로 이동됨 */}
 
       {/* 비교 담기 바 */}
       {compareList.length > 0 && (
