@@ -792,7 +792,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-16">
+    <div className="min-h-screen bg-gray-50 pb-4">
       <header className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-white shadow-xl sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -1000,25 +1000,6 @@ export default function App() {
           title="위로 올라가기">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
         </button>
-      </div>
-
-      {/* 하단 네비: 햄버거 + 상담신청 + 전화상담 */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto flex items-stretch h-14">
-          <button className="flex items-center justify-center px-4 text-white/80 hover:text-white border-r border-white/10" title="메뉴">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
-          </button>
-          {SITE_CONFIG.kakaoUrl && (
-            <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 font-bold hover:bg-gray-800 transition-colors">
-              상담신청
-            </a>
-          )}
-          <a href="tel:1588-0000"
-            className="flex-1 flex items-center justify-center gap-2 font-bold bg-blue-600 hover:bg-blue-500 transition-colors">
-            전화상담
-          </a>
-        </div>
       </div>
 
       {selectedProduct && (
