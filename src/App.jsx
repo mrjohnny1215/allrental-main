@@ -847,7 +847,7 @@ export default function App() {
           <FilterChips label="렌탈사" options={brands} value={brandFilter} onChange={setBrandFilter} />
           {activeCategory === 'water' && (
             <>
-              <FilterChips label="기능" options={['냉수전용','냉온전용','얼음냉온','얼음냉정','정수전용','커피정수기','탄산정수기']} value={funcFilter} onChange={setFuncFilter} />
+              <FilterChips label="기능" options={['냉수전용','냉온전용','얼음냉온','정수전용']} value={funcFilter} onChange={setFuncFilter} />
               <FilterChips label="타입" options={['빌트인','스탠드형','하프형']} value={typeFilter} onChange={setTypeFilter} />
               <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원']} value={priceFilter} onChange={setPriceFilter} />
             </>
@@ -950,7 +950,14 @@ export default function App() {
 
       {/* 하단 플로팅 상담 버튼 제거됨 (사용자 요청) */}
 
-      {/* 우측 상단 상시 플로팅 상담 아이콘 제거됨 (사용자 요청) */}
+      {/* 우측 상단 상시 플로팅 상담 아이콘 */}
+      {SITE_CONFIG.kakaoUrl && (
+        <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
+          className="fixed top-20 right-3 z-40 w-12 h-12 rounded-full bg-yellow-400 text-gray-900 shadow-lg hover:bg-yellow-300 transition-all flex items-center justify-center"
+          title="상담하기">
+          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c5.5 0 10 3.6 10 8s-4.5 8-10 8c-1.1 0-2.2-.1-3.2-.4L4 20l.9-3.3C3.3 15.5 2 13.3 2 11c0-4.4 4.5-8 10-8z"/></svg>
+        </a>
+      )}
 
       {/* 비교 담기 바 */}
       {compareList.length > 0 && (
