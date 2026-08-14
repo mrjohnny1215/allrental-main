@@ -223,14 +223,14 @@ const parsePrice = (s) => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) 
 function FilterChips({ label, options, value, onChange }) {
   return (
     <div className="flex flex-wrap items-center gap-1.5">
-      <span className="text-xs font-bold text-gray-500 w-14 flex-shrink-0">{label}</span>
+      <span className="text-sm font-black text-blue-700 w-16 flex-shrink-0 bg-blue-50 border border-blue-100 rounded-md px-1.5 py-1 text-center">{label}</span>
       <button onClick={() => onChange('all')}
-        className={`px-3 py-1.5 rounded-md text-xs font-medium border transition-all ${value === 'all' ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-gray-300'}`}>
+        className={`px-3 py-1.5 rounded-md text-xs font-bold border transition-all ${value === 'all' ? 'bg-blue-600 text-white border-blue-600 shadow' : 'bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-600'}`}>
         전체
       </button>
       {options.map((opt) => (
         <button key={opt} onClick={() => onChange(opt)}
-          className={`px-3 py-1.5 rounded-md text-xs font-medium border transition-all ${value === opt ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-gray-300'}`}>
+          className={`px-3 py-1.5 rounded-md text-xs font-bold border transition-all ${value === opt ? 'bg-blue-600 text-white border-blue-600 shadow' : 'bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-600'}`}>
           {opt}
         </button>
       ))}
@@ -792,7 +792,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-4">
+    <div className="min-h-screen bg-gray-50 pb-16">
       <header className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-white shadow-xl sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -801,11 +801,11 @@ export default function App() {
               <p className="text-xs text-blue-100 mt-0.5">프리미엄 렌탈 서비스</p>
             </div>
             {SITE_CONFIG.kakaoUrl && (
-              <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
-                className="w-11 h-11 rounded-full bg-yellow-400 text-gray-900 shadow-lg hover:bg-yellow-300 transition-all flex items-center justify-center flex-shrink-0"
-                title="상담하기">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c5.5 0 10 3.6 10 8s-4.5 8-10 8c-1.1 0-2.2-.1-3.2-.4L4 20l.9-3.3C3.3 15.5 2 13.3 2 11c0-4.4 4.5-8 10-8z"/></svg>
-              </a>
+              <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="w-11 h-11 rounded-full bg-white/15 text-white shadow-lg hover:bg-white/25 transition-all flex items-center justify-center flex-shrink-0"
+                title="위로 올라가기">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+              </button>
             )}
           </div>
         </div>
@@ -850,7 +850,11 @@ export default function App() {
         </div>
 
         {/* 스마트 필터 (클릭 칩) */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-3 mb-3 flex flex-col gap-2.5">
+        <div className="bg-blue-50/60 rounded-xl shadow-md border-2 border-blue-200 p-3 mb-3 flex flex-col gap-2.5">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-sm font-black text-blue-700">🔍 스마트 필터</span>
+            <span className="text-xs text-blue-400">렌탈사 · 기능 · 타입 · 렌탈료</span>
+          </div>
           {/* 렌탈사 = 브랜드 */}
           <FilterChips label="렌탈사" options={brands} value={brandFilter} onChange={setBrandFilter} />
           {activeCategory === 'water' && (
@@ -982,12 +986,40 @@ export default function App() {
         </div>
       )}
 
-      {/* 우측 하단 위로 올라가기 버튼 */}
-      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-24 right-3 z-30 w-11 h-11 rounded-full bg-white border border-gray-200 text-gray-600 shadow-lg hover:bg-gray-50 transition-all flex items-center justify-center"
-        title="위로 올라가기">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
-      </button>
+      {/* 우측 하단 플로팅: 카톡 상담 + 맨위로가기 (렌탈세계 스타일) */}
+      <div className="fixed bottom-28 right-3 z-40 flex flex-col gap-2">
+        {SITE_CONFIG.kakaoUrl && (
+          <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
+            className="w-12 h-12 rounded-full bg-yellow-400 text-gray-900 shadow-lg hover:bg-yellow-300 transition-all flex items-center justify-center"
+            title="카톡 상담">
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c5.5 0 10 3.6 10 8s-4.5 8-10 8c-1.1 0-2.2-.1-3.2-.4L4 20l.9-3.3C3.3 15.5 2 13.3 2 11c0-4.4 4.5-8 10-8z"/></svg>
+          </a>
+        )}
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="w-12 h-12 rounded-full bg-gray-900 text-white shadow-lg hover:bg-gray-700 transition-all flex items-center justify-center"
+          title="위로 올라가기">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+        </button>
+      </div>
+
+      {/* 하단 네비: 햄버거 + 상담신청 + 전화상담 */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto flex items-stretch h-14">
+          <button className="flex items-center justify-center px-4 text-white/80 hover:text-white border-r border-white/10" title="메뉴">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+          {SITE_CONFIG.kakaoUrl && (
+            <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 font-bold hover:bg-gray-800 transition-colors">
+              상담신청
+            </a>
+          )}
+          <a href="tel:1588-0000"
+            className="flex-1 flex items-center justify-center gap-2 font-bold bg-blue-600 hover:bg-blue-500 transition-colors">
+            전화상담
+          </a>
+        </div>
+      </div>
 
       {selectedProduct && (
         <ErrorBoundary>

@@ -60,3 +60,4 @@ backend/chk_coway2.cjs
 backend/shot_card.cjs
 backend/shot_promo.cjs
 backend/peek_real.cjs
+.env*
