@@ -809,20 +809,20 @@ export default function App() {
             )}
           </div>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm border-t border-white/20">
+        <div className="bg-blue-900/40 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex overflow-x-auto gap-2 py-2">
+            <div className="flex overflow-x-auto gap-2 py-2.5">
               {SITE_CONFIG.categories.map((c) => (
                 <button key={c.key} onClick={() => { setActiveCategory(c.key); setBrandFilter('all'); setSearch(''); setFuncFilter('all'); setTypeFilter('all'); setMethodFilter('all'); setPriceFilter('all'); setAreaFilter('all'); setAirFuncFilter('all'); setMattressTypeFilter('all'); }}
-                  className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl transition-all flex-shrink-0 w-20 ${activeCategory === c.key ? 'bg-white text-blue-700 shadow-lg' : 'text-white hover:bg-white/20'}`}>
-                  <div className={`w-12 h-12 rounded-lg overflow-hidden border-2 flex items-center justify-center bg-white/90 ${activeCategory === c.key ? 'border-blue-600' : 'border-transparent'}`}>
+                  className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl transition-all flex-shrink-0 w-20 ${activeCategory === c.key ? 'bg-blue-500 text-white shadow-lg scale-105 ring-2 ring-white/70' : 'bg-white/10 text-blue-100 hover:bg-white/20'}`}>
+                  <div className={`w-12 h-12 rounded-lg overflow-hidden border-2 flex items-center justify-center ${activeCategory === c.key ? 'bg-white border-white' : 'bg-white/90 border-transparent'}`}>
                     {categoryImages[c.key] ? (
                       <img src={categoryImages[c.key]} alt={c.name} className="max-w-full max-h-full object-contain" onError={(e) => (e.target.style.display = 'none')} />
                     ) : (
                       <span className="text-lg">📦</span>
                     )}
                   </div>
-                  <span className="text-[11px] font-semibold whitespace-nowrap">{c.name}</span>
+                  <span className={`text-[11px] font-bold whitespace-nowrap ${activeCategory === c.key ? 'text-white' : 'text-blue-100'}`}>{c.name}</span>
                 </button>
               ))}
             </div>
@@ -864,7 +864,6 @@ export default function App() {
             <>
               <FilterChips label="평형" options={['10평이하','11~20평','21~30평','31~50평']} value={areaFilter} onChange={setAreaFilter} />
               <FilterChips label="기능" options={['가습기능','온풍기능','제습기능','펫기능','환기청정기']} value={airFuncFilter} onChange={setAirFuncFilter} />
-              <FilterChips label="렌탈료" options={['1만원이하','1만원대','2만원대','3만원대','4~10만원','10만원이상']} value={priceFilter} onChange={setPriceFilter} />
             </>
           )}
           {activeCategory === 'bidet' && (
