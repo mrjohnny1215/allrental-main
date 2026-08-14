@@ -225,12 +225,12 @@ function FilterChips({ label, options, value, onChange }) {
     <div className="flex flex-wrap items-center gap-1.5">
       <span className="text-xs font-bold text-gray-500 w-14 flex-shrink-0">{label}</span>
       <button onClick={() => onChange('all')}
-        className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-all ${value === 'all' ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-gray-300'}`}>
+        className={`px-3 py-1.5 rounded-md text-xs font-medium border transition-all ${value === 'all' ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-gray-300'}`}>
         전체
       </button>
       {options.map((opt) => (
         <button key={opt} onClick={() => onChange(opt)}
-          className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-all ${value === opt ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-gray-300'}`}>
+          className={`px-3 py-1.5 rounded-md text-xs font-medium border transition-all ${value === opt ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-gray-300'}`}>
           {opt}
         </button>
       ))}
@@ -843,6 +843,8 @@ export default function App() {
 
         {/* 스마트 필터 (클릭 칩) */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-3 mb-3 flex flex-col gap-2.5">
+          {/* 렌탈사 = 브랜드 */}
+          <FilterChips label="렌탈사" options={brands} value={brandFilter} onChange={setBrandFilter} />
           {activeCategory === 'water' && (
             <>
               <FilterChips label="기능" options={['냉수전용','냉온전용','얼음냉온','얼음냉정','정수전용','커피정수기','탄산정수기']} value={funcFilter} onChange={setFuncFilter} />
