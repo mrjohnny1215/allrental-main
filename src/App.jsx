@@ -814,7 +814,7 @@ export default function App() {
             <div className="flex overflow-x-auto gap-2 py-2.5">
               {SITE_CONFIG.categories.map((c) => (
                 <button key={c.key} onClick={() => { setActiveCategory(c.key); setBrandFilter('all'); setSearch(''); setFuncFilter('all'); setTypeFilter('all'); setMethodFilter('all'); setPriceFilter('all'); setAreaFilter('all'); setAirFuncFilter('all'); setMattressTypeFilter('all'); }}
-                  className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl transition-all flex-shrink-0 w-20 ${activeCategory === c.key ? 'bg-white text-blue-700 shadow-xl scale-110 ring-4 ring-yellow-300 font-black' : 'bg-white/15 text-white hover:bg-white/30 font-semibold'}`}>
+                  className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-xl transition-all flex-shrink-0 w-20 ${activeCategory === c.key ? 'bg-white text-blue-700 shadow-md font-black' : 'bg-white/15 text-white hover:bg-white/30 font-semibold'}`}>
                   <div className={`w-12 h-12 rounded-lg overflow-hidden border-2 flex items-center justify-center ${activeCategory === c.key ? 'bg-white border-white' : 'bg-white/90 border-transparent'}`}>
                     {categoryImages[c.key] ? (
                       <img src={categoryImages[c.key]} alt={c.name} className="max-w-full max-h-full object-contain" onError={(e) => (e.target.style.display = 'none')} />
