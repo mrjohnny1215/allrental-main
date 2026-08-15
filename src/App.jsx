@@ -831,27 +831,19 @@ export default function App() {
         <div className="absolute w-72 h-72 bg-blue-400/30 rounded-full blur-3xl -top-10 -left-10"></div>
         <div className="absolute w-72 h-72 bg-blue-300/20 rounded-full blur-3xl -bottom-10 -right-10"></div>
         <div className="text-center relative z-10">
-          {/* 3D 로고 + 회전 링 + 오비탈 */}
-          <div className="intro-orbit-wrap mx-auto mb-8" style={{ width: 160, height: 160 }}>
-            <div className="intro-ring intro-ring-2" style={{ inset: '50% auto auto 50%', transform: 'translate(-50%,-50%)' }}></div>
-            <div className="intro-ring intro-ring-1" style={{ inset: '50% auto auto 50%', transform: 'translate(-50%,-50%)' }}></div>
-            <div className="intro-orbit intro-orbit-1">
-              <span className="intro-orbit-dot" style={{ width: 9, height: 9, background: '#93c5fd', boxShadow: '0 0 8px #93c5fd', top: -4, left: -4 }}></span>
-            </div>
-            <div className="intro-orbit intro-orbit-2">
-              <span className="intro-orbit-dot" style={{ width: 6, height: 6, background: '#bfdbfe', boxShadow: '0 0 6px #bfdbfe', top: -3, left: -3 }}></span>
-            </div>
+          {/* 로고 + 펄스 서클 */}
+          <div className="relative mx-auto mb-8" style={{ width: 150, height: 150 }}>
+            <div className="intro-pulse-2"></div>
+            <div className="intro-pulse-1"></div>
             <div className="intro-3d-logo absolute inset-0 m-auto w-24 h-24 rounded-2xl bg-white/95 shadow-2xl flex items-center justify-center">
-              <span className="intro-3d-logo-idle inline-block text-4xl font-black text-blue-700 leading-none tracking-tight">ALL<span className="text-blue-400">R</span></span>
+              <span className="inline-block text-4xl font-black text-blue-700 leading-none tracking-tight">ALL<span className="text-blue-400">R</span></span>
             </div>
           </div>
           <h1 className="intro-3d-text text-3xl font-black text-white tracking-wide">ALL<span className="text-blue-200">렌탈</span></h1>
           <p className="intro-3d-text mt-1 text-sm text-blue-100/90">프리미엄 렌탈 서비스</p>
-          {/* 3점 로딩 인디케이터 */}
-          <div className="intro-3d-text flex items-center justify-center gap-1.5 mt-5">
-            <span className="intro-loader-dot" style={{ animationDelay: '0s' }}></span>
-            <span className="intro-loader-dot" style={{ animationDelay: '0.2s' }}></span>
-            <span className="intro-loader-dot" style={{ animationDelay: '0.4s' }}></span>
+          {/* 가로 슬라이드 로딩바 */}
+          <div className="intro-3d-text flex items-center justify-center mt-6">
+            <div className="intro-loader-bar"></div>
           </div>
         </div>
       </div>
