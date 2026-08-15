@@ -80,6 +80,8 @@ backend/shot_orbit.cjs
 backend/shot_orbit1.png
 backend/shot_live_orbit.cjs
 backend/shot_live_orbit.png
+backend/shot_live_intro_force.cjs
+backend/shot_live_intro_force.png
 deploy_now.sh
 alias_now.sh
 .env*
