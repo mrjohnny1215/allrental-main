@@ -91,6 +91,10 @@ backend/shot_live_pulse.cjs
 backend/shot_live_pulse.png
 backend/shot_live_pulse2.cjs
 backend/shot_live_pulse2.png
+backend/probe_intro.cjs
+backend/probe_live.cjs
+backend/shot_verify_pulse.cjs
+backend/shot_verify_pulse.png
 deploy_now.sh
 alias_now.sh
 .env*
