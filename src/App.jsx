@@ -649,6 +649,9 @@ export default function App() {
   const [airFuncFilter, setAirFuncFilter] = useState('all');
   const [mattressTypeFilter, setMattressTypeFilter] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
+  // 무한 스크롤: 한 번에 렌더할 카드 수 (초기 36, 스크롤 시 24씩 증가)
+  const [visibleCount, setVisibleCount] = useState(36);
+  const sentinelRef = useRef(null);
   const [compareList, setCompareList] = useState([]);
 
   useEffect(() => {
@@ -776,6 +779,31 @@ export default function App() {
     return sorted;
   }, [categoryProducts, search, brandFilter, sort, funcFilter, typeFilter, methodFilter, priceFilter, areaFilter, airFuncFilter, mattressTypeFilter, activeCategory]);
 
+  // 필터/검색/카테고리 변경 시 스크롤 위치 리셋
+  useEffect(() => {
+    setVisibleCount(36);
+    window.scrollTo({ top: 0 });
+  }, [filtered]);
+
+  // 화면에 실제 렌더할 카드만 잘라냄 (무한 스크롤)
+  const visibleProducts = filtered.slice(0, visibleCount);
+
+  // 스크롤 바닥 감지 → 카드 24개씩 추가 로드
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && visibleCount < filtered.length) {
+          setVisibleCount((c) => Math.min(c + 24, filtered.length));
+        }
+      },
+      { rootMargin: '400px' }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [visibleCount, filtered.length]);
+
   const currentName = SITE_CONFIG.categories.find((c) => c.key === activeCategory)?.name || '';
 
   // 카테고리별 대표 이미지 (렌탈세계 서브카테고리 이미지 탭용)
@@ -889,10 +917,10 @@ export default function App() {
           )}
         </div>
 
-        <div className="text-sm text-gray-500 mb-3">{filtered.length}개 상품</div>
+        <div className="text-sm text-gray-500 mb-3">{filtered.length}개 상품{visibleCount < filtered.length && ` (${visibleCount}개 표시 중)`}</div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3">
-          {filtered.map((p, idx) => {
+          {visibleProducts.map((p, idx) => {
             const isDiscounted = p.discount && p.discount !== '0' && p.discount !== '';
             const promos = (p.promotion && Array.isArray(p.promotion)) ? p.promotion : [];
             const promoStyle = (t) => t === '반값할인' ? 'bg-red-500' : t === '타사보상' ? 'bg-gray-500' : t === 'BEST' ? 'bg-yellow-500' : 'bg-emerald-500';
@@ -958,6 +986,19 @@ export default function App() {
             );
           })}
         </div>
+
+        {/* 무한 스크롤 감지 지점 + 더보기 버튼 (폴백) */}
+        {filtered.length > 0 && visibleCount < filtered.length && (
+          <div className="flex justify-center py-6">
+            <button
+              ref={sentinelRef}
+              onClick={() => setVisibleCount((c) => Math.min(c + 24, filtered.length))}
+              className="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200 rounded-lg px-6 py-2.5 hover:bg-blue-100"
+            >
+              상품 더 보기 ({filtered.length - visibleCount}개 남음)
+            </button>
+          </div>
+        )}
 
         {filtered.length === 0 && (
           <div className="text-center py-16">
