@@ -832,7 +832,7 @@ export default function App() {
         <div className="absolute w-72 h-72 bg-blue-300/20 rounded-full blur-3xl -bottom-10 -right-10"></div>
         <div className="text-center relative z-10">
           {/* 3D 로고 + 회전 링 + 오비탈 */}
-          <div className="intro-orbit-wrap mx-auto mb-7" style={{ width: 130, height: 130 }}>
+          <div className="intro-orbit-wrap mx-auto mb-8" style={{ width: 160, height: 160 }}>
             <div className="intro-ring intro-ring-2" style={{ inset: '50% auto auto 50%', transform: 'translate(-50%,-50%)' }}></div>
             <div className="intro-ring intro-ring-1" style={{ inset: '50% auto auto 50%', transform: 'translate(-50%,-50%)' }}></div>
             <div className="intro-orbit intro-orbit-1">

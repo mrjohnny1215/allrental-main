@@ -52,12 +52,12 @@ button {
   50%      { filter: drop-shadow(0 0 26px rgba(147,197,253,0.95)); }
 }
 @keyframes intro-orbit {
-  from { transform: rotate(0deg) translateX(58px) rotate(0deg); }
-  to   { transform: rotate(360deg) translateX(58px) rotate(-360deg); }
+  from { transform: rotate(0deg) translateX(105px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(105px) rotate(-360deg); }
 }
 @keyframes intro-orbit-rev {
-  from { transform: rotate(0deg) translateX(80px) rotate(0deg); }
-  to   { transform: rotate(-360deg) translateX(80px) rotate(360deg); }
+  from { transform: rotate(0deg) translateX(145px) rotate(0deg); }
+  to   { transform: rotate(-360deg) translateX(145px) rotate(360deg); }
 }
 @keyframes intro-text-rise {
   0%   { opacity: 0; letter-spacing: 0.4em; transform: translateY(14px); }
@@ -84,8 +84,8 @@ button {
   -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
           mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
 }
-.intro-ring-1 { width: 196px; height: 196px; animation: intro-ring-spin 3.5s linear infinite; }
-.intro-ring-2 { width: 256px; height: 256px; animation: intro-ring-spin-rev 5s linear infinite; opacity: 0.55; }
+.intro-ring-1 { width: 240px; height: 240px; animation: intro-ring-spin 3.5s linear infinite; }
+.intro-ring-2 { width: 320px; height: 320px; animation: intro-ring-spin-rev 5s linear infinite; opacity: 0.55; }
 
 /* 3D 로고 마크 */
 .intro-3d-logo {
