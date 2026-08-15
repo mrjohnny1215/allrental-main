@@ -75,8 +75,11 @@ backend/shot_intro_fresh2.png
 backend/shot_live_fresh.cjs
 backend/shot_live_fresh1.png
 backend/shot_live_fresh2.png
-backend/shot_live_intro_force.cjs
 backend/shot_live_intro_force.png
+backend/shot_orbit.cjs
+backend/shot_orbit1.png
+backend/shot_live_orbit.cjs
+backend/shot_live_orbit.png
 deploy_now.sh
 alias_now.sh
 .env*
