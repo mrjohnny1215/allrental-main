@@ -82,6 +82,8 @@ backend/shot_live_orbit.cjs
 backend/shot_live_orbit.png
 backend/shot_live_intro_force.cjs
 backend/shot_live_intro_force.png
+backend/shot_verify_final.cjs
+backend/shot_verify_final.png
 deploy_now.sh
 alias_now.sh
 .env*
