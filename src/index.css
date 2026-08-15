@@ -30,39 +30,87 @@ button {
   overflow: hidden;
 }
 
-/* ===== 3D 로고 인트로 스플래시 ===== */
-@keyframes intro-3d-spin {
-  0%   { transform: perspective(600px) rotateY(0deg) rotateX(8deg) scale(0.6); opacity: 0; }
-  35%  { transform: perspective(600px) rotateY(180deg) rotateX(0deg) scale(1.05); opacity: 1; }
-  70%  { transform: perspective(600px) rotateY(340deg) rotateX(-4deg) scale(1); opacity: 1; }
-  100% { transform: perspective(600px) rotateY(360deg) rotateX(0deg) scale(1); opacity: 1; }
+/* ===== 3D 로고 인트로 스플래시 (리뉴얼) ===== */
+@keyframes intro-ring-spin { to { transform: rotate(360deg); } }
+@keyframes intro-ring-spin-rev { to { transform: rotate(-360deg); } }
+@keyframes intro-logo-assemble {
+  0%   { transform: perspective(800px) rotateY(-180deg) rotateX(20deg) scale(0.3); opacity: 0; }
+  55%  { transform: perspective(800px) rotateY(20deg) rotateX(-6deg) scale(1.08); opacity: 1; }
+  75%  { transform: perspective(800px) rotateY(-8deg) rotateX(2deg) scale(0.98); }
+  100% { transform: perspective(800px) rotateY(0deg) rotateX(0deg) scale(1); }
+}
+@keyframes intro-logo-idle {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
 }
 @keyframes intro-float {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-10px); }
+  50%      { transform: translateY(-12px); }
 }
 @keyframes intro-glow {
-  0%, 100% { filter: drop-shadow(0 0 8px rgba(59,130,246,0.5)); }
-  50%      { filter: drop-shadow(0 0 22px rgba(59,130,246,0.95)); }
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(96,165,250,0.55)); }
+  50%      { filter: drop-shadow(0 0 26px rgba(147,197,253,0.95)); }
 }
-@keyframes intro-text {
-  0%   { opacity: 0; letter-spacing: 0.5em; transform: translateY(8px); }
-  60%  { opacity: 1; letter-spacing: 0.12em; transform: translateY(0); }
-  100% { opacity: 1; letter-spacing: 0.12em; transform: translateY(0); }
+@keyframes intro-orbit {
+  from { transform: rotate(0deg) translateX(58px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(58px) rotate(-360deg); }
+}
+@keyframes intro-orbit-rev {
+  from { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+  to   { transform: rotate(-360deg) translateX(80px) rotate(360deg); }
+}
+@keyframes intro-text-rise {
+  0%   { opacity: 0; letter-spacing: 0.4em; transform: translateY(14px); }
+  100% { opacity: 1; letter-spacing: 0.1em; transform: translateY(0); }
+}
+@keyframes intro-dot-bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40%           { transform: translateY(-7px); opacity: 1; }
 }
 @keyframes intro-fade-out {
   to { opacity: 0; visibility: hidden; }
 }
+
+/* 배경 회전 코닉 링 */
+.intro-ring {
+  position: absolute;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg,
+    transparent 0%,
+    rgba(147,197,253,0) 18%,
+    rgba(147,197,253,0.9) 50%,
+    rgba(59,130,246,0) 82%,
+    transparent 100%);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
+          mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
+}
+.intro-ring-1 { width: 196px; height: 196px; animation: intro-ring-spin 3.5s linear infinite; }
+.intro-ring-2 { width: 256px; height: 256px; animation: intro-ring-spin-rev 5s linear infinite; opacity: 0.55; }
+
+/* 3D 로고 마크 */
 .intro-3d-logo {
-  animation: intro-3d-spin 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-             intro-float 2s ease-in-out 1.6s infinite,
+  animation: intro-logo-assemble 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+             intro-float 2.4s ease-in-out 1.5s infinite,
              intro-glow 1.8s ease-in-out infinite;
   transform-style: preserve-3d;
 }
-.intro-3d-text {
-  animation: intro-text 1.2s ease-out 0.4s both;
+.intro-3d-logo-idle {
+  animation: intro-logo-idle 6s linear 1.5s infinite;
+  transform-style: preserve-3d;
+}
+/* 오비탈 */
+.intro-orbit-wrap { position: relative; }
+.intro-orbit { position: absolute; top: 50%; left: 50%; width: 0; height: 0; }
+.intro-orbit-1 { animation: intro-orbit 4s linear infinite; }
+.intro-orbit-2 { animation: intro-orbit-rev 6s linear infinite; }
+.intro-orbit-dot { position: absolute; border-radius: 50%; }
+
+.intro-3d-text { animation: intro-text-rise 1s ease-out 0.5s both; }
+.intro-loader-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: #bfdbfe;
+  animation: intro-dot-bounce 1.4s ease-in-out infinite;
 }
 .intro-overlay {
-  animation: intro-fade-out 0.5s ease-in forwards;
+  animation: intro-fade-out 0.55s ease-in forwards;
   animation-delay: 1.9s;
 }
