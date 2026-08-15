@@ -637,6 +637,9 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
 export default function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  // 3D 로고 인트로 스플래시 (최소 2초 노출)
+  const [showIntro, setShowIntro] = useState(true);
+  const INTRO_MIN_MS = 2000;
   const [activeCategory, setActiveCategory] = useState(SITE_CONFIG.categories[0].key);
   const [search, setSearch] = useState('');
   const [brandFilter, setBrandFilter] = useState('all');
@@ -652,6 +655,7 @@ export default function App() {
   // 무한 스크롤: 한 번에 렌더할 카드 수 (초기 36, 스크롤 시 24씩 증가)
   const [visibleCount, setVisibleCount] = useState(36);
   const sentinelRef = useRef(null);
+  const introStartRef = useRef(Date.now());
   const [compareList, setCompareList] = useState([]);
 
   useEffect(() => {
@@ -681,6 +685,10 @@ export default function App() {
         console.error('데이터 로드 실패:', e);
       } finally {
         setLoading(false);
+        // 인트로 스플래시: 데이터 로드가 2초보다 빨라도 최소 INTRO_MIN_MS 만큼 노출
+        const elapsed = Date.now() - introStartRef.current;
+        const wait = Math.max(0, INTRO_MIN_MS - elapsed);
+        setTimeout(() => setShowIntro(false), wait);
       }
     };
     loadAll();
@@ -816,12 +824,19 @@ export default function App() {
     return map;
   }, [products]);
 
-  if (loading) {
+  if (loading || showIntro) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-blue-600 border-t-transparent mx-auto mb-4"></div>
-          <p className="text-gray-600 font-medium">상품 데이터를 불러오는 중...</p>
+      <div className={`intro-overlay min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 via-blue-600 to-blue-800 relative overflow-hidden ${showIntro ? '' : 'opacity-0'}`}>
+        {/* 배경 글로우 */}
+        <div className="absolute w-72 h-72 bg-blue-400/30 rounded-full blur-3xl -top-10 -left-10"></div>
+        <div className="absolute w-72 h-72 bg-blue-300/20 rounded-full blur-3xl -bottom-10 -right-10"></div>
+        <div className="text-center relative z-10">
+          {/* 3D 회전 로고 마크 */}
+          <div className="intro-3d-logo mx-auto mb-6 w-28 h-28 rounded-2xl bg-white/95 shadow-2xl flex items-center justify-center">
+            <span className="text-4xl font-black text-blue-700 leading-none tracking-tight">ALL<span className="text-blue-400">R</span></span>
+          </div>
+          <h1 className="intro-3d-text text-3xl font-black text-white tracking-wide">ALL<span className="text-blue-200">렌탈</span></h1>
+          <p className="intro-3d-text mt-1 text-sm text-blue-100/90">프리미엄 렌탈 서비스</p>
         </div>
       </div>
     );
