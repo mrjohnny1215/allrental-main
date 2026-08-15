@@ -84,6 +84,13 @@ backend/shot_live_intro_force.cjs
 backend/shot_live_intro_force.png
 backend/shot_verify_final.cjs
 backend/shot_verify_final.png
+backend/shot_pulse.cjs
+backend/shot_pulse1.png
+backend/shot_pulse2.png
+backend/shot_live_pulse.cjs
+backend/shot_live_pulse.png
+backend/shot_live_pulse2.cjs
+backend/shot_live_pulse2.png
 deploy_now.sh
 alias_now.sh
 .env*
