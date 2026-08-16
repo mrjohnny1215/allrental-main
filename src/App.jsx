@@ -351,7 +351,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
       `🔧 관리 주기: ${selectedCycle}\n` +
       `🎨 ${isMattress ? '사이즈' : '색상'}: ${selectedColor || '기본'}\n` +
       `💰 예상 월 렌탈료: ${calculatedPrice}원\n` +
-      (product.discount && product.discount !== '0' ? `🎉 할인적용가: ${product.discount}원\n` : '') +
+      (product.discount && product.discount !== 0 ? `🎉 할인적용가: ${Number(product.discount || 0).toLocaleString()}원\n` : '') +
       `\n상세 견적 및 설치 가능 여부 부탁드립니다.`
     );
     if (SITE_CONFIG.kakaoUrl) {
@@ -439,10 +439,10 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
                 <span className="text-sm text-gray-600">월 렌탈료</span>
                 <span className="text-xl font-bold text-gray-900">{calculatedPrice}원</span>
               </div>
-              {product.discount && product.discount !== '0' && (
+              {product.discount && product.discount !== 0 && (
                 <div className="flex justify-between items-center pt-1 border-t border-blue-200">
                   <span className="text-sm text-red-600">할인적용</span>
-                  <span className="text-lg font-bold text-red-600">{product.discount}원</span>
+                  <span className="text-lg font-bold text-red-600">{Number(product.discount || 0).toLocaleString()}원</span>
                 </div>
               )}
             </div>
