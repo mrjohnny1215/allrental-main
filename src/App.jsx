@@ -590,10 +590,42 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
         )}
       </div>
 
-      {/* footer (빈 영역 - 추후 정보 입력 예정) */}
-      <footer className="bg-gray-900 text-white mt-8">
-        <div className="max-w-3xl mx-auto px-4 py-8 text-center text-sm text-gray-400">
-          ALL렌탈
+      {/* footer - 실제 사업자 정보 (사업자등록증 기준) */}
+      <footer className="bg-white text-gray-700 border-t border-gray-200 mt-8">
+        <div className="max-w-5xl mx-auto px-4 py-6 text-sm">
+          {/* 최상단: 개인정보처리방침 */}
+          <div className="border-b border-gray-100 pb-2 mb-4">
+            <a href="#" className="text-gray-500 hover:text-blue-600 text-xs">개인정보처리방침</a>
+          </div>
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+            {/* 좌측: 로고 + 상호 */}
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-black text-lg">A</div>
+              <div>
+                <div className="font-black text-lg text-gray-900">올(AII)렌탈</div>
+                <div className="text-xs text-gray-400">allrental-xi.vercel.app</div>
+              </div>
+            </div>
+            {/* 중앙: 사업자 정보 */}
+            <div className="text-xs leading-relaxed text-gray-600 space-y-0.5">
+              <div>주식회사 올(AII)렌탈</div>
+              <div>대표이사 : 김성훈</div>
+              <div>주소 : 전남광주통합특별시 무안군 일로읍 오룡중앙동로 65, 209동 901호(오룡 에듀포레 푸르지오)</div>
+              <div>사업자등록번호 : 764-36-01626</div>
+              <div>업태 : 서비스업 &nbsp; 종목 : 정수기, 청정기, 비데 렌탈</div>
+              <div>개업일 : 2026.07.31</div>
+            </div>
+            {/* 우측: 고객센터 */}
+            <div className="text-right md:text-right">
+              <div className="font-bold text-gray-900 mb-1">고객센터</div>
+              <div className="text-2xl font-black text-blue-600">1877-0000</div>
+              <div className="text-xs text-gray-500 mt-1">e-mail : allrental@naver.com</div>
+              <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer" className="inline-block mt-2 text-xs text-blue-600 hover:underline">카카오톡 상담하기</a>
+            </div>
+          </div>
+          <div className="border-t border-gray-100 mt-5 pt-3 text-xs text-gray-400">
+            Copyright 2026 주식회사 올(AII)렌탈 All rights reserved
+          </div>
         </div>
       </footer>
 
