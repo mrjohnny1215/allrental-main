@@ -67,7 +67,7 @@ function RecommendCarousel({ items, onSelect }) {
                     <div className="text-[10px] font-bold text-gray-800 line-clamp-2 leading-tight mb-1 h-7 overflow-hidden">{it.name}</div>
                     <div className="flex justify-between items-center">
                       <span className="text-[9px] text-gray-500">월료</span>
-                      <span className="text-xs font-bold text-gray-900">{Number(it.price || 0).toLocaleString()}원</span>
+                      <span className="text-xs font-bold text-gray-900">{it.price ? Number(it.price).toLocaleString()+'원' : '가격문의'}</span>
                     </div>
                     {it.discount && (
                       <div className="flex justify-between items-center">
