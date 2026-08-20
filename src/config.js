@@ -15,6 +15,7 @@ export const SITE_CONFIG = {
     { key: 'air', name: '공기청정기' },
     { key: 'bidet', name: '비데' },
     { key: 'mattress', name: '매트리스' },
+    { key: 'massage', name: '안마의자' },
   ],
 
   // NOTE: 카테고리별 기본 옵션(색상/관리주기/프로모션) 하드코딩은 제거했습니다.

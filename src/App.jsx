@@ -591,9 +591,18 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
       </div>
 
       {/* footer (빈 영역 - 추후 정보 입력 예정) */}
-      <footer className="bg-gray-900 text-white mt-8">
-        <div className="max-w-3xl mx-auto px-4 py-8 text-center text-sm text-gray-400">
-          ALL렌탈
+      <footer className="bg-white text-gray-600 mt-8 border-t border-gray-200">
+        <div className="max-w-3xl mx-auto px-4 py-8 text-sm leading-relaxed">
+          <div className="font-bold text-gray-900 text-base mb-3">올(AII)렌탈</div>
+          <div className="space-y-1 text-gray-500">
+            <div>주식회사 올(AII)렌탈 | 대표이사 : 김성훈</div>
+            <div>사업자등록번호 : 764-36-01626</div>
+            <div>업태 : 서비스업 | 종목 : 정수기, 청정기, 비데, 안마의자 렌탈</div>
+            <div>주소 : 301ho, 27 Daejukseoro 16beon-gil, Muan-gun, Gwangju-metropolitan Autonomous City, Republic of Korea</div>
+          </div>
+          <div className="border-t border-gray-200 mt-4 pt-4 text-gray-400 text-xs">
+            Copyright 2026 주식회사 올(AII)렌탈 All rights reserved
+          </div>
         </div>
       </footer>
 
