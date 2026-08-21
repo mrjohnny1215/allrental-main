@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { SITE_CONFIG } from './config';
-import { useSession, LoginModal, SignupModal } from './auth';
+import { useSession, LoginModal } from './auth';
 import { calcFee } from './users';
 
 // ==========================================
@@ -653,6 +653,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
 // ==========================================
 export default function App() {
   const [products, setProducts] = useState([]);
+  const [feeTable, setFeeTable] = useState({}); // 모델별 수수료 (CSV)
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState(SITE_CONFIG.categories[0].key);
   const [search, setSearch] = useState('');
@@ -671,6 +672,8 @@ export default function App() {
   // 직원 로그인 세션 (수수료 표시용)
   const { user: sessionUser, login, logout } = useSession();
   const [showLogin, setShowLogin] = useState(false);
+  // 수수료 표시 ON/OFF 토글 (우측하단 녹색 버튼) — 기본 ON
+  const [showFee, setShowFee] = useState(true);
   const [showSignup, setShowSignup] = useState(false);
 
   useEffect(() => {
@@ -684,6 +687,14 @@ export default function App() {
         ]);
         const list = await listRes.json();
         const detailRaw = await detailRes.json();
+
+        // 수수료 표 (CSV → JSON): 모델명 → {년수: 금액}
+        let feeRaw = {};
+        try {
+          const feeRes = await fetch(`/fee_table.json?v=${CACHE_BUST}`);
+          if (feeRes.ok) feeRaw = await feeRes.json();
+        } catch (e) { console.warn('수수료 표 로드 실패', e); }
+        setFeeTable(feeRaw || {});
 
         // 상세 데이터: merged_products.json 은 {url: detail} flat 구조 (URL 정규화 키맵)
         const detailMap = {};
