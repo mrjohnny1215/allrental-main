@@ -658,7 +658,7 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState(SITE_CONFIG.categories[0].key);
   const [search, setSearch] = useState('');
   const [brandFilter, setBrandFilter] = useState('all');
-  const [sort, setSort] = useState('default');
+  const [sort, setSort] = useState('sales_desc');
   const [funcFilter, setFuncFilter] = useState('all');
   const [typeFilter, setTypeFilter] = useState('all');
   const [methodFilter, setMethodFilter] = useState('all');
@@ -667,7 +667,6 @@ export default function App() {
   const [airFuncFilter, setAirFuncFilter] = useState('all');
   const [mattressTypeFilter, setMattressTypeFilter] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [compareList, setCompareList] = useState([]);
 
   // 직원 로그인 세션 (수수료 표시용)
   const { user: sessionUser, login, logout } = useSession();
@@ -950,21 +949,6 @@ export default function App() {
             return (
               <div key={idx} onClick={() => setSelectedProduct(p)}
                 className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all" data-testid="card">
-                {/* 비교 담기 버튼 (우측 상단) */}
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setCompareList((prev) =>
-                      prev.some((x) => x.url === p.url)
-                        ? prev.filter((x) => x.url !== p.url)
-                        : [...prev, p]
-                    );
-                  }}
-                  className={`absolute top-2 right-2 z-10 w-7 h-7 rounded-full flex items-center justify-center text-sm shadow ${compareList.some((x) => x.url === p.url) ? 'bg-blue-600 text-white' : 'bg-white/90 text-gray-500 hover:bg-white'}`}
-                  title="비교 담기"
-                >
-                  {compareList.some((x) => x.url === p.url) ? '✓' : '+'}
-                </button>
                 {/* 사진 위 작은 브랜드 로고 (렌탈세계 동일) */}
                 <div className="h-9 px-3 flex justify-center items-center bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
                   {p.logo ? (
@@ -995,7 +979,7 @@ export default function App() {
                       <span className="text-[9px] text-gray-500">월 렌탈료</span>
                       <span className="text-sm font-bold text-gray-900">{Number(p.price || 0).toLocaleString()}원</span>
                     </div>
-                    {sessionUser && showFee && feeTable[p.model] && (
+                    {sessionUser && showFee && feeTable[p.model] && feeTable[p.model]['3년'] != null && (
                       <div className="flex justify-between items-center bg-emerald-50 px-1.5 py-1 rounded">
                         <span className="text-[9px] text-emerald-700 font-semibold">내 수수료({Math.round(sessionUser.deductRate * 100)}% 공제)</span>
                         <span className="text-xs font-bold text-emerald-700">{calcFee(feeTable[p.model]['3년'], sessionUser).toLocaleString()}원</span>
@@ -1026,29 +1010,6 @@ export default function App() {
       {/* 하단 플로팅 상담 버튼 제거됨 (사용자 요청) */}
 
       {/* 우측 상단 카톡 상담 아이콘은 헤더 내부로 이동됨 */}
-
-      {/* 비교 담기 바 */}
-      {compareList.length > 0 && (
-        <div className="fixed bottom-20 left-0 right-0 z-40 px-3">
-          <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-2xl border border-gray-200 p-3 flex items-center gap-2">
-            <span className="text-xs font-bold text-gray-700 flex-shrink-0">비교 {compareList.length}</span>
-            <div className="flex-1 flex gap-2 overflow-x-auto">
-              {compareList.map((c) => (
-                <div key={c.url} className="flex-shrink-0 flex items-center gap-1 bg-gray-100 rounded-lg px-2 py-1">
-                  <span className="text-[10px] text-gray-700 max-w-[100px] truncate">{c.desc}</span>
-                  <button onClick={() => setCompareList((prev) => prev.filter((x) => x.url !== c.url))} className="text-gray-400 hover:text-red-500 text-xs">✕</button>
-                </div>
-              ))}
-            </div>
-            <button
-              onClick={() => {
-                // 비교 모달은 간단히: 첫 상품 상세로
-                setSelectedProduct(compareList[0]);
-              }}
-              className="flex-shrink-0 bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-700">비교하기</button>
-          </div>
-        </div>
-      )}
 
       {/* 우측 하단 플로팅: 수수료 ON/OFF + 카톡 상담 + 맨위로가기 */}
       <div className="fixed bottom-28 right-3 z-40 flex flex-col gap-2 items-end">
