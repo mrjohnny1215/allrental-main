@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { SITE_CONFIG } from './config';
+import { useSession, LoginModal } from './auth';
+import { calcFee } from './users';
 
 // ==========================================
 // 에러 경계 (상세 페이지 크래시 시 빈 화면 방지)
@@ -241,7 +243,7 @@ function FilterChips({ label, options, value, onChange }) {
 // ==========================================
 // 상품 상세 모달
 // ==========================================
-function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }) {
+function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, sessionUser }) {
   if (!product) return null;
   const catKey = product.category;
   const detail = product.detail || product || {};
@@ -439,6 +441,12 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts }
                 <span className="text-sm text-gray-600">월 렌탈료</span>
                 <span className="text-xl font-bold text-gray-900">{calculatedPrice}원</span>
               </div>
+              {sessionUser && (
+                <div className="flex justify-between items-center pt-1.5 mt-1 border-t border-blue-200">
+                  <span className="text-sm text-emerald-700 font-semibold">내 수수료 ({Math.round(sessionUser.feeRate * 100)}%)</span>
+                  <span className="text-lg font-bold text-emerald-700">{calcFee(basePrice, sessionUser).toLocaleString()}원</span>
+                </div>
+              )}
               {product.discount && product.discount !== '0' && (
                 <div className="flex justify-between items-center pt-1 border-t border-blue-200">
                   <span className="text-sm text-red-600">할인적용</span>
@@ -660,6 +668,10 @@ export default function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [compareList, setCompareList] = useState([]);
 
+  // 직원 로그인 세션 (수수료 표시용)
+  const { user: sessionUser, login, logout } = useSession();
+  const [showLogin, setShowLogin] = useState(false);
+
   useEffect(() => {
     const loadAll = async () => {
       try {
@@ -817,13 +829,32 @@ export default function App() {
               <h1 className="text-xl font-black tracking-tight">ALL<span className="text-blue-200">렌탈</span></h1>
               <p className="text-[11px] text-blue-100 mt-0">프리미엄 렌탈 서비스</p>
             </div>
-            {SITE_CONFIG.kakaoUrl && (
+            <div className="flex items-center gap-2">
+              {sessionUser ? (
+                <>
+                  <div className="text-right leading-tight">
+                    <div className="text-[10px] text-blue-100">로그인됨</div>
+                    <div className="text-xs font-bold text-white">{sessionUser.name} <span className="text-blue-200">({Math.round(sessionUser.feeRate * 100)}%)</span></div>
+                  </div>
+                  <button onClick={logout}
+                    className="text-[11px] bg-white/15 text-white px-2.5 py-1.5 rounded-full hover:bg-white/25 transition-all font-medium flex-shrink-0">
+                    로그아웃
+                  </button>
+                </>
+              ) : (
+                <button onClick={() => setShowLogin(true)}
+                  className="text-[11px] bg-white text-blue-700 px-3 py-1.5 rounded-full hover:bg-blue-50 transition-all font-bold flex-shrink-0 shadow">
+                  직원 로그인
+                </button>
+              )}
+              {SITE_CONFIG.kakaoUrl && (
               <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="w-9 h-9 rounded-full bg-white/15 text-white shadow-lg hover:bg-white/25 transition-all flex items-center justify-center flex-shrink-0"
                 title="위로 올라가기">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
               </button>
             )}
+            </div>
           </div>
         </div>
         <div className="bg-blue-900/40 border-t border-white/10">
@@ -954,6 +985,12 @@ export default function App() {
                       <span className="text-[9px] text-gray-500">월 렌탈료</span>
                       <span className="text-sm font-bold text-gray-900">{Number(p.price || 0).toLocaleString()}원</span>
                     </div>
+                    {sessionUser && (
+                      <div className="flex justify-between items-center bg-emerald-50 px-1.5 py-1 rounded">
+                        <span className="text-[9px] text-emerald-700 font-semibold">내 수수료({Math.round(sessionUser.feeRate * 100)}%)</span>
+                        <span className="text-xs font-bold text-emerald-700">{calcFee(p.price, sessionUser).toLocaleString()}원</span>
+                      </div>
+                    )}
                     {isDiscounted && (
                       <div className="flex justify-between items-center bg-red-50 px-1.5 py-1 rounded">
                         <span className="text-[9px] text-red-600 font-semibold">할인적용</span>
@@ -1025,6 +1062,7 @@ export default function App() {
             product={selectedProduct}
             onClose={() => setSelectedProduct(null)}
             allProducts={products}
+            sessionUser={sessionUser}
             onSelectRecommend={(rec) => {
               const recNo = getNo(rec.url);
               const target = products.find((p) => getNo(p.url) === recNo);
@@ -1036,6 +1074,12 @@ export default function App() {
             }}
           />
         </ErrorBoundary>
+      )}
+      {showLogin && (
+        <LoginModal
+          onLogin={login}
+          onClose={() => setShowLogin(false)}
+        />
       )}
     </div>
   );
