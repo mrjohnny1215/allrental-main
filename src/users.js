@@ -14,10 +14,10 @@
 //
 // 🔧 실제 운영: 아래 user1~4를 실제 아이디/비번으로 교체 후 재배포.
 export const USERS = [
-  { id: 'user1', pw: '1234', name: 'all001', deductRate: 0.00 },
-  { id: 'user2', pw: '1234', name: 'all002', deductRate: 0.10 },
-  { id: 'user3', pw: '1234', name: 'all003', deductRate: 0.18 },
-  { id: 'user4', pw: '1234', name: 'all004', deductRate: 0.24 },
+  { id: 'all001', pw: '1234', name: 'all001', deductRate: 0.00 },
+  { id: 'all002', pw: '1234', name: 'all002', deductRate: 0.10 },
+  { id: 'all003', pw: '1234', name: 'all003', deductRate: 0.18 },
+  { id: 'all004', pw: '1234', name: 'all004', deductRate: 0.24 },
 ];
 
 // 품목(모델) 수수료(원, 절대금액) → 해당 직원 실지급 수수료(원)
