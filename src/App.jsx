@@ -243,7 +243,7 @@ function FilterChips({ label, options, value, onChange }) {
 // ==========================================
 // 상품 상세 모달
 // ==========================================
-function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, sessionUser }) {
+function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, sessionUser, feeTable }) {
   if (!product) return null;
   const catKey = product.category;
   const detail = product.detail || product || {};
@@ -441,10 +441,10 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
                 <span className="text-sm text-gray-600">월 렌탈료</span>
                 <span className="text-xl font-bold text-gray-900">{calculatedPrice}원</span>
               </div>
-              {sessionUser && (
+              {sessionUser && showFee && feeTable[product.model] && feeTable[product.model][selectedPeriod] != null && (
                 <div className="flex justify-between items-center pt-1.5 mt-1 border-t border-blue-200">
-                  <span className="text-sm text-emerald-700 font-semibold">내 수수료 ({Math.round(sessionUser.feeRate * 100)}%)</span>
-                  <span className="text-lg font-bold text-emerald-700">{calcFee(basePrice, sessionUser).toLocaleString()}원</span>
+                  <span className="text-sm text-emerald-700 font-semibold">내 수수료 ({Math.round(sessionUser.deductRate * 100)}% 공제 · {selectedPeriod})</span>
+                  <span className="text-lg font-bold text-emerald-700">{calcFee(feeTable[product.model][selectedPeriod], sessionUser).toLocaleString()}원</span>
                 </div>
               )}
               {product.discount && product.discount !== '0' && (
@@ -674,7 +674,6 @@ export default function App() {
   const [showLogin, setShowLogin] = useState(false);
   // 수수료 표시 ON/OFF 토글 (우측하단 녹색 버튼) — 기본 ON
   const [showFee, setShowFee] = useState(true);
-  const [showSignup, setShowSignup] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -846,7 +845,7 @@ export default function App() {
                 <>
                   <div className="text-right leading-tight">
                     <div className="text-[10px] text-blue-100">로그인됨</div>
-                    <div className="text-xs font-bold text-white">{sessionUser.name} <span className="text-blue-200">({Math.round(sessionUser.feeRate * 100)}%)</span></div>
+                    <div className="text-xs font-bold text-white">{sessionUser.name} <span className="text-blue-200">({Math.round(sessionUser.deductRate * 100)}% 공제)</span></div>
                   </div>
                   <button onClick={logout}
                     className="text-[11px] bg-white/15 text-white px-2.5 py-1.5 rounded-full hover:bg-white/25 transition-all font-medium flex-shrink-0">
@@ -857,12 +856,6 @@ export default function App() {
                 <button onClick={() => setShowLogin(true)}
                   className="text-[11px] bg-white text-blue-700 px-3 py-1.5 rounded-full hover:bg-blue-50 transition-all font-bold flex-shrink-0 shadow">
                   직원 로그인
-                </button>
-              )}
-              {!sessionUser && (
-                <button onClick={() => setShowSignup(true)}
-                  className="text-[11px] bg-green-600 text-white px-3 py-1.5 rounded-full hover:bg-green-700 transition-all font-bold flex-shrink-0 shadow">
-                  회원가입
                 </button>
               )}
               {SITE_CONFIG.kakaoUrl && (
@@ -1003,10 +996,10 @@ export default function App() {
                       <span className="text-[9px] text-gray-500">월 렌탈료</span>
                       <span className="text-sm font-bold text-gray-900">{Number(p.price || 0).toLocaleString()}원</span>
                     </div>
-                    {sessionUser && (
+                    {sessionUser && showFee && feeTable[p.model] && (
                       <div className="flex justify-between items-center bg-emerald-50 px-1.5 py-1 rounded">
-                        <span className="text-[9px] text-emerald-700 font-semibold">내 수수료({Math.round(sessionUser.feeRate * 100)}%)</span>
-                        <span className="text-xs font-bold text-emerald-700">{calcFee(p.price, sessionUser).toLocaleString()}원</span>
+                        <span className="text-[9px] text-emerald-700 font-semibold">내 수수료({Math.round(sessionUser.deductRate * 100)}% 공제)</span>
+                        <span className="text-xs font-bold text-emerald-700">{calcFee(feeTable[p.model]['3년'], sessionUser).toLocaleString()}원</span>
                       </div>
                     )}
                     {isDiscounted && (
@@ -1058,8 +1051,15 @@ export default function App() {
         </div>
       )}
 
-      {/* 우측 하단 플로팅: 카톡 상담 + 맨위로가기 (렌탈세계 스타일) */}
-      <div className="fixed bottom-28 right-3 z-40 flex flex-col gap-2">
+      {/* 우측 하단 플로팅: 수수료 ON/OFF + 카톡 상담 + 맨위로가기 */}
+      <div className="fixed bottom-28 right-3 z-40 flex flex-col gap-2 items-end">
+        <button
+          onClick={() => setShowFee((v) => !v)}
+          className={`w-12 h-12 rounded-full shadow-lg transition-all flex items-center justify-center text-white font-bold text-[10px] ${showFee ? 'bg-emerald-500 hover:bg-emerald-600' : 'bg-gray-300 hover:bg-gray-400'}`}
+          title={showFee ? '수수료 표시 중 (클릭해 끄기)' : '수수료 숨김 (클릭해 켜기)'}
+        >
+          {showFee ? 'ON' : 'OFF'}
+        </button>
         {SITE_CONFIG.kakaoUrl && (
           <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
             className="w-12 h-12 rounded-full bg-yellow-400 text-gray-900 shadow-lg hover:bg-yellow-300 transition-all flex items-center justify-center"
@@ -1081,6 +1081,7 @@ export default function App() {
             onClose={() => setSelectedProduct(null)}
             allProducts={products}
             sessionUser={sessionUser}
+            feeTable={feeTable}
             onSelectRecommend={(rec) => {
               const recNo = getNo(rec.url);
               const target = products.find((p) => getNo(p.url) === recNo);
@@ -1097,18 +1098,6 @@ export default function App() {
         <LoginModal
           onLogin={login}
           onClose={() => setShowLogin(false)}
-          onGoSignup={() => { setShowLogin(false); setShowSignup(true); }}
-        />
-      )}
-      {showSignup && (
-        <SignupModal
-          onClose={() => setShowSignup(false)}
-          onGoLogin={() => { setShowSignup(false); setShowLogin(true); }}
-          onSignedUp={(id, pw) => {
-            setShowSignup(false);
-            const res = login(id, pw);
-            if (res.ok) setShowLogin(false);
-          }}
         />
       )}
     </div>
