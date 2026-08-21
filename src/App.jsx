@@ -795,16 +795,16 @@ export default function App() {
     }
 
     const sorted = [...arr];
+    // 수수료 추정액 = 월료 × 약정개월(렌탈기간 최대값) — 판매량많은순(수수료많은순) 정렬용
+    const feeScore = (p) => {
+      const price = parsePrice(p.price) || 0;
+      const periods = (p.rentalPeriods || []).map((s) => parseInt(String(s).replace(/[^0-9]/g, ''), 10) || 0);
+      const months = periods.length ? Math.max(...periods) : 0;
+      return price * months;
+    };
     if (sort === 'price_asc') sorted.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
     else if (sort === 'price_desc') sorted.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
-    else if (sort === 'brand') {
-      const pri = SITE_CONFIG.brandPriority;
-      sorted.sort((a, b) => {
-        const ia = pri.indexOf(extractBrand(a.desc));
-        const ib = pri.indexOf(extractBrand(b.desc));
-        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
-      });
-    }
+    else if (sort === 'sales_desc') sorted.sort((a, b) => feeScore(b) - feeScore(a));
     return sorted;
   }, [categoryProducts, search, brandFilter, sort, funcFilter, typeFilter, methodFilter, priceFilter, areaFilter, airFuncFilter, mattressTypeFilter, activeCategory]);
 
@@ -901,10 +901,9 @@ export default function App() {
           />
           <select value={sort} onChange={(e) => setSort(e.target.value)}
             className="p-2.5 border border-gray-300 rounded-lg outline-none text-sm bg-white md:w-40">
-            <option value="default">기본 정렬</option>
-            <option value="price_asc">월료 낮은순</option>
-            <option value="price_desc">월료 높은순</option>
-            <option value="brand">브랜드순</option>
+            <option value="sales_desc">판매량 많은순</option>
+            <option value="price_desc">렌탈료 높은순</option>
+            <option value="price_asc">렌탈료 낮은순</option>
           </select>
         </div>
 
