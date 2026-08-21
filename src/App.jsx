@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { SITE_CONFIG } from './config';
-import { useSession, LoginModal } from './auth';
+import { useSession, LoginModal, SignupModal } from './auth';
 import { calcFee } from './users';
 
 // ==========================================
@@ -671,6 +671,7 @@ export default function App() {
   // 직원 로그인 세션 (수수료 표시용)
   const { user: sessionUser, login, logout } = useSession();
   const [showLogin, setShowLogin] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -845,6 +846,12 @@ export default function App() {
                 <button onClick={() => setShowLogin(true)}
                   className="text-[11px] bg-white text-blue-700 px-3 py-1.5 rounded-full hover:bg-blue-50 transition-all font-bold flex-shrink-0 shadow">
                   직원 로그인
+                </button>
+              )}
+              {!sessionUser && (
+                <button onClick={() => setShowSignup(true)}
+                  className="text-[11px] bg-green-600 text-white px-3 py-1.5 rounded-full hover:bg-green-700 transition-all font-bold flex-shrink-0 shadow">
+                  회원가입
                 </button>
               )}
               {SITE_CONFIG.kakaoUrl && (
@@ -1079,6 +1086,18 @@ export default function App() {
         <LoginModal
           onLogin={login}
           onClose={() => setShowLogin(false)}
+          onGoSignup={() => { setShowLogin(false); setShowSignup(true); }}
+        />
+      )}
+      {showSignup && (
+        <SignupModal
+          onClose={() => setShowSignup(false)}
+          onGoLogin={() => { setShowSignup(false); setShowLogin(true); }}
+          onSignedUp={(id, pw) => {
+            setShowSignup(false);
+            const res = login(id, pw);
+            if (res.ok) setShowLogin(false);
+          }}
         />
       )}
     </div>

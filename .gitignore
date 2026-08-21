@@ -99,3 +99,4 @@ deploy_now.sh
 alias_now.sh
 .env*
 core
+dist/
