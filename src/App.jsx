@@ -450,7 +450,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
               {product.discount && product.discount !== '0' && (
                 <div className="flex justify-between items-center pt-1 border-t border-blue-200">
                   <span className="text-sm text-red-600">할인적용</span>
-                  <span className="text-lg font-bold text-red-600">{product.discount}원</span>
+                  <span className="text-lg font-bold text-red-600">{Number(product.discount || 0).toLocaleString()}원</span>
                 </div>
               )}
             </div>
