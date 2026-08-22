@@ -655,6 +655,7 @@ export default function App() {
   const [products, setProducts] = useState([]);
   const [feeTable, setFeeTable] = useState({}); // 모델별 수수료 (CSV)
   const [loading, setLoading] = useState(true);
+  const loadStartRef = useRef(Date.now());
   const [activeCategory, setActiveCategory] = useState(SITE_CONFIG.categories[0].key);
   const [search, setSearch] = useState('');
   const [brandFilter, setBrandFilter] = useState('all');
@@ -676,6 +677,7 @@ export default function App() {
 
   useEffect(() => {
     const loadAll = async () => {
+      loadStartRef.current = Date.now();
       try {
         // 빌드 시점마다 바뀌는 캐시 키 주입 (vite.config.js define으로 주입, 미설정 시 날짜 기반 폴백)
         const CACHE_BUST = (import.meta.env.VITE_CACHE_BUST || `d${new Date().toISOString().slice(0, 10).replace(/-/g, '')}`);
@@ -708,7 +710,10 @@ export default function App() {
       } catch (e) {
         console.error('데이터 로드 실패:', e);
       } finally {
-        setLoading(false);
+        // 최소 3초 로딩 애니메이션 보장 (데이터 빨리 와도 3초는 노출)
+        const MIN = 3000;
+        const elapsed = Date.now() - loadStartRef.current;
+        setTimeout(() => setLoading(false), Math.max(0, MIN - elapsed));
       }
     };
     loadAll();
@@ -821,11 +826,49 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-blue-600 border-t-transparent mx-auto mb-4"></div>
-          <p className="text-gray-600 font-medium">상품 데이터를 불러오는 중...</p>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 via-blue-600 to-blue-800 overflow-hidden relative">
+        {/* 배경 플로팅 원 */}
+        <div className="absolute -top-20 -left-20 w-72 h-72 bg-white/10 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute -bottom-24 -right-16 w-80 h-80 bg-blue-400/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+        <div className="text-center relative z-10 px-6">
+          {/* 워드마크 펄스 */}
+          <div className="mb-8 animate-[pulse_1s_ease-in-out_infinite]">
+            <h1 className="text-5xl font-black text-white tracking-tight drop-shadow-lg">
+              ALL<span className="text-blue-200">렌탈</span>
+            </h1>
+            <p className="text-blue-100/80 text-xs mt-1 tracking-[0.3em]">PREMIUM RENTAL</p>
+          </div>
+
+          {/* 다이나믹 스피너: 3중 링 회전 + 중심 점 */}
+          <div className="relative mx-auto mb-8 w-24 h-24 flex items-center justify-center">
+            <div className="absolute inset-0 rounded-full border-4 border-white/20"></div>
+            <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-white animate-spin" style={{ animationDuration: '0.8s' }}></div>
+            <div className="absolute inset-2 rounded-full border-4 border-transparent border-t-blue-200 animate-spin" style={{ animationDuration: '1.2s', animationDirection: 'reverse' }}></div>
+            <div className="w-3 h-3 bg-white rounded-full animate-ping"></div>
+          </div>
+
+          {/* 점 3개 바운스 */}
+          <div className="flex justify-center gap-2 mb-6">
+            <span className="w-2.5 h-2.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
+            <span className="w-2.5 h-2.5 bg-blue-200 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
+            <span className="w-2.5 h-2.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+          </div>
+
+          <p className="text-white/90 font-medium text-sm mb-4">상품 데이터를 불러오는 중...</p>
+
+          {/* 3초 진행바 */}
+          <div className="w-56 h-1.5 bg-white/20 rounded-full mx-auto overflow-hidden">
+            <div className="h-full bg-white rounded-full animate-[loadingBar_3s_ease-out_forwards]"></div>
+          </div>
         </div>
+
+        <style>{`
+          @keyframes loadingBar {
+            0% { width: 0%; }
+            100% { width: 100%; }
+          }
+        `}</style>
       </div>
     );
   }
