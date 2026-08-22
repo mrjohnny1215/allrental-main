@@ -243,7 +243,7 @@ function FilterChips({ label, options, value, onChange }) {
 // ==========================================
 // 상품 상세 모달
 // ==========================================
-function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, sessionUser, feeTable }) {
+function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, sessionUser, feeTable, showFee }) {
   if (!product) return null;
   const catKey = product.category;
   const detail = product.detail || product || {};
@@ -1042,6 +1042,7 @@ export default function App() {
             allProducts={products}
             sessionUser={sessionUser}
             feeTable={feeTable}
+            showFee={showFee}
             onSelectRecommend={(rec) => {
               const recNo = getNo(rec.url);
               const target = products.find((p) => getNo(p.url) === recNo);
