@@ -441,12 +441,23 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
                 <span className="text-sm text-gray-600">월 렌탈료</span>
                 <span className="text-xl font-bold text-gray-900">{calculatedPrice}원</span>
               </div>
-              {sessionUser && showFee && feeTable[product.model] && feeTable[product.model][selectedPeriod] != null && (
-                <div className="flex justify-between items-center pt-1.5 mt-1 border-t border-blue-200">
-                  <span className="text-sm text-emerald-700 font-semibold">내 수수료 ({Math.round(sessionUser.deductRate * 100)}% 공제 · {selectedPeriod})</span>
-                  <span className="text-lg font-bold text-emerald-700">{calcFee(feeTable[product.model][selectedPeriod], sessionUser).toLocaleString()}원</span>
-                </div>
-              )}
+              {sessionUser && showFee && feeTable[product.model] && (() => {
+                const periods = Object.keys(feeTable[product.model]).filter(k => feeTable[product.model][k] != null);
+                const order = {'3년':0,'4년':1,'5년':2,'6년':3,'7년':4,'8년':5,'9년':6};
+                periods.sort((a,b)=>(order[a]??99)-(order[b]??99));
+                if (!periods.length) return null;
+                return (
+                  <div className="pt-1.5 mt-1 border-t border-blue-200 space-y-0.5">
+                    <div className="text-sm text-emerald-700 font-semibold mb-0.5">내 수수료 (약정별)</div>
+                    {periods.map(per => (
+                      <div key={per} className="flex justify-between items-center">
+                        <span className="text-sm text-emerald-700">{per}</span>
+                        <span className="text-lg font-bold text-emerald-700">{calcFee(feeTable[product.model][per], sessionUser).toLocaleString()}원</span>
+                      </div>
+                    ))}
+                  </div>
+                );
+              })()}
               {product.discount && product.discount !== '0' && (
                 <div className="flex justify-between items-center pt-1 border-t border-blue-200">
                   <span className="text-sm text-red-600">할인적용</span>
@@ -891,7 +902,7 @@ export default function App() {
                 <>
                   <div className="text-right leading-tight">
                     <div className="text-[10px] text-blue-100">로그인됨</div>
-                    <div className="text-xs font-bold text-white">{sessionUser.name} <span className="text-blue-200">({Math.round(sessionUser.deductRate * 100)}% 공제)</span></div>
+                    <div className="text-xs font-bold text-white">{sessionUser.name}</div>
                   </div>
                   <button onClick={logout}
                     className="text-[11px] bg-white/15 text-white px-2.5 py-1.5 rounded-full hover:bg-white/25 transition-all font-medium flex-shrink-0">
@@ -1021,12 +1032,22 @@ export default function App() {
                       <span className="text-[9px] text-gray-500">월 렌탈료</span>
                       <span className="text-sm font-bold text-gray-900">{Number(p.price || 0).toLocaleString()}원</span>
                     </div>
-                    {sessionUser && showFee && feeTable[p.model] && feeTable[p.model]['3년'] != null && (
-                      <div className="flex justify-between items-center bg-emerald-50 px-1.5 py-1 rounded">
-                        <span className="text-[9px] text-emerald-700 font-semibold">내 수수료({Math.round(sessionUser.deductRate * 100)}% 공제)</span>
-                        <span className="text-xs font-bold text-emerald-700">{calcFee(feeTable[p.model]['3년'], sessionUser).toLocaleString()}원</span>
-                      </div>
-                    )}
+                    {sessionUser && showFee && feeTable[p.model] && (() => {
+                      const periods = Object.keys(feeTable[p.model]).filter(k => feeTable[p.model][k] != null);
+                      const order = {'3년':0,'4년':1,'5년':2,'6년':3,'7년':4,'8년':5,'9년':6};
+                      periods.sort((a,b)=>(order[a]??99)-(order[b]??99));
+                      if (!periods.length) return null;
+                      return (
+                        <div className="space-y-0.5">
+                          {periods.map(per => (
+                            <div key={per} className="flex justify-between items-center bg-emerald-50 px-1.5 py-0.5 rounded">
+                              <span className="text-[9px] text-emerald-700 font-semibold">내 수수료 {per}</span>
+                              <span className="text-xs font-bold text-emerald-700">{calcFee(feeTable[p.model][per], sessionUser).toLocaleString()}원</span>
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    })()}
                     {isDiscounted && (
                       <div className="flex justify-between items-center bg-red-50 px-1.5 py-1 rounded">
                         <span className="text-[9px] text-red-600 font-semibold">할인적용</span>
