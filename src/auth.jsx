@@ -48,6 +48,7 @@ export function LoginModal({ onLogin, onClose }) {
     e.preventDefault();
     const res = onLogin(id.trim(), pw);
     if (!res.ok) setErr(res.error);
+    else onClose(); // 로그인 성공 시 모달 닫기 (overlay 제거 → 카드 클릭 정상화)
   };
 
   return (
