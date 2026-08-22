@@ -77,10 +77,6 @@ export function LoginModal({ onLogin, onClose }) {
             로그인
           </button>
         </form>
-        <div className="mt-4 text-[11px] text-gray-400 bg-gray-50 rounded-lg p-2.5 leading-relaxed">
-          <span className="font-bold text-gray-500">계정</span><br />
-          all001/1234 · all002/1234<br />all003/1234 · all004/1234
-        </div>
       </div>
     </div>
   );
@@ -139,10 +135,6 @@ export function LoginGate({ onLogin }) {
               로그인
             </button>
           </form>
-          <div className="mt-4 text-[11px] text-gray-400 bg-gray-50 rounded-lg p-2.5 leading-relaxed">
-            <span className="font-bold text-gray-500">계정</span><br />
-            all001/1234 · all002/1234<br />all003/1234 · all004/1234
-          </div>
         </div>
       </div>
     </div>
