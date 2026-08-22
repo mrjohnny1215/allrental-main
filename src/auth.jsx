@@ -55,7 +55,6 @@ export function LoginModal({ onLogin, onClose }) {
     <div className="fixed inset-0 z-[70] bg-black/60 flex items-center justify-center p-4" onClick={onClose}>
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm p-6" onClick={(e) => e.stopPropagation()}>
         <h2 className="text-lg font-black text-gray-900 mb-1">직원 로그인</h2>
-        <p className="text-xs text-gray-400 mb-5">로그인하면 본인 수수료가 상품에 표시됩니다.</p>
         <form onSubmit={submit} className="space-y-3">
           <input
             type="text"
@@ -113,7 +112,6 @@ export function LoginGate({ onLogin }) {
         {/* 로그인 카드 */}
         <div className="bg-white rounded-2xl shadow-2xl p-6">
           <h2 className="text-lg font-black text-gray-900 mb-1">직원 로그인</h2>
-          <p className="text-xs text-gray-400 mb-5">로그인하면 본인 수수료가 상품에 표시됩니다.</p>
           <form onSubmit={submit} className="space-y-3">
             <input
               type="text"
