@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { SITE_CONFIG } from './config';
-import { useSession, LoginModal } from './auth';
+import { useSession, LoginGate } from './auth';
 import { calcFee } from './users';
 
 // ==========================================
@@ -671,7 +671,6 @@ export default function App() {
 
   // 직원 로그인 세션 (수수료 표시용)
   const { user: sessionUser, login, logout } = useSession();
-  const [showLogin, setShowLogin] = useState(false);
   // 수수료 표시 ON/OFF 토글 (우측하단 녹색 버튼) — 기본 ON
   const [showFee, setShowFee] = useState(true);
 
@@ -873,6 +872,11 @@ export default function App() {
     );
   }
 
+  // 로그인 게이트: 미로그인 시 풀스크린 로그인 화면만 표시
+  if (!sessionUser) {
+    return <LoginGate onLogin={login} />;
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 pb-4">
       <header className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-white shadow-xl sticky top-0 z-40">
@@ -894,12 +898,7 @@ export default function App() {
                     로그아웃
                   </button>
                 </>
-              ) : (
-                <button onClick={() => setShowLogin(true)}
-                  className="text-[11px] bg-white text-blue-700 px-3 py-1.5 rounded-full hover:bg-blue-50 transition-all font-bold flex-shrink-0 shadow">
-                  직원 로그인
-                </button>
-              )}
+              ) : null}
               {SITE_CONFIG.kakaoUrl && (
               <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="w-9 h-9 rounded-full bg-white/15 text-white shadow-lg hover:bg-white/25 transition-all flex items-center justify-center flex-shrink-0"
@@ -1097,12 +1096,6 @@ export default function App() {
             }}
           />
         </ErrorBoundary>
-      )}
-      {showLogin && (
-        <LoginModal
-          onLogin={login}
-          onClose={() => setShowLogin(false)}
-        />
       )}
     </div>
   );
