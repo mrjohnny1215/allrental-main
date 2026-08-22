@@ -442,19 +442,23 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
                 <span className="text-xl font-bold text-gray-900">{calculatedPrice}원</span>
               </div>
               {sessionUser && showFee && feeTable[product.model] && (() => {
-                const periods = Object.keys(feeTable[product.model]).filter(k => feeTable[product.model][k] != null);
-                const order = {'3년':0,'4년':1,'5년':2,'6년':3,'7년':4,'8년':5,'9년':6};
-                periods.sort((a,b)=>(order[a]??99)-(order[b]??99));
-                if (!periods.length) return null;
+                const modelFee = feeTable[product.model];
+                const periodFee = modelFee[selectedPeriod];
+                if (!periodFee) return null;
+                // 사용자가 고른 관리주기(없으면 첫 슬롯)의 수수료를 동적으로 표시
+                const cycleKey = periodFee[selectedCycle] != null ? selectedCycle
+                  : Object.keys(periodFee)[0] || '';
+                if (cycleKey === '' || periodFee[cycleKey] == null) return null;
+                const fee = calcFee(periodFee[cycleKey], sessionUser);
                 return (
                   <div className="pt-1.5 mt-1 border-t border-blue-200 space-y-0.5">
-                    <div className="text-sm text-emerald-700 font-semibold mb-0.5">내 수수료 (약정별)</div>
-                    {periods.map(per => (
-                      <div key={per} className="flex justify-between items-center">
-                        <span className="text-sm text-emerald-700">{per}</span>
-                        <span className="text-lg font-bold text-emerald-700">{calcFee(feeTable[product.model][per], sessionUser).toLocaleString()}원</span>
-                      </div>
-                    ))}
+                    <div className="text-sm text-emerald-700 font-semibold mb-0.5">
+                      내 수수료 ({selectedPeriod} · {cycleKey})
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-emerald-700">예상 수수료</span>
+                      <span className="text-lg font-bold text-emerald-700">{fee.toLocaleString()}원</span>
+                    </div>
                   </div>
                 );
               })()}
@@ -1033,18 +1037,21 @@ export default function App() {
                       <span className="text-sm font-bold text-gray-900">{Number(p.price || 0).toLocaleString()}원</span>
                     </div>
                     {sessionUser && showFee && feeTable[p.model] && (() => {
-                      const periods = Object.keys(feeTable[p.model]).filter(k => feeTable[p.model][k] != null);
+                      const modelFee = feeTable[p.model];
                       const order = {'3년':0,'4년':1,'5년':2,'6년':3,'7년':4,'8년':5,'9년':6};
-                      periods.sort((a,b)=>(order[a]??99)-(order[b]??99));
+                      const periods = Object.keys(modelFee).filter(k => modelFee[k] && typeof modelFee[k] === 'object').sort((a,b)=>(order[a]??99)-(order[b]??99));
                       if (!periods.length) return null;
+                      // 카드엔 대표 조합(첫 기간·첫 관리주기) 수수료 한 줄 표시
+                      const per = periods[0];
+                      const cycleKeys = Object.keys(modelFee[per]);
+                      const cyc = cycleKeys[0] || '';
+                      if (cyc === '' || modelFee[per][cyc] == null) return null;
                       return (
-                        <div className="space-y-0.5">
-                          {periods.map(per => (
-                            <div key={per} className="flex justify-between items-center bg-emerald-50 px-1.5 py-0.5 rounded">
-                              <span className="text-[9px] text-emerald-700 font-semibold">내 수수료 {per}</span>
-                              <span className="text-xs font-bold text-emerald-700">{calcFee(feeTable[p.model][per], sessionUser).toLocaleString()}원</span>
-                            </div>
-                          ))}
+                        <div className="bg-emerald-50 px-1.5 py-0.5 rounded">
+                          <div className="flex justify-between items-center">
+                            <span className="text-[9px] text-emerald-700 font-semibold">내 수수료 {per} · {cyc}</span>
+                            <span className="text-xs font-bold text-emerald-700">{calcFee(modelFee[per][cyc], sessionUser).toLocaleString()}원</span>
+                          </div>
                         </div>
                       );
                     })()}
