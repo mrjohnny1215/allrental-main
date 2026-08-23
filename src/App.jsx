@@ -340,7 +340,8 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
   const addForPeriod = periodPrices[selectedPeriod] || {};
   const cycleAdd = addForPeriod[selectedCycle] || 0;
   const basePrice = itPrice + cycleAdd;
-  const calculatedPrice = basePrice.toLocaleString();
+  // 0원 방어: 실제 금액 미확보 시 '가격문의'로 폴백 (손님 화면 0원 노출 방지)
+  const calculatedPrice = basePrice > 0 ? basePrice.toLocaleString() : '가격문의';
 
   const handleConsult = () => {
     const brand = extractBrand(product.desc);
