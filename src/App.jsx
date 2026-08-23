@@ -322,7 +322,8 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
   }
   const allRecommendations = [...recommendations, ...crossRecs].slice(0, 12);
   const brand = d.brand || '';
-  const productType = classifyFunc(product) || d.product_type || '';
+  // 실제 데이터 product_type 우선, 폴백으로 키워드 분류
+  const productType = d.product_type || classifyFunc(product) || '';
   const asPeriod = d.as_period || '';
 
   // periodPrices는 아래 useState 초기값에서 참조하므로, 선언을 먼저 해야 함 (TDZ 방지)
