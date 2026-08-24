@@ -160,6 +160,7 @@ function SmartImage({ src, alt, brand, className }) {
       <div className={`flex flex-col items-center justify-center text-center ${className || ''}`}>
         <span className="text-3xl mb-1">📦</span>
         <span className="text-[10px] font-bold text-gray-400 leading-tight px-1">{brand || 'ALL렌탈'}</span>
+        <span className="text-[9px] text-blue-600 mt-0.5 font-medium">이미지 곧 업데이트 예정</span>
       </div>
     );
   }
@@ -1212,12 +1213,23 @@ export default function App() {
 
       {/* 우측 하단 플로팅: 수수료 ON/OFF + 카톡 상담 + 맨위로가기 */}
       <div className="fixed bottom-28 right-3 z-40 flex flex-col gap-2 items-end">
+        {/* 수수료 토글 — 클릭 시 상태 변경 */}
         <button
           onClick={() => setShowFee((v) => !v)}
-          className={`w-12 h-12 rounded-full shadow-lg transition-all flex items-center justify-center text-white font-bold text-[10px] ${showFee ? 'bg-emerald-500 hover:bg-emerald-600' : 'bg-gray-300 hover:bg-gray-400'}`}
-          title={showFee ? '수수료 표시 중 (클릭해 끄기)' : '수수료 숨김 (클릭해 켜기)'}
+          className={`w-14 h-14 rounded-full shadow-lg transition-all flex items-center justify-center text-white font-bold text-sm ${showFee ? 'bg-emerald-500 hover:bg-emerald-600 ring-2 ring-emerald-300' : 'bg-gray-400 hover:bg-gray-500'}`}
+          title={showFee ? '수수료 표시 중 — 클릭해 끄기' : '수수료 숨김 — 클릭해 켜기'}
         >
-          {showFee ? 'ON' : 'OFF'}
+          {showFee ? (
+            <>
+              <svg className="w-5 h-5 -ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7"/></svg>
+              <span className="ml-0.5">ON</span>
+            </>
+          ) : (
+            <>
+              <svg className="w-5 h-5 -ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12"/></svg>
+              <span className="ml-0.5">OFF</span>
+            </>
+          )}
         </button>
         {SITE_CONFIG.kakaoUrl && (
           <a href={SITE_CONFIG.kakaoUrl} target="_blank" rel="noreferrer"
@@ -1229,7 +1241,7 @@ export default function App() {
         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="w-12 h-12 rounded-full bg-gray-900 text-white shadow-lg hover:bg-gray-700 transition-all flex items-center justify-center"
           title="위로 올라가기">
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7"/></svg>
         </button>
       </div>
 
