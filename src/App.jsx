@@ -667,130 +667,6 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
 }
 
 // ==========================================
-// 렌탈료 / 수수료 계산기 (관리방식·계약유형·약정기간·색상·옵션 선택)
-// - 기존 상세 모달 가격 로직(it_price + period_prices) 재사용 → 사이트 내부 정합성 유지
-// - 5개 선택지 모두 <button> 클릭 동작 보장 (이전 "선택 안 먹힘" 증상 원천 차단)
-// ==========================================
-function CalcSelector({ label, value, options, onChange, emptyHint, disabled }) {
-  return (
-    <div>
-      <label className="block text-sm font-bold text-gray-700 mb-2">{label}</label>
-      {disabled || !options || !options.length ? (
-        <div className="text-xs text-gray-400 bg-gray-50 rounded-lg px-3 py-2 border border-gray-200">{emptyHint || '정보 없음'}</div>
-      ) : (
-        <div className="flex flex-wrap gap-2">
-          {options.map((o) => (
-            <button key={o} type="button" onClick={() => onChange(o)}
-              className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${value === o ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
-              {o}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function RentalFeeCalculator({ onClose, products, feeTable, sessionUser, showFee }) {
-  const [selectedModel, setSelectedModel] = useState('');
-  const product = products.find((p) => p.model === selectedModel) || null;
-  const detail = (product && product.detail) || {};
-  const periods = detail.rental_periods || [];
-  const cycles = detail.maintenance_cycles || [];
-  const colors = detail.colors || [];
-  const careTypes = detail.care_types || [];
-  const sizes = detail.sizes || [];
-  const options = careTypes.length ? careTypes : sizes; // 옵션 = 관리유형(매트리스) 또는 사이즈
-
-  const [contract, setContract] = useState('신규'); // 계약유형
-  const [period, setPeriod] = useState(periods[0] || '');
-  const [mgmt, setMgmt] = useState(cycles[0] || '');
-  const [color, setColor] = useState(colors[0] || '');
-  const [opt, setOpt] = useState(options[0] || '');
-
-  // 상품 바뀌면 하위 선택 초기화 (useEffect 의존성은 selectedModel만 — 하위 배열은 파생값)
-  useEffect(() => {
-    setContract('신규');
-    setPeriod(periods[0] || '');
-    setMgmt(cycles[0] || '');
-    setColor(colors[0] || '');
-    setOpt(options[0] || '');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedModel]);
-
-  const periodPrices = detail.period_prices || {};
-  const itPrice = parsePrice(detail.it_price) || parsePrice(product ? product.price : 0);
-  const add = (periodPrices[period] && periodPrices[period][mgmt] != null) ? periodPrices[period][mgmt] : 0;
-  const monthly = itPrice + add;
-  const monthlyStr = monthly > 0 ? monthly.toLocaleString() : '가격문의';
-
-  // 직원 수수료(사은 혜택)
-  let fee = null;
-  const modelFee = sessionUser && showFee ? feeTable[selectedModel] : null;
-  if (modelFee && modelFee[period] && modelFee[period][mgmt] != null) {
-    fee = calcFee(modelFee[period][mgmt], sessionUser);
-  }
-  const isUsed = contract === '중고';
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50" onClick={onClose}>
-      <div className="bg-gray-50 w-full max-w-3xl rounded-t-2xl max-h-[92vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-        <div className="sticky top-0 z-10 bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
-          <h3 className="text-base font-bold text-gray-900 flex items-center gap-2"><span>🧮</span> 렌탈료 / 수수료 계산기</h3>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-2xl leading-none">×</button>
-        </div>
-        <div className="p-4 space-y-4">
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-2">상품 선택</label>
-            <select value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)}
-              className="w-full p-3 border border-gray-300 rounded-lg bg-white outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="">상품을 선택하세요</option>
-              {products.map((p) => (
-                <option key={(p.model || '') + p.url} value={p.model}>{p.desc} ({Number(p.price || 0).toLocaleString()}원)</option>
-              ))}
-            </select>
-          </div>
-
-          {!product ? (
-            <div className="text-center text-gray-400 text-sm py-10">상품을 선택하면 월 렌탈료와 수수료가 계산됩니다.</div>
-          ) : (
-            <>
-              <CalcSelector label="관리 방식" value={mgmt} options={cycles} onChange={setMgmt} emptyHint="관리방식 정보 없음" disabled={cycles.length === 0} />
-              <CalcSelector label="계약 유형" value={contract} options={['신규', '중고']} onChange={setContract} />
-              <CalcSelector label="약정 기간" value={period} options={periods} onChange={setPeriod} emptyHint="약정기간 정보 없음" disabled={periods.length === 0} />
-              <CalcSelector label="색상" value={color} options={colors} onChange={setColor} emptyHint="색상 정보 없음" disabled={colors.length === 0} />
-              <CalcSelector label="옵션" value={opt} options={options} onChange={setOpt} emptyHint="옵션 정보 없음" disabled={options.length === 0} />
-
-              {isUsed && (
-                <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-700">중고 계약은 현재 렌탈세계 데이터에 없어 월 렌탈료·수수료가 신규 기준으로 표시됩니다.</div>
-              )}
-
-              <div className="bg-blue-50 rounded-xl p-4 border border-blue-100 space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">월 렌탈료</span>
-                  <span className="text-xl font-bold text-gray-900">{monthlyStr}원</span>
-                </div>
-                <div className="text-[11px] text-gray-400">
-                  {itPrice > 0 ? `기본 ${itPrice.toLocaleString()}원` : ''}{add > 0 ? ` + 관리추가 ${add.toLocaleString()}원` : ''} · {period || '-'} · {mgmt || '-'}
-                </div>
-                {fee != null ? (
-                  <div className="pt-2 border-t border-blue-200 flex justify-between items-center">
-                    <span className="text-sm text-emerald-700 font-semibold">지급 수수료 (사은 혜택)</span>
-                    <span className="text-lg font-bold text-emerald-700">{fee.toLocaleString()}원</span>
-                  </div>
-                ) : (
-                  <div className="pt-2 border-t border-blue-200 text-xs text-gray-400">로그인 후 이 상품의 수수료를 확인할 수 있습니다.</div>
-                )}
-              </div>
-            </>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ==========================================
 // 메인 App
 // ==========================================
 export default function App() {
@@ -815,9 +691,6 @@ export default function App() {
   const { user: sessionUser, login, logout } = useSession();
   // 수수료 표시 ON/OFF 토글 (우측하단 녹색 버튼) — 기본 ON
   const [showFee, setShowFee] = useState(true);
-
-  // 렌탈료/수수료 계산기 모달 열림 상태
-  const [showCalc, setShowCalc] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -1245,15 +1118,6 @@ export default function App() {
         </button>
       </div>
 
-      {/* 좌측 하단 플로팅: 렌탈료/수수료 계산기 */}
-      <div className="fixed bottom-28 left-3 z-40 flex flex-col gap-2 items-start">
-        <button onClick={() => setShowCalc(true)}
-          className="bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all flex items-center gap-1.5 rounded-full pl-3 pr-4 py-3 text-sm font-bold"
-          title="렌탈료 / 수수료 계산기">
-          <span className="text-lg leading-none">🧮</span> 계산기
-        </button>
-      </div>
-
       {selectedProduct && (
         <ErrorBoundary>
           <ProductDetailModal
@@ -1274,16 +1138,6 @@ export default function App() {
             }}
           />
         </ErrorBoundary>
-      )}
-
-      {showCalc && (
-        <RentalFeeCalculator
-          onClose={() => setShowCalc(false)}
-          products={categoryProducts}
-          feeTable={feeTable}
-          sessionUser={sessionUser}
-          showFee={showFee}
-        />
       )}
     </div>
   );
