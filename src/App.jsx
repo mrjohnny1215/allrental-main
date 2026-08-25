@@ -408,8 +408,8 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
           <div className="bg-gray-50 rounded-xl p-3 flex flex-col items-center justify-center overflow-hidden">
             {product.logo ? <img src={product.logo.startsWith('//') ? 'https:' + product.logo : product.logo} alt="logo" className="h-7 w-auto object-contain mb-2" onError={(e) => { e.target.style.display = 'none'; }} /> : <div className="text-sm font-bold text-blue-700 mb-2">{brand || extractBrand(product.desc)}</div>}
-            <div className="w-full h-56 sm:h-64 flex items-center justify-center overflow-hidden">
-              <SmartImage src={(product.image || (product.detail_images && product.detail_images[0]) || '')} alt={product.desc} brand={brand || extractBrand(product.desc)} className="h-full" />
+            <div className="w-full max-w-full h-56 sm:h-64 flex items-center justify-center overflow-hidden">
+              <SmartImage src={(product.image || (product.detail_images && product.detail_images[0]) || '')} alt={product.desc} brand={brand || extractBrand(product.desc)} className="max-h-full max-w-full object-contain" />
             </div>
             {detailImages.length > 1 && (
               <div className="flex gap-1.5 mt-3 w-full overflow-x-auto pb-1">
@@ -1017,7 +1017,7 @@ export default function App() {
                     <span className="text-[10px] font-bold text-gray-500">{brand}</span>
                   )}
                 </div>
-                <div className="relative h-36 bg-gradient-to-b from-white to-gray-50 flex items-center justify-center p-3">
+                <div className="relative h-36 bg-gradient-to-b from-white to-gray-50 flex items-center justify-center p-3 overflow-hidden">
                   {promos[0] && <span className={`absolute top-2 left-2 text-[10px] font-bold px-2 py-1 rounded text-white ${promoStyle(promos[0])}`}>{promos[0]}</span>}
                   <SmartImage src={(p.image || (p.detail_images && p.detail_images[0]) || '')} alt={p.desc} brand={brand} className="" />
                 </div>
