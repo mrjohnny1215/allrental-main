@@ -405,77 +405,96 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
             </div>
           </div>
         )}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+        {/* 갤러리 */}
+        <div className="detail-cols mb-4">
           <div className="bg-gray-50 rounded-xl p-3 flex flex-col items-center justify-center overflow-hidden">
-            {product.logo ? <img src={product.logo.startsWith('//') ? 'https:' + product.logo : product.logo} alt="logo" className="h-7 w-auto object-contain mb-2" onError={(e) => { e.target.style.display = 'none'; }} /> : <div className="text-sm font-bold text-blue-700 mb-2">{brand || extractBrand(product.desc)}</div>}
-            <div className="w-full max-w-full h-56 sm:h-64 flex items-center justify-center overflow-hidden">
-              <SmartImage src={(product.image || (product.detail_images && product.detail_images[0]) || '')} alt={product.desc} brand={brand || extractBrand(product.desc)} className="max-h-full max-w-full object-contain" />
+            {product.logo ? (
+              <img
+                src={product.logo.startsWith('//') ? 'https:' + product.logo : product.logo}
+                alt="logo"
+                className="h-7 w-auto object-contain mb-2"
+                onError={(e) => { e.target.style.display = 'none'; }}
+              />
+            ) : (
+              <div className="text-sm font-bold text-blue-700 mb-2">{brand || extractBrand(product.desc)}</div>
+            )}
+            <div className="pc-v w-full max-w-full h-56 sm:h-64 flex items-center justify-center overflow-hidden">
+              <SmartImage
+                src={(product.image || (product.detail_images && product.detail_images[0]) || '')}
+                alt={product.desc}
+                brand={brand || extractBrand(product.desc)}
+                className="max-h-full max-w-full object-contain"
+              />
             </div>
             {detailImages.length > 1 && (
-              <div className="flex gap-1.5 mt-3 w-full overflow-x-auto pb-1">
+              <div className="seg flex gap-1.5 mt-3 w-full overflow-x-auto pb-1">
                 {detailImages.slice(0, 6).map((img, i) => (
-                  <img key={i} src={img} alt={`${product.desc} ${i + 1}`} loading="lazy"
+                  <img
+                    key={i}
+                    src={img}
+                    alt={`${product.desc} ${i + 1}`}
+                    loading="lazy"
                     className="h-12 w-12 object-cover rounded-lg border border-gray-200 flex-shrink-0 bg-white"
-                    onError={(e) => (e.target.style.display = 'none')} />
+                    onError={(e) => { e.target.style.display = 'none'; }}
+                  />
                 ))}
               </div>
             )}
           </div>
-          <div>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-2">
-              <div>
-                <span className="text-xs text-gray-400">브랜드 </span>
-                <span className="text-base font-bold text-blue-700">{brand || extractBrand(product.desc)}</span>
-              </div>
-              <div>
-                <span className="text-xs text-gray-400">모델명 </span>
-                <span className="text-sm font-mono text-gray-800">{product.model}</span>
-              </div>
-            </div>
-            <div className="mb-3">
-              <span className="text-xs text-gray-400">제품종류 </span>
-              <span className="text-sm font-semibold text-gray-800">{productType || '-'}</span>
-            </div>
-            <div className="text-xs text-gray-500 mb-1">AS기간</div>
-            <div className="text-sm font-semibold text-gray-800 mb-3">{asPeriod || '-'}</div>
-
-            <div className="bg-blue-50 rounded-lg p-3 border border-blue-100">
-              <div className="flex justify-between items-center mb-1">
-                <span className="text-sm text-gray-600">월 렌탈료</span>
-                <span className="text-xl font-bold text-gray-900">{calculatedPrice}원</span>
-              </div>
-              {sessionUser && showFee && feeTable[product.model] && (() => {
-                const modelFee = feeTable[product.model];
-                const periodFee = modelFee[selectedPeriod];
-                if (!periodFee) return null;
-                // 사용자가 고른 관리주기(없으면 첫 슬롯)의 수수료를 동적으로 표시
-                const cycleKey = periodFee[selectedCycle] != null ? selectedCycle
-                  : Object.keys(periodFee)[0] || '';
-                if (cycleKey === '' || periodFee[cycleKey] == null) return null;
-                const fee = calcFee(periodFee[cycleKey], sessionUser);
-                return (
-                  <div className="pt-1.5 mt-1 border-t border-blue-200 space-y-0.5">
-                    <div className="text-sm text-emerald-700 font-semibold mb-0.5">
-                      내 수수료 ({selectedPeriod} · {cycleKey})
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-emerald-700">예상 수수료</span>
-                      <span className="text-lg font-bold text-emerald-700">{fee.toLocaleString()}원</span>
-                    </div>
-                  </div>
-                );
-              })()}
-              {product.discount && product.discount !== '0' && (
-                <div className="flex justify-between items-center pt-1 border-t border-blue-200">
-                  <span className="text-sm text-red-600">할인적용</span>
-                  <span className="text-lg font-bold text-red-600">{Number(product.discount || 0).toLocaleString()}원</span>
-                </div>
-              )}
-            </div>
-          </div>
         </div>
 
+        {/* 메타/가격/옵션/프로모션/제휴카드 */}
         <div className="space-y-5 mb-6">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+            <div>
+              <span className="text-xs text-gray-400">브랜드 </span>
+              <span className="text-base font-bold text-blue-700">{brand || extractBrand(product.desc)}</span>
+            </div>
+            <div>
+              <span className="text-xs text-gray-400">모델명 </span>
+              <span className="text-sm font-mono text-gray-800">{product.model}</span>
+            </div>
+          </div>
+          <div className="mb-1">
+            <span className="text-xs text-gray-400">제품종류 </span>
+            <span className="text-sm font-semibold text-gray-800">{productType || '-'}</span>
+          </div>
+          <div className="text-xs text-gray-500 mb-1">AS기간</div>
+          <div className="text-sm font-semibold text-gray-800 mb-3">{asPeriod || '-'}</div>
+
+          <div className="bg-blue-50 rounded-lg p-3 border border-blue-100">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-sm text-gray-600">월 렌탈료</span>
+              <span className="text-xl font-bold text-gray-900">{calculatedPrice}원</span>
+            </div>
+            {sessionUser && showFee && feeTable[product.model] && (() => {
+              const modelFee = feeTable[product.model];
+              const periodFee = modelFee[selectedPeriod];
+              if (!periodFee) return null;
+              const cycleKey = periodFee[selectedCycle] != null ? selectedCycle
+                : Object.keys(periodFee)[0] || '';
+              if (cycleKey === '' || periodFee[cycleKey] == null) return null;
+              const fee = calcFee(periodFee[cycleKey], sessionUser);
+              return (
+                <div className="pt-1.5 mt-1 border-t border-blue-200 space-y-0.5">
+                  <div className="text-sm text-emerald-700 font-semibold mb-0.5">
+                    내 수수료 ({selectedPeriod} · {cycleKey})
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-emerald-700">예상 수수료</span>
+                    <span className="text-lg font-bold text-emerald-700">{fee.toLocaleString()}원</span>
+                  </div>
+                </div>
+              );
+            })()}
+            {product.discount && product.discount !== '0' && (
+              <div className="flex justify-between items-center pt-1 border-t border-blue-200">
+                <span className="text-sm text-red-600">할인적용</span>
+                <span className="text-lg font-bold text-red-600">{Number(product.discount || 0).toLocaleString()}원</span>
+              </div>
+            )}
+          </div>
+
           {periodPrices[selectedPeriod] && Object.keys(periodPrices[selectedPeriod]).length > 0 && (
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-2">관리 주기</label>
@@ -492,8 +511,15 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
             {periods.length > 0 ? (
               <div className="grid grid-cols-4 gap-2">
                 {periods.map((period) => (
-                  <button key={period} onClick={() => { setSelectedPeriod(period); const cyc = periodPrices[period] ? Object.keys(periodPrices[period]) : []; setSelectedCycle(cyc[0] || ''); }}
-                    className={`py-2.5 px-2 rounded-lg border-2 text-sm font-semibold transition-all ${selectedPeriod === period ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
+                  <button
+                    key={period}
+                    onClick={() => {
+                      setSelectedPeriod(period);
+                      const cyc = periodPrices[period] ? Object.keys(periodPrices[period]) : [];
+                      setSelectedCycle(cyc[0] || '');
+                    }}
+                    className={`py-2.5 px-2 rounded-lg border-2 text-sm font-semibold transition-all ${selectedPeriod === period ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}
+                  >
                     <div>{period}</div>
                   </button>
                 ))}
@@ -509,8 +535,11 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
                 <label className="block text-sm font-bold text-gray-700 mb-2">매트리스 사이즈 / 관리등급</label>
                 <div className="flex flex-wrap gap-2">
                   {sizes.map((item) => (
-                    <button key={item} onClick={() => setSelectedColor(item)}
-                      className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
+                    <button
+                      key={item}
+                      onClick={() => setSelectedColor(item)}
+                      className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}
+                    >
                       {item}
                     </button>
                   ))}
@@ -523,8 +552,11 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
                 <label className="block text-sm font-bold text-gray-700 mb-2">제품 색상</label>
                 <div className="flex flex-wrap gap-2">
                   {colors.map((item) => (
-                    <button key={item} onClick={() => setSelectedColor(item)}
-                      className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}>
+                    <button
+                      key={item}
+                      onClick={() => setSelectedColor(item)}
+                      className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${selectedColor === item ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}
+                    >
                       {item}
                     </button>
                   ))}
@@ -577,7 +609,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
                 {cards.slice(0, 2).map((card, i) => (
                   <div key={i} className="bg-white rounded-lg p-3 flex items-center gap-3 border border-purple-100">
                     {card.image ? (
-                      <img src={card.image.startsWith('//') ? 'https:' + card.image : card.image} alt={card.name} className="h-7 w-auto object-contain flex-shrink-0" onError={(e) => (e.target.style.display = 'none')} />
+                      <img src={card.image.startsWith('//') ? 'https:' + card.image : card.image} alt={card.name} className="h-7 w-auto object-contain flex-shrink-0" onError={(e) => { e.target.style.display = 'none'; }} />
                     ) : null}
                     <span className="text-sm font-semibold text-gray-800">{card.name}</span>
                   </div>
@@ -590,6 +622,7 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
           )}
         </div>
 
+        {/* 제품 상세 이미지 */}
         {detailImages.length > 0 && (
           <div className="mb-6">
             <label className="block text-sm font-bold text-gray-700 mb-2">제품 상세</label>
