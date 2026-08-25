@@ -564,12 +564,15 @@ function ProductDetailModal({ product, onClose, onSelectRecommend, allProducts, 
 
           {cards.length > 0 && (
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-100">
-              <div className="flex items-center justify-between mb-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-3 gap-2">
                 <h4 className="text-sm font-bold text-purple-900 flex items-center">
                   <span className="mr-2">💳</span> 제휴카드 안내
                 </h4>
-                <button onClick={() => setShowCardModal(true)} className="text-xs bg-purple-600 text-white px-3 py-1 rounded-full hover:bg-purple-700">자세히 보기</button>
+                <button onClick={() => setShowCardModal(true)} className="text-xs bg-purple-600 text-white px-3 py-1.5 rounded-full hover:bg-purple-700 w-full sm:w-auto text-center">
+                  자세히 보기
+                </button>
               </div>
+              <p className="text-sm text-gray-600 mb-2">렌탈료 할인 및 무이자 혜택을 확인하세요.</p>
               <div className="space-y-2">
                 {cards.slice(0, 2).map((card, i) => (
                   <div key={i} className="bg-white rounded-lg p-3 flex items-center gap-3 border border-purple-100">

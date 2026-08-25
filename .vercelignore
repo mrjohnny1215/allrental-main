@@ -1,0 +1,10 @@
+node_modules
+backend
+.git
+core
+backup
+*.log
+.env.local
+.env
+dist
+build
