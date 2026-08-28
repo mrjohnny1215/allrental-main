@@ -1,102 +1,21 @@
-```
 # Dependencies
 node_modules/
 
-# Build artifacts
-# NOTE: dist/ is committed on purpose so Vercel can serve it statically
-# without running a build step.
+# Build output (Vercel builds from source via Git)
+dist/
 build/
-*.js.map
+.vite/
 
-# Environment
+# Environment / secrets
 .env
-.env.local
-*.env.*
+.env.*
+*.env.local
 
-# Editors
-.vscode/
-.idea/
-
-# Logs and temp files
+# Logs & OS
 *.log
-*.tmp
-*.swp
-
-# Python (if applicable)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# OS generated files
 .DS_Store
 Thumbs.db
-```
-.vercel
-
-# 임시 디버그/크롤 스크립트 (로컬 전용)
-backend/chk_*.cjs
-backend/peek_*.cjs
-backend/recrawl_empty.py
-backend/local_crawl_missing.js
-backend/missing_30.txt
-backend/peek_filter*.cjs
-backend/debug_filter*.cjs
-backend/chk_*.cjs
-backend/peek_real.cjs
-backend/recrawl_empty_pw.cjs
-backend/recrawl_empty.py
-backend/debug_filter*.cjs
-backend/chk_allchips.cjs
-backend/chk_coway*.cjs
-backend/chk_fixes.cjs
-backend/chk_periods_live.cjs
-backend/chk_coway2.cjs
-backend/shot_card.cjs
-backend/shot_promo.cjs
-backend/peek_real.cjs
-backend/perf_check.cjs
-backend/perf_full.cjs
-backend/verify_scroll.cjs
-backend/shot_intro.cjs
-backend/shot_intro_1.png
-backend/shot_intro_2.png
-backend/shot_live_intro.cjs
-backend/shot_live_intro.png
-backend/shot_live_main.png
-backend/shot_intro_v.cjs
-backend/shot_intro_fresh1.png
-backend/shot_intro_fresh2.png
-backend/shot_live_fresh.cjs
-backend/shot_live_fresh1.png
-backend/shot_live_fresh2.png
-backend/shot_live_intro_force.png
-backend/shot_orbit.cjs
-backend/shot_orbit1.png
-backend/shot_live_orbit.cjs
-backend/shot_live_orbit.png
-backend/shot_live_intro_force.cjs
-backend/shot_live_intro_force.png
-backend/shot_verify_final.cjs
-backend/shot_verify_final.png
-backend/shot_pulse.cjs
-backend/shot_pulse1.png
-backend/shot_pulse2.png
-backend/shot_live_pulse.cjs
-backend/shot_live_pulse.png
-backend/shot_live_pulse2.cjs
-backend/shot_live_pulse2.png
-backend/probe_intro.cjs
-backend/probe_live.cjs
-backend/shot_verify_pulse.cjs
-backend/shot_verify_pulse.png
-deploy_now.sh
-alias_now.sh
-.env*
 core
-dist/
+
+# Vercel
+.vercel
