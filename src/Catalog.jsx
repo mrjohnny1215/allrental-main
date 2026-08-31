@@ -625,7 +625,7 @@ export default function Catalog() {
 
   // 카테고리/브랜드 전환 시 세부 필터 초기화
   const resetFilters = useCallback(() => {
-    setBrandFilter('all'); setFuncFilter('all'); setTypeFilter('all'); setMethodFilter('all')
+    setBrandFilter('전체'); setFuncFilter('all'); setTypeFilter('all'); setMethodFilter('all')
     setPriceFilter('all'); setAreaFilter('all'); setAirFuncFilter('all'); setMattressTypeFilter('all')
   }, [])
 
